@@ -1,0 +1,77 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div class="my-search-list">
+    <ul>
+      <li>
+        <label>地址类型</label>
+        <ion-select interface="popover" [(ngModel)]="typeSelect" (ngModelChange)="onSelectChange()" cancelText="取消" okText="确认">
+          <ion-option value="{{item.key}}" *ngFor="let item of typeObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </li>
+      <li>
+        <button ion-button (click)="addAddress({addOrEdit: 'add'})">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-add"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <ul class="line-list" style="margin-top:181px;">
+    <li *ngFor="let addr of items">
+      <div class="header">
+        <b>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufadi"></use>
+          </svg>
+        </b>
+        <span>{{addr.linker}}</span>
+        <i *ngIf="addr.type==2">发货地址</i>
+        <i *ngIf="addr.type==1">收货地址</i>
+      </div>
+      <div class="content">
+        <div class="info">
+          <!-- <p>
+            <span>联系人：</span>
+            <span>{{addr.linker}}</span>
+          </p> -->
+          <p>
+            <span>联系电话：</span>
+            <span>{{addr.telephone}}</span>
+          </p>
+          <p>
+            <span>联系地址：</span>
+            <span>
+              {{addr.area.Level1AreaName}}-{{addr.area.Level2AreaName}}-{{addr.area.Level3AreaName}}
+            </span>
+          </p>
+          <p>
+            <span>详细地址：</span>
+            <span>{{addr.destAddress}}</span>
+          </p>
+          <p class="buttons">
+            <button class="edit" (click)="addAddress({addOrEdit: 'edit'}, addr)">编辑</button>
+            <button class="delete" (click)="delAddress(addr)">删除</button>
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

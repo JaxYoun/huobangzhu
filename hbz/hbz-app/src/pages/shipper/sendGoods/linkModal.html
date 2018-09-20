@@ -1,0 +1,47 @@
+  <ion-content padding class="my-modal my-modal-style">
+  <div class="modal-card" >
+    <div class="modal-card-header">
+      <h1>个人信息</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ion-item>
+        <ion-label stacked>姓名:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.linker"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>联系电话:</ion-label>
+        <ion-input type="tel" [(ngModel)]="obj.linkTelephone" maxlength="11"></ion-input>
+      </ion-item>
+      <!-- <ion-item>
+        <ion-label stacked>地址选择:</ion-label>
+        <ion-input type="text" disabled="true" (click)="openMapModal()" [(ngModel)]="obj.location"></ion-input>
+      </ion-item> -->
+      <city-picker modal [address]="destInfoName" label="区域" (change)="onChangeAddress($event)"></city-picker>
+
+      <ion-item>
+        <ion-label stacked>详细地址:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.address"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>地址标签:</ion-label>
+      </ion-item>
+
+      <div class="modal-card-content">
+        <ul class="my-check-box">
+          <li *ngFor="let t of addrTagArray" (click)="goSelectBack(t)" [ngClass]="{'selected': t.isSelected}">
+            <span>{{t.name}}</span>
+            <i></i>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew(type)" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-ok">取消</button>
+    </div>
+  </div>
+</ion-content>

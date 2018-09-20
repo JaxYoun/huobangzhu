@@ -1,0 +1,17 @@
+app-header {
+  .toolbar-content {
+    margin-left: 44px;
+  }
+  .show-back-button + ion-buttons + .toolbar-content{
+    margin-left: 0 !important;
+  }
+  .icon-xinfeng-set{
+    width: 8px;
+    height: 8px;
+    background: #ff2323;
+    border-radius: 50%;
+    position: absolute;
+    right: -3px;
+    top: 5px;
+  }
+}

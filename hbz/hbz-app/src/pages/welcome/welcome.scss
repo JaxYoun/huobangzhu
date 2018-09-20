@@ -1,0 +1,63 @@
+page-welcome {
+    .scroll-content {
+      margin: 0 !important;
+    }
+    .buttons {
+      position: absolute;
+      bottom: 20%;
+      left: 10%;
+      right: 10%;
+      height: 50px;
+      z-index: 999;
+      display: flex;
+      justify-content: space-between;
+
+      button {
+        border-radius: 8px;
+        min-width: 120px;
+        background-color: $color;
+        font-size: 1.8rem;
+        letter-spacing: .3rem;
+
+        &.button-outline {
+          background-color: transparent !important;
+          border-color: $color;
+          color: #666;
+        }
+      }
+    }
+    .toolbar-background {
+        background: transparent;
+        border-color: transparent;
+      }
+
+      .slide-zoom {
+        height: 100%;
+      }
+
+      .slide-title {
+        margin-top: 2.8rem;
+      }
+
+      .slide-image {
+        margin: 0;
+        height: 100%;
+        width: 100%;
+      }
+
+      b {
+        font-weight: 500;
+      }
+
+      p {
+        padding: 0 40px;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #60646B;
+
+        b {
+          color: #000000;
+        }
+      }
+
+}

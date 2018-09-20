@@ -1,0 +1,57 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+  <div>
+    <ul class="auth-list">
+      <li class="done">
+        <div>
+          <span>个人货主</span>
+          <span>2017-10-10 15:30</span>
+        </div>
+        <div>
+          <span>已认证</span>
+          <button ion-button (click)="gotoAnyWhere(PersonShipperAuth)">修改资料</button>
+        </div>
+      </li>
+      <li class="done">
+        <div>
+          <span>个人司机</span>
+          <span>2017-10-10 15:30</span>
+        </div>
+        <div>
+          <span>已认证</span>
+          <button ion-button (click)="gotoAnyWhere(PersonDriverAuth)">修改资料</button>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span>货主企业</span>
+          <span>2017-10-10 15:30</span>
+        </div>
+        <div>
+          <span>未认证</span>
+          <button ion-button (click)="gotoAnyWhere(ShipperCompanyAuth)">前往认证</button>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span>运输企业</span>
+          <span>2017-10-10 15:30</span>
+        </div>
+        <div>
+          <span>未认证</span>
+          <button ion-button (click)="gotoAnyWhere(TransportCompanyAuth)">前往认证</button>
+        </div>
+      </li>
+      <li>
+        <div>
+          <span>配送员</span>
+          <span>2017-10-10 15:30</span>
+        </div>
+        <div>
+          <span>未认证</span>
+          <button ion-button (click)="gotoAnyWhere(DeliveryBoyAuth)">前往认证</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>

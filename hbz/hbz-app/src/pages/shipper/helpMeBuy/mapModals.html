@@ -1,0 +1,26 @@
+<!--
+  character： 当前modal信息，
+-->
+<ion-header class="modal-header">
+    <ion-toolbar>
+      <ion-title>
+        选择地址
+      </ion-title>
+      <ion-buttons start>
+        <button ion-button (click)="dismiss()">
+          <ion-icon name="md-close"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+<ion-content>
+  <div #map id="map_container"></div>
+    <div id="r-text">
+        <input id="searchInput" type="text"  [(ngModel)]="inputAddress" />
+    </div>
+    <div id="r-center" style="display:none">
+        <img src="assets/icon/marker1.png"/>
+    </div>
+    <div id="searchResultPanel" style="border:1px solid #C0C0C0;width:150px;height:auto; display:none;"></div>
+    <div id="r-result">	</div>
+</ion-content>

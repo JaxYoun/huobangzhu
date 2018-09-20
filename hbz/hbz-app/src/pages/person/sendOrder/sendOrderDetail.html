@@ -1,0 +1,118 @@
+<app-header title="订单详情"></app-header>
+<ion-content class="fulltransport confirm-order">
+  <h1 (click)="doDetail()">订单编号：{{obj.orderNo}}</h1>
+  <ion-card class="none-border">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      货物详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>订单类型:</ion-label>
+          <ion-input type="text"  [(ngModel)]="orderTypeChi" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>货物名称:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="obj.orderType != 'BUY'">
+          <ion-label stacked>取货地址:</ion-label>
+          <ion-input type="text"  [(ngModel)]="originAreaName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>送货地址:</ion-label>
+          <ion-input type="text"  [(ngModel)]="destAreaName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>发布总价:</ion-label>
+          <ion-input *ngIf="obj.orderType == 'BUY' || obj.orderType == 'SEND' || obj.orderType == 'EX'" type="text" [(ngModel)]="obj.amount" disabled="true"></ion-input>
+          <ion-input *ngIf="obj.orderType == 'FSL' || obj.orderType == 'LTL'" type="text" [(ngModel)]="obj.expectedPrice" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>发单时间:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.createdDate" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>运单状态:</ion-label>
+          <ion-input type="text" [(ngModel)]="orderTransChi" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+      <ul class="photos" *ngIf="obj.completeImage">
+        <li >
+          <img src="{{obj.completeImage}}" alt="图片加载中...">
+        </li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      接运详情
+    </ion-card-header>
+    <ion-card-content *ngIf="nickName == ''">
+      <ion-item>
+        <ion-label stacked>暂无接运信息</ion-label>
+      </ion-item>
+    </ion-card-content>
+    <ion-card-content *ngIf="nickName != ''">
+        <ion-item>
+          <ion-label stacked>接运人:</ion-label>
+          <ion-input type="text" [(ngModel)]="nickName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="text" [(ngModel)]="telephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>接运时间:</ion-label>
+          <ion-input type="text" [(ngModel)]="takeTime" disabled="true"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      物流详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let item of recordArray">
+        <ion-label style="border-bottom: 1px solid #ddd !important;">{{item.timeMillis}}   {{item.orderTrans}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  
+  <div *ngIf="obj.orderTrans == 'WAIT_FOR_PAYMENT'">
+    <button ion-button class="ok" (click)="toPay()">去支付</button>
+  </div>
+  <div *ngIf="obj.settlementType == 'MONTHLY_SETTLEMENT' && obj.orderTrans == 'CONFIRMED'">
+    <button ion-button class="ok" (click)="toSelectDriver()">选择司机</button>
+  </div>
+  <!-- 不是快递运单的，才行显示按钮 -->
+  <div *ngIf="obj.orderType != 'EX'">
+    <!-- TRANSPORT运输中: 司机用户已经取货装车  WAIT_TO_CONFIRM已收货 -->
+    <button *ngIf="obj.orderTrans == 'TRANSPORT' || obj.orderTrans == 'WAIT_TO_CONFIRM'" ion-button class="ok" (click)="doConfirm()">确认收件</button>
+    <!--     LOCKED_ORDER订单锁定待货主确认:  司机用户点击接单,待货主确认,锁定时间为5分钟,超时则自动修改回退至CONFIRMED 已确认 状态 -->
+    <button *ngIf="obj.orderTrans == 'LOCKED_ORDER'" ion-button class="ok" (click)="doAgree()">确认司机接运</button>
+  
+
+    <!-- 专线运输，支付类型为在线支付、车辆征集 -->
+    <div *ngIf="(obj.orderType == 'FSL' || obj.orderType == 'LTL') && obj.settlementType !='MONTHLY_SETTLEMENT'">
+      <button *ngIf="obj.orderTrans == 'LOCKED_ORDER'" ion-button class="ok" (click)="doCancle()">拒绝司机接运</button>
+    </div>
+  
+  </div>
+  </ion-content>
+  

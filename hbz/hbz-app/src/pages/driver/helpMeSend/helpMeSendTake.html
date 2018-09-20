@@ -1,0 +1,85 @@
+<app-header title="帮你送"></app-header>
+
+<ion-content class="cards-content help-me-buy-take">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="下拉刷新"
+        refreshingSpinner="circles"
+        refreshingText="数据加载中...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+
+    <div class="search">
+        <ul>
+          <li>
+            <div class="from">起点</div>
+            <city-picker [address]='originAreaCode'  [shortName]="true" (change)="onChangeAddressOrigin($event)"></city-picker>
+            <div class="line-icon">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-tejiajipiaojiantou-wangfan"></use>
+              </svg>
+            </div>
+            <div class="to">到达</div>
+            <city-picker [address]='destAreaCode'  [shortName]="true" (change)="onChangeAddressDest($event)"></city-picker>
+          </li>
+        </ul>
+      </div>
+  
+
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" (click)="goDetail(myOrder)">
+      <div class="header">
+        <b>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufadi"></use>
+          </svg>
+        </b>
+        <span>{{myOrder.commodityName}}</span>
+        <i>{{myOrder.createdDate}}</i>
+      </div>
+      <div class="content">
+        <div class="info">
+            <p>
+              <span>取货地址：</span>
+              <span>{{myOrder.originAddress}}</span>
+            </p>
+            <p>
+              <span>取货详细地址：</span>
+              <span>{{myOrder.originInfo}}</span>
+            </p>
+            <p>
+              <span>配送地址：</span>
+              <span>{{myOrder.destAddress}}</span>
+            </p>
+            <p>
+              <span>配送详细地址：</span>
+              <span>{{myOrder.destInfo}}</span>
+            </p>
+            <p>
+              <span>商品重量：</span>
+              <span>{{myOrder.commodityWeight}}公斤</span>
+            </p>
+            <p>
+              <span>商品体积：</span>
+              <span>{{myOrder.commodityVolume}}方</span>
+            </p>
+            <p>
+              <span>配送价格：</span>
+              <span>￥{{myOrder.amount}}元</span>
+            </p>
+          <p></p><!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

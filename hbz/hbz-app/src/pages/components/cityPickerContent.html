@@ -1,0 +1,12 @@
+<div class="city-picker-content">
+  <div class="header">
+    <ul>
+      <li (click)="resetArea()">中国大陆地区</li>
+      <li *ngIf="level1.areaName" (click)="handleClick(level1)"> > <span>{{level1.areaName}}</span></li>
+      <li *ngIf="level2.areaName" (click)="handleClick(level2)"> > <span>{{level2.areaName}}</span></li>
+    </ul>
+  </div>
+  <ul class="city-list">
+    <li *ngFor="let item of currentArray" (click)="handleClick(item)">{{item.areaName}}</li>
+  </ul>
+</div>

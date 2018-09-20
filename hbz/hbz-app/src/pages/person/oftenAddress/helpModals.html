@@ -1,0 +1,43 @@
+<!--
+  character： 当前modal信息，
+-->
+<app-header *ngIf="character.type == 'pickUp' || character.type == 'deliver'" title="{{character.title}}"></app-header>
+<ion-content padding class="my-modal my-modal-style" *ngIf="character.type == 'new'">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>{{character.title}}</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ion-item>
+        <ion-label stacked>联系人:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.linker"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>联系电话:</ion-label>
+        <ion-input type="tel" [(ngModel)]="obj.linkTelephone" maxlength="11"></ion-input>
+      </ion-item>
+
+      <city-picker [address]="destInfoName" label="联系地址" (change)="onChangeAddress($event)"></city-picker>
+      <!-- <ion-item>
+        <ion-label stacked>详细地址:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.destAddress"></ion-input>
+      </ion-item> -->
+
+      <div class="map-address">
+        <ion-item>
+            <ion-label stacked>详细地址:</ion-label>
+            <ion-input type="text" placeholder="详细地址详细到门牌号"  [(ngModel)]="obj.destAddress"></ion-input>
+        </ion-item>
+        <span class="icon" (click)="openMapModal()"></span>
+      </div>
+      
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew(character.saveType,character.addRessId)" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-cancel">取消</button>
+    </div>
+  </div>
+</ion-content>

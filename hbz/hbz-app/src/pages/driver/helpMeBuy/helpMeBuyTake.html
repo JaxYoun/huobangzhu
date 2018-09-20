@@ -1,0 +1,67 @@
+<app-header title="帮你买"></app-header>
+<ion-content class="cards-content help-me-buy-take">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="下拉刷新"
+        refreshingSpinner="circles"
+        refreshingText="数据加载中...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+  <div class="my-search-list">
+    <ul>
+      <li>
+        <label>选择地址</label>
+        <city-picker [address]='destAreaCode'  [shortName]="true" (change)="onChangeAddressDest($event)"></city-picker>
+      </li>
+    </ul>
+  </div>
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" (click)="goDetail(myOrder)">
+      <div class="header">
+        <b>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufadi"></use>
+          </svg>
+        </b>
+        <span>{{myOrder.commodityName}}</span>
+        <i>{{myOrder.createdDate}}</i>
+      </div>
+      <div class="content">
+        <div class="info">
+          <p>
+            <span>配送地址：</span>
+            <span>{{myOrder.destInfo}}</span>
+          </p>
+          <p>
+            <span>详细地址：</span>
+            <span>{{myOrder.destAddress}}</span>
+          </p>
+          <p>
+            <span>预估价格：</span>
+            <span>{{myOrder.commodityAmount}}元</span>
+          </p>
+          <p>
+            <span>配送费用：</span>
+            <span>{{myOrder.remuneration}}元</span>
+          </p>
+          <p>
+            <span>个人信誉：</span>
+            <star-level [starLevel]="myOrder.createUser.starLevel" class="my-stars inline"></star-level>
+          </p>
+          <p></p><!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+
+</ion-content>

@@ -1,0 +1,24 @@
+.special-line{
+  background: none;
+  position: relative;
+
+  &.special-line-modal {
+    .scroll-content {
+      background: none;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: .7;
+    }
+  }
+  .confirm {
+    @extend .confirm-button;
+    background: #1fbe88 !important;
+  }
+}

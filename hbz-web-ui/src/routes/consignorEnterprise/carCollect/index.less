@@ -1,0 +1,161 @@
+.card {
+  padding: 0 20px;
+  :global{
+    .ant-card-head {
+      border-bottom: 1px dashed #aaa;
+      border-radius: 0;
+    }
+  }
+}
+.card:hover{
+  cursor: pointer;
+}
+.title {
+  text-align: left;
+  .send{
+    font-size: 30px;
+    color: #16bbb1;
+    margin-right: 20px;
+  }
+  span {
+    font-size: 20px;
+  }
+  .dao {
+    font-size: 30px;
+    color: #30cb96;
+  }
+}
+.time {
+  font-size: 16px;
+  background: #e3f5f4;
+  padding: 2px 10px;
+  border-radius: 10px;
+  color: #16bbb1;
+}
+
+.content{
+  overflow: hidden;
+  font-size: 1.5em;
+  .name{
+    float: left;
+  }
+  .value{
+    float: right;
+  }
+  .not-start {
+    color: #01c0c8;
+  }
+  .order-todo {
+    color: #f8a13a;
+  }
+  .order-end {
+    color: #92d050;
+  }
+  .order-cancel {
+    color: #d82525;
+  }
+}
+
+.form {
+  .icon{
+    font-size: 2em;
+    color:#4abce2;
+  }
+  span{
+    font-size: 1.5em;
+    margin-left: 10px;
+  }
+}
+
+.pay-button {
+  text-align: center;
+}
+
+.check-detail{
+  text-align: center;
+}
+
+.textInput{
+  border: none;
+  border-bottom: 1px solid #aaa;
+}
+
+.select-monthly-pay-list {
+  .check-icon {
+    padding: 0 0.3em 0.2em 0.6em;
+    font-size: 1.2em;
+    border-radius: 0 0 0  2em ;
+  }
+  :global {
+    .ant-card-body {
+      padding: 0;
+      .driver-info {
+        position: relative;
+        .driver-tog {
+          width: 100%;
+          position: absolute;
+          div {
+            background: #4abce2;
+            color: #ffffff;
+          }
+          div:first-child {
+            float: left;
+            width: auto;
+            padding: 0.2em 2em;
+            border-radius: 0 1em 1em 0;
+          }
+          div:nth-child(2) {
+            float: right;
+            width: auto;
+          }
+        }
+        .info-body {
+          padding: 1.5em;
+          padding-top: 3em;
+          display: flex;
+          .driver-logo {
+            padding-top: 1em;
+            padding-right: 2em;
+            .driver-logo-img {
+              width: 80px;
+              height: 80px;
+              background: #ccc;
+              border-radius: 80px;
+            }
+          }
+          .info-intro {
+            flex-grow: 1;
+            .info-list {
+              table {
+                font-size: 14px;
+                width: 100%;
+                tr {
+                  td {
+                    padding: 0.2 0;
+                  }
+                  td:nth-child(2) {
+                    text-align: right;
+                  }
+                }
+                .car-info-list {
+                  li {
+                    color: #fff;
+                    float: right;
+                    padding: 0 0.5em;
+                    margin: 0 0.2em;
+                    border-radius: 2em;
+                  }
+                }
+              }
+            }
+            .driver-remark {
+              font-size: 14px;
+              line-height: 1.7;
+              padding-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}

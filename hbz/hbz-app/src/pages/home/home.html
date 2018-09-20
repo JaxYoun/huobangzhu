@@ -1,0 +1,86 @@
+<!-- <ion-content padding>
+  <ion-item-group>
+    <ion-item (click)="sendPaymentRequest()">微信支付</ion-item>
+    <ion-item (click)="goToPay()">支付宝支付</ion-item>
+    <ion-item (click)="goToStorage()">获取storage</ion-item>
+  </ion-item-group>
+</ion-content> -->
+<ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+      <ion-refresher-content
+        pullingIcon="arrow-dropdown"
+        pullingText="下拉刷新"
+        refreshingSpinner="circles"
+        refreshingText="数据加载中...">
+      </ion-refresher-content>
+    </ion-refresher>
+
+
+  <!-- <div class="nobg-header">
+    <h1>{{title}}</h1>
+    <button ion-button icon-only end>
+      <svg class="icon" aria-hidden="true" (click)="gotoMessage()">
+        <use xlink:href="#icon-xinfeng"></use>
+      </svg>
+    </button>
+  </div> -->
+    <app-header title="{{title}}" class="none-bg"></app-header>
+
+  <div class="my-banner">
+    <ion-slides pager loop="true"  autoplay="3000">
+      <ion-slide *ngFor="let item of bannerArray">
+        <img src="{{item.imagePath}}" (click)="slideTo(item)">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="home-buttons">
+    <ul >
+      <li>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-jifen1"></use>
+        </svg>
+      </li>
+      <li (click)="goToAnyWhere('Score')">
+        <h2>个人积分</h2>
+        <p>个人总积分、消费、留余情况</p>
+      </li>
+      <li>
+        <ion-icon name="ios-arrow-dropright-circle"></ion-icon>
+      </li>
+    </ul>
+    <ul >
+      <li>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-21"></use>
+        </svg>
+      </li>
+      <li (click)="goToAnyWhere('Shop')">
+        <h2>积分商城</h2>
+        <p>个人总积分优惠兑换商城</p>
+      </li>
+      <li>
+        <ion-icon name="ios-arrow-dropright-circle"></ion-icon>
+      </li>
+    </ul>
+  </div>
+  <div class="news">
+    <h1>平台新闻</h1>
+    <ul>
+      <li *ngFor="let item of newsArray" (click)="gotoInfo(item)">
+        <h2>{{item.title}}</h2>
+        <p>
+          <img src="{{item.titleImageList}}" alt="">
+        </p>
+      </li>
+    </ul>
+  </div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

@@ -1,0 +1,93 @@
+<!--
+  character： 当前modal信息，
+-->
+<app-header *ngIf="character.type == 'pickUp' || character.type == 'deliver'" title="{{character.title}}"></app-header>
+<ion-content padding class="fulltransport" *ngIf="character.type == 'pickUp'">
+  <div class="modals">
+    <div *ngFor="let item of pickUp">
+      <ion-card (click)="goSelectBack('pickUp',item)" [ngClass]="{'selected-card': item.isSelected}">
+        <div class="custom-header">
+          <ion-card-header>
+            地址
+          </ion-card-header>
+          <div *ngIf="item.isSelected" class="selected">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-dui"></use>
+            </svg>
+          </div>
+        </div>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <h2>联系人：</h2>
+              <p>
+                {{item.linker}}
+              </p>
+            </ion-item>
+            <ion-item>
+              <h2>联系电话：</h2>
+              <p>
+                {{item.linkTelephone}}
+              </p>
+            </ion-item>
+            <ion-item>
+              <h2>联系地址：</h2>
+              <p>
+                {{item.location}}
+              </p>
+            </ion-item>
+            <ion-item>
+              <h2>详细地址：</h2>
+              <p>
+                {{item.address}}
+              </p>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+      <div class="edit" (click)="goEdit('pickUp',item)">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-bianji"></use>
+        </svg>
+      </div>
+    </div>
+  </div>
+  <button *ngIf="character.type !== 'new'" ion-button (click)="addNew()" class="addnew">+</button>
+</ion-content>
+<ion-content padding class="my-modal my-modal-style" *ngIf="character.type == 'new'">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>{{character.title}}</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ion-item>
+        <ion-label stacked>联系人:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.linker"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>联系电话:</ion-label>
+        <ion-input type="tel" [(ngModel)]="obj.linkTelephone" maxlength="11"></ion-input>
+      </ion-item>
+
+      <city-picker modal [address]="destInfoName" label="联系地址" (change)="onChangeAddress($event)"></city-picker>
+      <!-- <ion-item>
+        <ion-label stacked>详细地址:</ion-label>
+        <ion-input type="text" [(ngModel)]="obj.destAddress"></ion-input>
+      </ion-item> -->
+      <div class="map-address">
+        <ion-item>
+            <ion-label stacked>详细地址:</ion-label>
+            <ion-input type="text" placeholder="详细地址详细到门牌号"  [(ngModel)]="obj.destAddress"></ion-input>
+        </ion-item>
+        <span class="icon" (click)="openMapModal()"></span>
+      </div>
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew(character.saveType,character.addRessId)" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-cancel">取消</button>
+    </div>
+  </div>
+</ion-content>

@@ -1,0 +1,213 @@
+
+
+
+.login-box {
+  display: flex;
+  .login-bg {
+    width: 374px;
+    height: 313.5px;
+    background: url('/login_left.jpg')  no-repeat center center;
+    background-size: 100% auto;
+    background-color: #1c91c0;
+    flex-direction: row-reverse;
+    color: #ffffff;
+    padding: 0 20px;
+    .bg-title {
+      text-align: center;
+      line-height: 120px;
+      font-size: 24px;
+      letter-spacing : 0.2em;
+      .bg-title-logo {
+        padding: 0 0.6em;
+        :global {
+          img {
+            vertical-align: middle;
+            width: 2.5em;
+          }
+        }
+      }
+
+    }
+    .bg-content {
+      // text-indent:2em;
+      font-size: 14px;
+    }
+  }
+  .form {
+    flex-grow: 1;
+    padding: 0 25px 0 50px;
+  
+    p {
+      color: rgb(204, 204, 204);
+      text-align: center;
+      margin-top: 16px;
+  
+      span {
+        &:first-child {
+          margin-right: 16px;
+        }
+      }
+    }
+    :global {
+      .ant-tabs-vertical.ant-tabs-left > .ant-tabs-content {
+        padding-left: 0;
+        border-left: 0;
+      } 
+      .ant-tabs-nav-wrap {
+        display: none;
+      }
+      .ant-form-item:not(.validate-code) {
+        .ant-input {
+          border-width: 0 0 1px 0;
+          border-radius: 0;
+          box-shadow: 0;
+        }
+        .ant-input:focus {
+          box-shadow: 0 2px 0 #3ecfd5;
+        }
+        .has-error .ant-input:focus {
+          box-shadow: 0 2px 0 #f04134;
+        }
+      }
+
+      .validate-code-login,
+      .validate-code {
+        width: 50%;
+        .ant-input {
+          border-radius: 3px;
+        }
+        .ant-col-12 {
+          height: 32px;
+        }
+        img {
+          width: 100%;
+          height: 32px;
+        }
+      }
+    }
+    .get-sms{
+      float: right;
+      margin: 0px;
+      background-color:#2bde98;
+      border-color: #2bde98;
+    }
+    .check-protocol {
+      margin-top: -10px;
+    }
+  }
+}
+
+
+.sub-btn {
+  text-align: center;
+  button {
+    border-radius: 1em;
+    padding: 0 2.5em;
+    background-color:#49bce1;
+    border-color: #49bce1;
+    box-shadow: 1px 2px 2px 0px #cccccc;
+  }
+  button:hover,
+  button:active {
+    background-color: #71ceec;
+    border-color: #71ceec;
+  }
+  .sub-btn-login {
+    margin-left: 10em;
+  }
+  a {
+    text-decoration: underline;
+    padding: 0 0.5em;
+  }
+  .forget-pwd-btn {
+    color: #f3b37f;
+  }
+  .to-regist-btn {
+    color: #49c9a3;
+  }
+}
+
+.loginimg {
+    position: absolute;
+    top: 2%;
+    left: 1%;
+    border-style: none;
+}
+.m-name {
+  height: 40px;
+
+  cursor: pointer;
+  margin: 20px 0;
+  span {
+    font-size: 20px;
+    // text-transform: uppercase;
+    display: inline-block;
+  }
+  :nth-child(2) {
+    color: #999;
+    padding-left: 0.4em;
+    font-size: 10px;
+  }
+}
+.pwd-modify-input {
+}
+
+.ant-spin-container,
+.ant-spin-nested-loading {
+  height: 100%;
+}
+.pwd-modify-form {
+  padding-top: 10px;
+  .sub-btn {
+    margin-top: 10px;
+    padding-top: 20px;
+
+  }
+}
+
+:global {
+
+  .login-modal-wrap {
+    .ant-modal-content {
+      border-radius: 0;
+    }
+    .ant-modal {
+      top: 200px;
+    }
+  }
+
+  .vertical-center-modal {
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  .vertical-center-modal:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    width: 0;
+  }
+
+  .vertical-center-modal .ant-modal {
+    display: inline-block;
+    vertical-align: middle;
+    top: 0;
+    text-align: left;
+  }
+  .vertical-center-modal .ant-modal-body{
+    min-height: 25vh;
+  }
+}
+
+.protocal-modal {
+  :global {
+    .ant-modal-header {
+      text-align: center;
+    }
+  }
+  .protocal-box {
+    max-height: 40em;
+    overflow-y: scroll;
+  }
+}

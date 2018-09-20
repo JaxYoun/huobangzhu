@@ -1,0 +1,21 @@
+<ion-header class="modal-header">
+  <ion-toolbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons start>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content class="news-content">
+  <div class="w-top">
+    <h1>{{obj.title}}</h1>
+    <p *ngIf="obj.isShowDate">{{obj.createDate}}</p>
+  </div>
+  <div class="w-center">
+    <div [innerHTML]="obj.content"></div>
+  </div>
+</ion-content>

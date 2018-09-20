@@ -1,0 +1,65 @@
+<ion-content padding class="my-modal my-modal-style">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>货物详情</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+        <ion-item>
+            <ion-label stacked>货物名称:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.commodityName"></ion-input>
+          </ion-item>
+      <ion-item>
+        <ion-label stacked>货物类型：</ion-label>
+        <ion-select interface="popover" [(ngModel)]="obj.commodityClassSelected" cancelText="取消" okText="确认">
+          <ion-option value="">请选择</ion-option>
+          <ion-option value="{{item.key}}" *ngFor="let item of commodityClassObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>货物重量：</ion-label>
+        <ion-select interface="popover" [(ngModel)]="obj.exWeightemSelected" (ngModelChange)="onSelectExWeightem()" cancelText="取消"
+          okText="确认">
+          <ion-option value="">请选择</ion-option>
+          <ion-option value="{{item.id}}" *ngFor="let item of exWeightemArry">{{item.name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="isShow">
+        <ion-label stacked>填写具体重量:</ion-label>
+        <ion-input [(ngModel)]="obj.exWeightemSelected2"></ion-input>
+        <ion-label unit>吨</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>预估体积:</ion-label>
+        <ion-input type="number" [(ngModel)]="obj.commodityVolume"></ion-input>
+        <ion-label unit>方</ion-label>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>取件时间:</ion-label>
+        <ion-datetime  max="2050-12-31" displayFormat="MM-DD HH:mm" [(ngModel)]="obj.takeTime" doneText="确认" cancelText="取消"></ion-datetime>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>货物描述：</ion-label>
+        <ion-textarea type="text" [(ngModel)]="obj.commodityDesc"></ion-textarea>
+      </ion-item>
+      <div class="upload-container">
+          <h2>添加图片</h2>
+          <ul class="upload-list">
+              <li (click)="createImage('photo1')">
+                <div *ngIf="!photo1">
+                    <p>+</p>
+                    <p>图像照片</p>
+                </div>
+                <img *ngIf="photo1" [src]="photo1" />
+              </li>
+            </ul>
+        </div>
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew()" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-ok">取消</button>
+    </div>
+  </div>
+</ion-content>

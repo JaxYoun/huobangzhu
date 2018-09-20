@@ -1,0 +1,45 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content>
+    <ul class="score-top">
+      <li>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jifen1"></use>
+          </svg>
+        </span>
+        <em>{{totalScore}}</em>
+        <p>总积分</p>
+      </li>
+      <li>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jifen1"></use>
+          </svg>
+        </span>
+        <em>{{currentScore}}</em>
+        <p>当前积分</p>
+      </li>
+      <li>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-jifen1"></use>
+          </svg>
+        </span>
+        <em>{{spendScore}}</em>
+        <p>已使用</p>
+      </li>
+    </ul>
+    <ul class="score-list">
+      <li>
+        <span>收支明细</span>
+        <span>收支详情</span>
+        <span>日期</span>
+      </li>
+      <li *ngFor="let item of scoreArray">
+        <span [ngClass]="{'up':item.delta&gt;0,'down':item.delta&lt;0}">{{item.deltaValue}}</span>
+        <span>{{item.msg}}</span>
+        <span>{{item.time}}</span>
+      </li>
+    </ul>
+  </ion-content>

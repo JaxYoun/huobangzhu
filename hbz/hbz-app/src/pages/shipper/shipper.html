@@ -1,0 +1,99 @@
+<ion-content>
+  <!-- <div class="nobg-header">
+    <h1>{{title}}</h1>
+    <button ion-button icon-only end>
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-xinfeng"></use>
+      </svg>
+    </button>
+  </div> -->
+  <app-header title="{{title}}" class="none-bg"></app-header>
+
+  <div class="shipper-top">
+    <button ion-button class="left-button" (click)="goToAnyWhere('FindCars')">我要找车</button>
+    <button ion-button class="right-button">购买保险</button>
+  </div>
+  <ul class="shipper-icons">
+    <li (click)="goToAnyWhere('HelpMeBuy')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-icon5"></use>
+        </svg>
+      </div>
+      <div>
+        <span>配送-帮我买</span>
+      </div>
+    </li>
+    <li (click)="goToAnyWhere('HelpMeSend')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-car"></use>
+        </svg>
+      </div>
+      <div>
+        <span>配送-帮我送</span>
+      </div>
+    </li>
+    <li (click)="goToAnyWhere('SelectCarByOrders')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-fahuo"></use>
+        </svg>
+      </div>
+      <div>
+        <span>车辆征集</span>
+      </div>
+    </li>
+    <li (click)="goToAnyWhere('Fulltransport','lsl')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-lingdan-fahuo"></use>
+        </svg>
+      </div>
+      <div>
+        <span>零担-发货</span>
+      </div>
+    </li>
+    <li (click)="goToAnyWhere('Fulltransport','fsl')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zhengche-fahuo"></use>
+        </svg>
+      </div>
+      <div>
+        <span>整车-发货</span>
+      </div>
+    </li>
+    <li (click)="goToAnyWhere('SendGoods')">
+      <div>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche1"></use>
+        </svg>
+      </div>
+      <div>
+        <span>快递-发件</span>
+      </div>
+    </li>
+  </ul>
+  <div class="shipper-service">
+     <h1>待处理业务</h1>
+     <ul>
+       <li (click)="goToAnyWhere('DriverComment')">
+         <h2><span>{{obj.waite_rate}}</span><i>个</i></h2>
+         <p><span>待评价</span><i>评</i></p>
+       </li>
+       <li (click)="goToAnyWhere('SendList','','WAIT_TO_CONFIRM')">
+         <h2><span>{{obj.wait_receive}}</span><i>个</i></h2>
+         <p><span>待确认</span><i>定</i></p>
+       </li>
+       <li (click)="goToAnyWhere('SendList','','TRANSPORT')">
+          <h2><span>{{obj.transport_count}}</span><i>个</i></h2>
+          <p><span>配送中</span><i>送</i></p>
+        </li>
+        <li (click)="goToAnyWhere('SendList','','WAIT_FOR_PAYMENT')">
+          <h2><span>{{obj.wait_paymentonline}}</span><i>个</i></h2>
+          <p><span>待付款</span><i>付</i></p>
+        </li>
+     </ul>
+  </div>
+</ion-content>

@@ -1,0 +1,65 @@
+<app-header title="租赁列表"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+
+  <div class="my-search-list">
+      <ul>
+        <li>
+          <label>订单状态</label>
+          <ion-select interface="popover" [(ngModel)]="payProgressSelect" (ngModelChange)="onSelectChange()" cancelText="取消" okText="确认">
+            <ion-option value="{{item.key}}" *ngFor="let item of payProgressObj | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select>
+        </li>
+        <li></li>
+    </ul>
+  </div>
+
+
+
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" (click)="goDetail(myOrder)">
+      <div class="content">
+        <div class="info">
+          <p>
+            <span>订单编号：</span>
+            <span>{{myOrder.orderNo}}</span>
+          </p>
+          <p>
+            <span>仓储名称：</span>
+            <span>{{myOrder.warehouseName}}</span>
+          </p>
+          <p>
+            <span>租赁单价：</span>
+            <span>￥{{myOrder.warehouse.unitPrice}}元</span>
+          </p>
+          <p>
+            <span>诚意金金额：</span>
+            <span>￥{{myOrder.earnestPrice}}元</span>
+          </p>
+          <p>
+            <span>下单时间：</span>
+            <span>{{myOrder.createDate}}</span>
+          </p>
+          <p>
+            <span>订单状态：</span>
+            <span>{{myOrder.payStatusChi}}</span>
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

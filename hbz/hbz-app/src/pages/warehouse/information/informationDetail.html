@@ -1,0 +1,13 @@
+<app-header title="{{title}}"></app-header>
+<ion-content class="news-content">
+    <div class="w-top">
+        <h1>{{obj.title}}</h1>
+        <p *ngIf="obj.isShowDate">{{obj.createDate}}</p>
+    </div>
+    <div class="w-center">
+        <p *ngIf="obj.isShowTitleImage">
+            <img src="{{obj.titleImage}}"  alt="">
+        </p>
+        <div [innerHTML]="obj.content"></div>
+    </div>
+</ion-content>

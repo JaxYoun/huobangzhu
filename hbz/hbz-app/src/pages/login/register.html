@@ -1,0 +1,41 @@
+<ion-content class="login-content">
+  <public-header></public-header>
+  <div class="login register">
+    <ul>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-icon-test"></use>
+          </svg>
+        </label>
+        <input type="text" [(ngModel)]="nickName" maxlength="20">
+        <span *ngIf="!nickName" class="placeholder">请输入您的昵称</span>
+      </li>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-shouji"></use>
+          </svg>
+        </label>
+        <input type="tel" [(ngModel)]="inputPhoneNumber" maxlength="11">
+        <span *ngIf="!inputPhoneNumber" class="placeholder">请输入手机号码</span>
+      </li>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-daan"></use>
+          </svg>
+        </label>
+        <input type="tel" [(ngModel)]="inputYZM" maxlength="6">
+        <span *ngIf="!inputYZM" class="placeholder">请输入验证码</span>
+      </li>
+      <li>
+        <button ion-button *ngIf="!isSendingYZM" (click)="sendYZM(60)" id="btnExcel">{{btnText}}</button>
+        <button *ngIf="isSendingYZM" disabled ion-button class="waitting">{{btnText}}</button>
+        <button (click)="reset()">重置</button>
+      </li>
+    </ul>
+    <button disabled={{isNext}} (click)="goToSetPasswordPage()">下一步</button>
+  </div>
+  <div class="go-back" (click)="goBack()">返回登录</div>
+</ion-content>

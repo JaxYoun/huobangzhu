@@ -1,0 +1,28 @@
+<app-header title="在线支付"></app-header>
+
+<ion-content class="payonline">
+  <div class="info">
+    <p>订单编号：{{obj.orderNo}}</p>
+    <p>订单类型：{{obj.orderType}}</p>
+    <div class="price">
+      <span>￥</span>{{obj.amount}}</div>
+  </div>
+  <ion-list radio-group [(ngModel)]="payTypeSelect" class="my-radio my-radio-noback">
+    <ion-item *ngFor="let item of payTypeObj | ObjNgFor">
+      <ion-avatar item-start>
+        <svg class="icon" aria-hidden="true" *ngIf="item.key == 'Wechat'">
+          <use xlink:href="#icon-Wechat"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true" *ngIf="item.key == 'Alipay'">
+          <use xlink:href="#icon-Alipay"></use>
+        </svg>
+        <svg class="icon" aria-hidden="true" *ngIf="item.key == 'Union'">
+          <use xlink:href="#icon-Union"></use>
+        </svg>
+      </ion-avatar>
+      <ion-label>{{item.value}}</ion-label>
+      <ion-radio value="{{item.key}}" checked="{{payTypeSelect === item.key}}"></ion-radio>
+    </ion-item>
+  </ion-list>
+  <button ion-button class="confirm" (click)="confirm()">确认支付</button>
+</ion-content>

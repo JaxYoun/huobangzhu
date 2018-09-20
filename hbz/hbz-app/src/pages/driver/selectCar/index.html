@@ -1,0 +1,108 @@
+<app-header title="车辆征集"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+      
+
+      <div class="search">
+          <ul>
+            <li>
+              <div class="from">起点</div>
+              <city-picker [address]='originAreaCode'  [shortName]="true" (change)="onChangeAddressOrigin($event)"></city-picker>
+              <div class="line-icon">
+                <svg class="icon" aria-hidden="true">
+                  <use xlink:href="#icon-tejiajipiaojiantou-wangfan"></use>
+                </svg>
+              </div>
+              <div class="to">到达</div>
+              <city-picker [address]='destAreaCode'  [shortName]="true" (change)="onChangeAddressDest($event)"></city-picker>
+            </li>
+          </ul>
+        </div>
+
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" (click)="goDetail(myOrder)">
+      <div class="header">
+          <b>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-chufadi"></use>
+            </svg>
+          </b>
+          <span>{{myOrder.originArea.level2Name}}</span>
+          <b class="arrow">
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-chufa"></use>
+            </svg>
+          </b>
+          <span>{{myOrder.destArea.level2Name}}</span>
+          <i>{{myOrder.createdDateDiff}}</i>
+        </div>
+      <div class="content">
+        <div class="info">
+          <p>
+            <span>取货地址：</span>
+            <span>{{myOrder.originLocation}}</span>
+          </p>
+          <p>
+            <span>取货详细地址：</span>
+            <span>{{myOrder.originAddress}}</span>
+          </p>
+          <p>
+            <span>配送地址：</span>
+            <span>{{myOrder.destLocation}}</span>
+          </p>
+          <p>
+            <span>配送详细地址：</span>
+            <span>{{myOrder.destAddress}}</span>
+          </p>
+          <p>
+            <span>重量：</span>
+            <span>{{myOrder.commodityWeight}}吨</span>
+          </p>
+          <p>
+            <span>体积：</span>
+            <span>{{myOrder.commodityVolume}}方</span>
+          </p>
+          <p>
+            <span>价格：</span>
+            <span>{{myOrder.expectedPrice}}元</span>
+          </p>
+          <!--
+            NEW、CONFIRMED    未开始
+            ORDER_TO_BE_RECEIVED、LOCKED_ORDER 征集中
+            WAIT_TO_TAKE、TRANSPORT、WAIT_TO_CONFIRM、WAIT_FOR_PAYMENT、PAID、LIQUIDATION_COMPLETED  征集完成
+            OVER_TIME、WAIT_TO_REFUNDDE、APPLY_FOR_REFUND、REFUND_FINISHT、INVALID 征集取消
+          -->
+          <p>
+            <span>征集状态：</span>
+            <span class="status-doing" *ngIf="myOrder.orderTrans == 'NEW' || myOrder.orderTrans == 'CONFIRMED'">未开始</span>
+            <span class="status-doing" *ngIf="myOrder.orderTrans == 'ORDER_TO_BE_RECEIVED' || myOrder.orderTrans == 'LOCKED_ORDER'">征集中</span>
+            <span class="status-doing" *ngIf="myOrder.orderTrans == 'WAIT_TO_TAKE' || myOrder.orderTrans == 'TRANSPORT'
+                || myOrder.orderTrans == 'WAIT_TO_CONFIRM' || myOrder.orderTrans == 'WAIT_FOR_PAYMENT'
+                || myOrder.orderTrans == 'PAID' || myOrder.orderTrans == 'LIQUIDATION_COMPLETED'">征集完成</span>
+            <span class="status-doing" *ngIf="myOrder.orderTrans == 'OVER_TIME' || myOrder.orderTrans == 'WAIT_TO_REFUNDDE'
+                || myOrder.orderTrans == 'APPLY_FOR_REFUND' || myOrder.orderTrans == 'REFUND_FINISHT'
+                || myOrder.orderTrans == 'INVALID'">征集取消</span>
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

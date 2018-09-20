@@ -1,0 +1,76 @@
+<app-header title="月结"></app-header>
+
+<ion-content padding class="paymonthly wave-cards">
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="searchbar">
+    <div class="search-icon">
+      <svg class="icon" aria-hidden="true">
+        <use xlink:href="#icon-sousuo"></use>
+      </svg>
+    </div>
+    <ion-input type="text" [(ngModel)]="telephone" placeholder="请输入司机手机号码"></ion-input>
+    <button ion-button (click)="onSearch()">确定</button>
+  </div>
+  <h1 class="order">订单编号：{{obj.orderNo}}</h1>
+
+  <!-- 老司机信息卡片 开始 -->
+  <ion-card [ngClass]="{'selected-card': user.isSelected}" *ngFor="let user of userArray" (click)="goSelectBack(user)">
+    <!-- true： 判断是否被选中 -->
+    <div class="custom-header">
+      <ion-card-header *ngIf="user.type == 'PersonDriver'">个人</ion-card-header>
+      <ion-card-header *ngIf="user.type == 'TransEnterprise'">企业</ion-card-header>
+      <div *ngIf="user.isSelected" class="selected">
+        <!-- true： 判断是否被选中 -->
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-dui"></use>
+        </svg>
+      </div>
+    </div>
+    <ion-card-content>
+      <ion-avatar>
+        <img src="{{user.imageUrl}}">
+      </ion-avatar>
+      <div class="info">
+        <h2 *ngIf="user.type == 'PersonDriver'">
+          <span>{{user.showName}}</span>
+          <star-level [starLevel]="user.starLevel" class="my-stars"></star-level>
+        </h2>
+        <h2 *ngIf="user.type == 'TransEnterprise'">
+          {{user.showName}}
+        </h2>
+        <h2 *ngIf="user.type == 'TransEnterprise'">
+          {{user.nickName}}
+          <star-level [starLevel]="user.starLevel" class="my-stars"></star-level>
+        </h2>
+        <p>电话：
+          <span>{{user.telephone}}</span>
+        </p>
+        <p *ngIf="user.type == 'PersonDriver'">车牌：
+          <span>{{user.showCarNumber}}</span>
+        </p>
+        <p *ngIf="user.type == 'PersonDriver'">车辆：
+          <span>
+            <i>{{user.showCommodityVolume}}</i>
+            <i>{{user.showCommodityWeight}}</i>
+            <i>{{user.showTransType}}</i>
+          </span>
+        </p>
+
+      </div>
+    </ion-card-content>
+  </ion-card>
+  <!-- 老司机信息卡片 结束 -->
+
+  <button ion-button class="confirm" (click)="confirm()">确认月结</button>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

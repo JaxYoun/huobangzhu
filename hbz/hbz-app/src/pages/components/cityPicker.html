@@ -1,0 +1,6 @@
+<div class="wrapper">
+  <ion-item>
+    <ion-label stacked *ngIf="label">{{label}}</ion-label>
+    <ion-input (focus)="openModal()" [(ngModel)]="text"></ion-input>
+  </ion-item>
+</div>

@@ -1,0 +1,136 @@
+<app-header title="订单详情"></app-header>
+<ion-content class="fulltransport confirm-order">
+  <h1 (click)="doDetail()">订单编号：{{obj.orderNo}}</h1>
+  <ion-card class="none-border">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      货物详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>订单类型:</ion-label>
+          <ion-input type="text"  [(ngModel)]="orderTypeChi" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>货物名称:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="obj.orderType != 'BUY'">
+          <ion-label stacked>取货地址:</ion-label>
+          <ion-input type="text"  [(ngModel)]="originAreaName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>配送地址:</ion-label>
+          <ion-input type="text"  [(ngModel)]="destAreaName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>发布总价:</ion-label>
+            <ion-input *ngIf="obj.orderType == 'BUY' || obj.orderType == 'SEND' || obj.orderType == 'EX'" type="text" [(ngModel)]="obj.amount" disabled="true"></ion-input>
+            <ion-input *ngIf="obj.orderType == 'FSL' || obj.orderType == 'LTL'" type="text" [(ngModel)]="obj.expectedPrice" disabled="true"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label stacked>发单时间:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.createdDate" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>运单状态:</ion-label>
+          <ion-input type="text" [(ngModel)]="orderTransChi" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      货主详情
+    </ion-card-header>
+    <ion-card-content>
+        <ion-item>
+          <ion-label stacked>货主:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.createUser.nickName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.createUser.telephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>发单时间:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.createdDate" disabled="true"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      物流详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item *ngFor="let item of recordArray">
+        <ion-label style="border-bottom: 1px solid #ddd !important;">{{item.timeMillis}}   {{item.orderTrans}}</ion-label>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+
+  <div *ngIf="obj.settlementType != 'MONTHLY_SETTLEMENT'">
+    <!-- 帮我买，需要特殊处理，不需要收货确认 -->
+    <div *ngIf="obj.orderType == 'BUY'">
+        <!-- 用户拒绝签收 -->
+        <div *ngIf="offlineProcess == '1'">
+            <div style="color:red;padding-bottom:20px;text-align:center;">客户拒绝签收，工作人员处理中。</div>
+        </div>
+        <div *ngIf="offlineProcess == '0'">
+            <button ion-button *ngIf="obj.orderTrans == 'WAIT_TO_TAKE'" class="ok" (click)="doConfirm('take','你确定买货吗?')">买货确认</button>
+            <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('ok')">签收确认</button>
+            <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('refuse')">拒绝签收</button>
+        </div>
+    </div>
+    <div *ngIf="obj.orderType != 'BUY'">
+        <!-- 用户拒绝签收 -->
+        <div *ngIf="offlineProcess == '1'">
+            <div style="color:red;padding-bottom:20px;text-align:center;">客户拒绝签收，工作人员处理中。</div>
+        </div>
+        <div *ngIf="offlineProcess == '0'">
+          <button ion-button *ngIf="obj.orderTrans == 'LOCKED_ORDER_DRIVER' 
+          || obj.orderTrans == 'WAIT_TO_TAKE'" class="ok" (click)="doConfirm('take')">收货确认</button>
+          <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('ok')">签收确认</button>
+          <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('refuse')">拒绝签收</button>
+        </div>
+
+
+        <!-- 在线支付、车辆征集   ：需要确认收款--> 
+        <div *ngIf="obj.orderType == 'FSL' || obj.orderType == 'LTL'">
+            <!--WAIT_FOR_PAYMENT_OFFLINE线下支付中：货主选择线下支付；-->
+            <button ion-button *ngIf="obj.orderTrans == 'WAIT_FOR_PAYMENT_OFFLINE' " class="ok" (click)="doConfirm('end')">收款确认</button>
+        </div>
+
+    </div>
+  </div>
+  <!-- 月结订单：收货确认需要状态为已结单WAIT_TO_TAKE -->
+    <div *ngIf="obj.settlementType == 'MONTHLY_SETTLEMENT'">
+      <!-- 用户拒绝签收 -->
+      <div *ngIf="offlineProcess == '1'">
+          <div style="color:red;padding-bottom:20px;text-align:center;">客户拒绝签收，工作人员处理中。</div>
+      </div>
+      <div *ngIf="offlineProcess == '0'">
+        <button ion-button *ngIf="obj.orderTrans == 'LOCKED_ORDER_DRIVER'" class="ok" (click)="doConfirm('drivingAgree')">确认接单</button>
+        <button ion-button *ngIf="obj.orderTrans == 'LOCKED_ORDER_DRIVER'" class="ok" (click)="doConfirm('refuseAgree')">拒绝接单</button>
+        <button ion-button *ngIf="obj.orderTrans == 'WAIT_TO_TAKE'" class="ok" (click)="doConfirm('take')">收货确认</button>
+        <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('ok')">签收确认</button>
+        <button ion-button *ngIf="obj.orderTrans == 'TRANSPORT'" class="ok" (click)="doConfirm('refuse')">拒绝签收</button>
+      </div>
+    </div>
+  </ion-content>
+  

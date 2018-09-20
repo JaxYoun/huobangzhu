@@ -1,0 +1,42 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <!-- <div class="my-search-list">
+    <ul>
+      <li>
+        <label>选择区域</label>
+        <city-picker [address]='originAreaCode' [shortName]="true" (change)="onChangeAddressOrigin($event)"></city-picker>
+      </li>
+    </ul>
+  </div> -->
+
+  <ul class="warehouse-list buttons">
+    <li *ngFor="let item of wareHouseList">
+      <div (click)="goToDetail(item)">
+        <img src="{{img}}" *ngFor="let img of item.titleImageList" alt="">
+      </div>
+      <div (click)="goToDetail(item)">
+        <h1>{{item.name}}</h1>
+        <p class="price">
+          <i>￥</i>{{item.unitPrice}}/m
+          <sup>2</sup>
+          <span [ngClass]="{'right':'true','process':item.lifecycle == 0,'success':item.lifecycle == 1,'fail':item.lifecycle == 2}">{{item.lifecycleChi.name}}</span>
+        </p>
+        <p class="desc">{{item.originAreaName}}</p>
+      </div>
+      <div>
+        <button delete (click)="delWarehouse(item)">x</button>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

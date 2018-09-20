@@ -1,0 +1,109 @@
+<app-header title="车辆征集"></app-header>
+  <ion-content class="fulltransport confirm-order wait-to-take">
+    <ion-card class="none-border">
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-goods"></use>
+          </svg>
+        </span>
+        征集订单
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>订单编号:</ion-label>
+            <ion-input type="text"  [(ngModel)]="obj.orderNo" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>货物名称:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>车辆类型:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.transType" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        征集条件
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>司机类型:</ion-label>
+            <ion-input [(ngModel)]="driverSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>注册资金:</ion-label>
+            <ion-input type="text" [(ngModel)]="registryMoneySelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>保证金额度:</ion-label>
+            <ion-input type="text" [(ngModel)]="bondSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>信誉等级:</ion-label>
+            <ion-input type="text" [(ngModel)]="needSelect" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        承运方   
+        <span *ngIf="isJoinSuccess" style="color:red">您参与征集未被选中</span>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item *ngIf="orgName != ''">
+            <ion-label stacked>公司名称:</ion-label>
+            <ion-input type="text" [(ngModel)]="orgName" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>联系人:</ion-label>
+            <ion-input type="text" [(ngModel)]="nickName" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>联系电话:</ion-label>
+            <ion-input type="text" [(ngModel)]="telephone" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>平台信誉:</ion-label>
+            <ion-input></ion-input>
+          </ion-item>
+          <star-level [starLevel]="starLevel" class="my-stars"></star-level>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+     <button ion-button class="ok" (click)="doDetail()">查看订单</button>
+
+     <!-- WAIT_TO_CONFIRM已收货：司机用户送货完成,等待货主确认完成 -->
+     <ion-card class="none-border pay-method" *ngIf="obj.orderTrans == 'WAIT_TO_CONFIRM'">
+       <ion-card-header>
+         选择付款方式：
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list radio-group [(ngModel)]="settlementTypeSelect" class="my-radio">
+            <ion-item *ngFor="let item of settlementTypeObj | ObjNgFor">
+              <ion-label>{{item.value}}</ion-label>
+              <ion-radio value="{{item.key}}"></ion-radio>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+    <button *ngIf="obj.orderTrans == 'WAIT_TO_CONFIRM'" ion-button class="ok" (click)="doConfirm()">确认送达</button>
+
+  </ion-content>

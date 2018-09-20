@@ -1,0 +1,18 @@
+<ion-content no-bounce class="welcome-page">
+  <ion-slides pager="false" dir="{{dir}}" (ionSlideWillChange)="onSlideChangeStart($event)">
+    <ion-slide *ngFor="let slide of slides">
+      <img [src]="slide.image" class="slide-image" />
+    </ion-slide>
+    <ion-slide>
+      <img src="assets/images/welcome/welcome_05.jpg" class="slide-image" />
+      <div class="buttons">
+        <button ion-button icon-start outline (click)="goToRegister()">
+          注册
+         </button>
+        <button ion-button icon-end (click)="goToLogin()">
+         登录
+        </button>
+      </div>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

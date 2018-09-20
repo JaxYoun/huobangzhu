@@ -1,0 +1,27 @@
+<ion-content padding class="my-modal my-modal-style">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>选择支付方式</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ion-item>
+        <ion-label stacked>支付方式：</ion-label>
+        <ion-select interface="popover" [(ngModel)]="obj.payWaySelected" cancelText="取消" okText="确认">
+          <ion-option value="{{item.key}}" *ngFor="let item of payWayObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </ion-item>
+      <ion-item *ngIf="obj.payWaySelected == 1">
+        <ion-label stacked>订单价格:</ion-label>
+        <ion-input type="number" [(ngModel)]="obj.amount"></ion-input>
+        <ion-label unit>元</ion-label>
+      </ion-item>
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew()" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-ok">取消</button>
+    </div>
+  </div>
+</ion-content>

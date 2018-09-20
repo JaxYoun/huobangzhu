@@ -1,0 +1,71 @@
+<app-header title="认证材料"></app-header>
+
+    <ion-content padding class="upload-id-card">
+        <h1>上传证件材料：</h1>
+        <ul class="upload-list">
+          <li (click)="createImage('certificates')">
+            <div *ngIf="!certificates">
+                <p>+</p>
+                <p>身份证照片</p>
+            </div>
+            <img [src]="certificates" *ngIf="certificates"/>
+          </li>
+          <li (click)="createImage('certifiedPhoto')">
+              <div *ngIf="!certifiedPhoto">
+                  <p>+</p>
+                  <p>持证照片</p>
+              </div>
+            <img [src]="certifiedPhoto" *ngIf="certifiedPhoto"/>
+          </li>
+          <li (click)="createImage('drivingLicense')">
+              <div *ngIf="!drivingLicense">
+                  <p>+</p>
+                  <p>驾驶证正本</p>
+              </div>
+            <img [src]="drivingLicense" *ngIf="drivingLicense"/>
+          </li>
+          <li (click)="createImage('plyLicense')">
+              <div *ngIf="!plyLicense">
+                  <p>+</p>
+                  <p>行驶证正本</p>
+              </div>
+            <img [src]="plyLicense" *ngIf="plyLicense"/>
+          </li>
+          <li (click)="createImage('plyLicense2')">
+              <div *ngIf="!plyLicense2">
+                  <p>+</p>
+                  <p>行驶证副本</p>
+              </div>
+            <img [src]="plyLicense2" *ngIf="plyLicense2"/>
+          </li>
+          <li (click)="createImage('strongInsuranceImage')">
+              <div *ngIf="!strongInsuranceImage">
+                  <p>+</p>
+                  <p>交强险保单</p>
+              </div>
+            <img [src]="strongInsuranceImage" *ngIf="strongInsuranceImage"/>
+          </li>
+          <li (click)="createImage('vehicle45degreePhoto')">
+              <div *ngIf="!vehicle45degreePhoto">
+                  <p>+</p>
+                  <p>车辆45度照片</p>
+              </div>
+            <img [src]="vehicle45degreePhoto" *ngIf="vehicle45degreePhoto"/>
+          </li>
+        </ul>
+        <ion-list>
+            <ion-item>
+              <ion-label>收款账号类型</ion-label>
+              <ion-select interface="popover" [(ngModel)]="receiveAccountType" cancelText="取消" okText="确认">
+                <ion-option value="{{item.key}}" *ngFor="let item of receiveAccountTypeObj | ObjNgFor">{{item.value}}</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+                <ion-label>收账账号</ion-label>
+                <ion-input type="text" [(ngModel)]="receiveAccount"></ion-input>
+              </ion-item>
+          </ion-list>
+        <button ion-button class="ok" (click)="submitUpload()" disabled={{isClick}}>提交认证</button>
+    </ion-content>
+
+

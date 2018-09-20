@@ -1,0 +1,30 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <ul class="line-list">
+    <li *ngFor="let contract of contractArray" (click)="goDetail(contract)">
+      <div class="content">
+        <div class="info">
+          <h1>{{contract.name}}</h1>
+          <p>
+              <img src="{{img}}">
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

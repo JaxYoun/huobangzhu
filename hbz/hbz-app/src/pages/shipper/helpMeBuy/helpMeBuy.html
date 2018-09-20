@@ -1,0 +1,104 @@
+<app-header title="帮我买"></app-header>
+<ion-content class="fulltransport">
+  <ion-card toggleCard [showItem]="obj.commodityName" (change)="backState($event)" [canLeave]="canLeave">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      商品要求
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>商品名称:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.commodityName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>购买数量:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.commodityCount"></ion-input>
+        </ion-item>
+        <ion-item class="cost">
+          <ion-label stacked>预估价格:</ion-label>
+          <ion-input type="number" maxlength="20" [(ngModel)]="obj.commodityAmount"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>补充说明:</ion-label>
+          <ion-textarea [(ngModel)]="obj.buyNeedInfo"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <div class="upload-container">
+        <h2>添加图片</h2>
+        <ul class="upload-list">
+            <li (click)="createImage('photo1')">
+              <div *ngIf="!photo1">
+                  <p>+</p>
+                  <p>图像照片</p>
+              </div>
+              <img *ngIf="photo1" [src]="photo1" />
+            </li>
+          </ul>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card toggleCard [showItem]="obj.linker" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      配送要求
+    </ion-card-header>
+    <ion-card-content (click)="openModal()">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>联系人:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.linker" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.linkTelephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.destInfo" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>详细地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.destAddress" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      配送时间
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>时间要求:</ion-label>
+          <ion-select interface="popover" [(ngModel)]="timeLimitSelect" (ngModelChange)="onSelect()" cancelText="取消" okText="确认">
+            <ion-option value="{{item.key}}" *ngFor="let item of timeLimit | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item id="startTimeDiv" style="display:none">
+          <ion-label stacked>起送时间:</ion-label>
+          <ion-datetime max="2050-12-31" displayFormat="MM-DD HH:mm"
+            [(ngModel)]="obj.starTime" doneText="确认" cancelText="取消"></ion-datetime>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button class="ok" (click)="saveOrder()">提交订单</button>
+</ion-content>

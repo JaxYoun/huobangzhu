@@ -1,0 +1,73 @@
+<app-header title="快递发件"></app-header>
+<ion-content class="find-car send-goods">
+  <div class="search">
+    <ul>
+      <li>
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-ditudizhi"></use>
+          </svg>
+        </div>
+        <!-- 注意：.user 是选择寄件人、收件人后显示的 -->
+        <div *ngIf="isDeliverShowLink == false" (click)="gotoList(1)">
+          请选择寄件人信息
+        </div>
+        <div *ngIf="isDeliverShowLink" (click)="gotoList(1)" class="user">
+          <h4>{{linkDeliverObj.linker}}
+            <i *ngIf="linkDeliverObj.type == 1">未知</i>
+            <i *ngIf="linkDeliverObj.type == 2">家</i>
+            <i *ngIf="linkDeliverObj.type == 3">公司</i>
+            <i *ngIf="linkDeliverObj.type == 4">常用地</i>
+            <span>{{linkDeliverObj.linkTelephone}}</span>
+          </h4>
+          <p>{{linkDeliverObj.location}} {{linkDeliverObj.address}}</p>
+        </div>
+      </li>
+      <li>
+        <div>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-ditudizhi"></use>
+          </svg>
+        </div>
+        <div *ngIf="isPickUpShowLink == false" (click)="gotoList(2)">
+            请选择收件人信息
+          </div>
+          <div *ngIf="isPickUpShowLink" (click)="gotoList(2)" class="user">
+            <h4>{{linkPickUpObj.linker}}
+              <i *ngIf="linkPickUpObj.type == 1">未知</i>
+              <i *ngIf="linkPickUpObj.type == 2">家</i>
+              <i *ngIf="linkPickUpObj.type == 3">公司</i>
+              <i *ngIf="linkPickUpObj.type == 4">常用地</i>
+              <span>{{linkPickUpObj.linkTelephone}}</span>
+            </h4>
+            <p>{{linkPickUpObj.location}} {{linkPickUpObj.address}}</p>
+          </div>
+      </li>
+    </ul>
+  </div>
+  <div class="content">
+    <h2>货物详情</h2>
+    <p (click)="selectGoods()">
+      <span><i>+</i></span>
+      <span *ngIf="isShow">
+        <i>{{commodityClassSelectedName}}</i>
+        <i>{{weightSelectedName}}</i>
+        <i>{{goodsObj.commodityVolume}}m<sup>3</sup></i>
+      </span>
+    </p>
+    <div class="cost">
+      <h3>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-feiyong"></use>
+          </svg>
+        </span> 费用</h3>
+      <ion-item>
+        <ion-label>预估费用：</ion-label>
+        <ion-input type="text" [(ngModel)]="amount" disabled="true"></ion-input>
+        <ion-label unit>元</ion-label>
+      </ion-item>
+      <button ion-button class="confirm" (click)="confirm()">去支付</button>
+    </div>
+  </div>
+</ion-content>

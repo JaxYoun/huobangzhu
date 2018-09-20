@@ -1,0 +1,300 @@
+.form {
+
+  :global{
+    .ant-card-body {
+      padding-top: 0;
+    } 
+  }
+  .bottem-card {
+    :global{
+      .ant-card-body {
+        padding-bottom: 0;
+      } 
+    }
+  }
+  .order-title-card {
+    :global{
+      .ant-card-body {
+        padding-bottom: 0;
+      } 
+    }
+  }
+  .bottem-btns {
+    text-align: center;
+    padding:20px;
+    .go-pay {
+
+    }
+    .save {
+      background-color: #1fbe88;
+      border-color: #1fbe88;
+    }
+    .save:hover {
+      background-color: #1fbe88;
+      border-color: #1fbe88;
+    }  
+    .save:active, {
+      background-color: #1fbe88;
+      border-color: #1fbe88;
+    }
+    .style-pay {
+      padding:10px;
+      :global {
+        .ant-btn {
+          padding: 0 2em;
+        }
+      }
+    }
+    .monthly-pay-confirm {
+      padding: 0 2em;
+      :global {
+        .ant-btn {
+          padding: 0 2em;
+        }
+      }
+    }
+    :global {
+      .ant-btn {
+        padding: 0 4em;
+      }
+    }
+  }
+  .select-style-pay {
+    padding: 0;
+    :global {
+      .ant-card-body {
+        padding: 0;
+        padding-bottom: 10px;
+        .ant-radio-group {
+          width: 100%;
+        }
+        .ant-radio-group-large .ant-radio-button-wrapper {
+          width: 100%;
+          height: auto;
+          padding: 1em;
+          line-height: 1;
+          border:0;
+          border-bottom:1px solid #ccc;
+        }
+        .style-pay-title {
+          padding: 1em;
+          border-bottom:1px solid #ccc;
+        }
+      }
+    }
+  }
+  .select-monthly-pay-list {
+    .check-icon {
+      padding: 0 0.3em 0.2em 0.6em;
+      font-size: 1.2em;
+      border-radius: 0 0 0  2em ;
+    }
+    :global {
+      .ant-card-body {
+        padding: 0;
+        .driver-info {
+          position: relative;
+          .driver-tog {
+            width: 100%;
+            position: absolute;
+            div {
+              background: #4abce2;
+              color: #ffffff;
+            }
+            div:first-child {
+              float: left;
+              width: auto;
+              padding: 0.2em 2em;
+              border-radius: 0 1em 1em 0;
+            }
+            div:nth-child(2) {
+              float: right;
+              width: auto;
+            }
+          }
+          .info-body {
+            padding: 1.5em;
+            padding-top: 3em;
+            display: flex;
+            .driver-logo {
+              padding-top: 1em;
+              padding-right: 2em;
+              .driver-logo-img {
+                width: 80px;
+                height: 80px;
+                background: #ccc;
+                border-radius: 80px;
+              }
+            }
+            .info-intro {
+              flex-grow: 1;
+              .info-list {
+                table {
+                  font-size: 14px;
+                  width: 100%;
+                  tr {
+                    td {
+                      padding: 0.2 0;
+                    }
+                    td:nth-child(2) {
+                      text-align: right;
+                    }
+                  }
+                  .car-info-list {
+                    li {
+                      color: #fff;
+                      float: right;
+                      padding: 0 0.5em;
+                      margin: 0 0.2em;
+                      border-radius: 2em;
+                    }
+                  }
+                }
+              }
+              .driver-remark {
+                font-size: 14px;
+                line-height: 1.7;
+                padding-top: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .sourch-drivers {
+    padding: 0;
+    &:hover {
+      box-shadow: 4px 4px 40px #b9e7f7;
+    }
+    :global {
+      .ant-card-body {
+        padding: 0;
+        .ant-form-item {
+          margin: 0;
+          .ant-input-affix-wrapper .ant-input:not(:first-child) {
+            padding-left: 35px;
+          }
+          .ant-input-affix-wrapper .ant-input-prefix {
+            font-size: 20px;
+            color: #ccc;
+          }
+          .ant-input-affix-wrapper .ant-input-suffix {
+            right: 0;
+            .ant-btn {
+              height: 35px;
+              border: 0;
+              border-left: 1px solid #f2f2f2;
+              border-radius: 0;
+              margin: 0;
+              font-size: 14px;
+              color: #4abbe0;
+            }
+          }
+        }
+        .ant-input {
+          border: 0;
+          height: 35px;
+          font-size: 13px;
+        }
+      }
+    }
+  }
+}
+
+.confirm-order-title {
+  text-align: center;
+  color: #4abbe0;
+  line-height: 2.7em;
+}
+
+.choice {
+  background: #4abce2;
+  color: #fff;
+}
+.choice:hover{
+  color: #fff;
+}
+.choiceIcon {
+  color:#fff;
+  font-size: 20px;
+  position: absolute;
+  right: 3%;
+  top: 25%;
+}
+
+.pay-grounp{
+  padding: 0;
+  .noChoice {
+    font-size: 30px;
+    position: absolute;
+    right: 3%;
+    top: 35%;
+  }
+  .paychoice {
+    font-size: 30px;
+    position: absolute;
+    right: 3%;
+    top: 35%;
+    color: #33bbe2;
+  }
+  :global{
+    .ant-radio-group {
+      width: 100%;
+    }
+    .ant-radio-group-large .ant-radio-button-wrapper {
+      width: 100%;
+      height: auto;
+      padding: 1em;
+      line-height: 1;
+      font-size: 2em;
+      border: none;
+      border-right: 1px solid #ccc;
+      border-top: 1px solid #ccc;
+      &:first-child{
+        border-left:1px solid #ccc;
+      }
+      &:last-child{
+        border-bottom: 1px solid #ccc;
+      }
+    }
+  }
+  img {
+    vertical-align: middle;
+    margin-right: 2%;
+  }
+}
+
+.online-title {
+  text-align: center;
+  color: #4abbe0;
+  line-height: 2.7em;
+  h1{
+    color: #4abbe0;
+  }
+}
+
+.online-price {
+  margin: 4% 0;
+  text-align: center;
+  span {
+    font-size: 2em;
+    padding: 10px;
+    background: #33bbe2;
+    color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #aaa;
+  }
+}
+
+.pay-button {
+  text-align: center;
+}
+
+.upload {
+  margin-top: 30px;
+}
+.dowload {
+  color: #119cf8;
+  margin-right: 20px;
+}

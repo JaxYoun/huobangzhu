@@ -1,0 +1,129 @@
+.login-content {
+  .scroll-content {
+    margin: 0 !important;
+
+  }
+}
+.login{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 5vh 0;
+
+  ul {
+    margin: 0;
+    padding: 24px 24px 0;
+    flex: auto;
+    width: 100vw;
+
+    li {
+      list-style: none;
+      margin-bottom: 24px;
+      height: 50px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      position: relative;
+
+      label {
+        width: 20vw;
+        min-width: 60px;
+        font-size: 50px;
+        color: #4abce2;
+      }
+
+      input {
+        width: 72vw;
+        height: 50px;
+        border-radius: 5px;
+        border: 1px solid #ddd;
+        font-size: 32px;
+        text-align: center;
+        color: #434343;
+        font-weight: 200;
+      }
+      input:focus + span {
+        display: none;
+      }
+      input:visited + span {
+        display: none;
+      }
+      .placeholder {
+        font-size: 16px;
+        color: #bbb;
+        position: absolute;
+        left: 50vw;
+        transform: translateX(-50%);
+        line-height: 50px;
+        pointer-events: none;
+      }
+    }
+  }
+  .submit {
+    flex: auto;
+    margin: 20px auto;
+    height: 48px;
+    line-height: 36px;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 200;
+    background: #4abce2;
+    border-radius: 50px;
+    box-shadow: none;
+    width: 80vw;
+    box-sizing: border-box;
+  }
+  .links {
+    flex: auto;
+    text-align: right;
+    margin: 0 24px;
+    a {
+      color: #999;
+      padding: 2px;
+      font-size: 16px;
+    }
+  }
+
+  .authcode {
+    display: flex;
+    padding: 0 24px;
+
+    span {
+      width: 20vw;
+      height: 20vw;
+      min-width: 60px;
+    }
+    .input {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+
+      input {
+        flex: auto;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        min-width: 100px;
+        margin-right: 20px;
+        height: 36px;
+        line-height: 36px;
+        text-indent: 1em;
+        letter-spacing: 12px;
+        text-align: center;
+        vertical-align: top;
+      }
+    }
+  }
+}
+.login.focus {
+  position: absolute;
+  top: 10vh;
+  left: 0;
+  background: #fff;
+}
+
+
+.button-md {
+  margin: 0;
+  box-shadow: none;
+}

@@ -1,0 +1,76 @@
+<app-header title="车辆征集"></app-header>
+  <ion-content class="fulltransport confirm-order order2receive">
+    <ion-card class="none-border">
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-dingdan"></use>
+          </svg>
+        </span>
+        征集订单
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>订单编号:</ion-label>
+            <ion-input type="text"  [(ngModel)]="obj.orderNo" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>货物名称:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>车辆类型:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.transType" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tiaojian"></use>
+          </svg>
+        </span>
+        征集条件
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>司机类型:</ion-label>
+            <ion-input [(ngModel)]="driverSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>注册资金:</ion-label>
+            <ion-input type="text" [(ngModel)]="registryMoneySelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>保证金额度:</ion-label>
+            <ion-input type="text" [(ngModel)]="bondSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>信誉等级:</ion-label>
+            <ion-input type="text" [(ngModel)]="needSelect" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <div *ngIf="flag != 'query'" class="drivers" (click)="selectDriver()">
+      <h1>参与司机<span>共{{joinDriversArray.length}}人</span></h1>
+      <ul>
+        <li *ngFor="let item of joinDriversArray">
+          <img src="{{item.user.imageUrl}}" alt="">
+        </li>
+      </ul>
+    </div>
+    <div *ngIf="flag == 'query'" class="drivers">
+      <h1>参与司机<span>共{{joinDriversArray.length}}人</span></h1>
+      <ul>
+        <li *ngFor="let item of joinDriversArray">
+          <img src="{{item.user.imageUrl}}" alt="">
+        </li>
+      </ul>
+    </div>
+     <button ion-button class="ok"  (click)="doDetail()">查看订单</button>
+  </ion-content>

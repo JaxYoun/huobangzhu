@@ -1,0 +1,59 @@
+.container-authened {
+  .navCard {
+    :global {
+      .ant-card {
+        border-radius: 8px;
+      }
+      .ant-card-head {
+        border-radius: 10px;
+        border-bottom: 0;
+        padding: 0;
+      }
+    }
+    .nav {
+      font-size: 20px;
+      color: #fff;
+      background:-webkit-gradient(linear, 0% 0%, 100% 0%,from(#2f8de5), to(#fff));
+      // background: -ms-linear-gradient(left, #2f8de5,  #fff);
+      // background: -moz-linear-gradient(left,#2f8de5,#fff);
+      .icon {
+        font-size: 30px;
+        margin: 0 8px;
+      }
+    }
+  }
+}
+
+.form {
+
+  :global{
+    .ant-card-body {
+      padding: 0 24px;
+    } 
+  }
+  .bottem-btns {
+    text-align: center;
+    padding:24px;
+    .go-pay {
+
+    }
+    .save {
+      background-color: #4CAF50;
+      border-color: #4CAF50;
+    }
+    .save:hover {
+      background-color: #6DDD6D;
+      border-color: #6DDD6D;
+    }  
+    .save:active, {
+      background-color: #199119;
+      border-color: #199119;
+    }
+
+    :global {
+      .ant-btn {
+        padding: 0 4em;
+      }
+    }
+  }
+}

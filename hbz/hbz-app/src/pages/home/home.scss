@@ -1,0 +1,185 @@
+page-home,
+page-commentOrder {
+  .scroll-content {
+    margin-top: 0 !important;
+  }
+  .my-banner {
+    background: $color;
+    .swiper-pagination {
+      // background: #f30;
+    }
+  }
+  .swiper-slide {
+    .slide-zoom {
+      height: 30vh;
+      overflow: hidden;
+    }
+    img {
+      width: 100vw;
+      height: 30vh;
+    }
+  }
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  h1,
+  h2,
+  p {
+    margin: 0;
+    padding: 0;
+  }
+  .home-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 1% 10%;
+    ul {
+      width: 100%;
+      margin: 15px auto;
+      padding: 12px 10px 5px 15px;
+      box-shadow: 0 2px 8px lighten($color, 25);
+      border-radius: 5px;
+      display: flex;
+      flex-wrap: nowrap;
+      position: relative;
+
+      li {
+        display: inline-block;
+        color: #888;
+
+        &:nth-child(1) {
+          font-size: 3.5rem;
+          color: $color;
+        }
+        &:nth-child(2) {
+          width: 100vw;
+          margin-left: 10px;
+        }
+        &:nth-child(3) {
+          font-size: 3rem;
+          color: $color;
+          opacity: 0.5;
+        }
+        h2 {
+          font-size: 1.7rem;
+          display: inline-block;
+          color: $color;
+          margin-bottom: 5px;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+  .news {
+    padding: 2%;
+    margin-top: 20px;
+    overflow: hidden;
+    h1 {
+      font-size: 1.5rem;
+      display: inline-block;
+      border: 1px solid $color;
+      border-radius: 50px;
+      padding: 2px 12px;
+      position: relative;
+      &:after {
+        content: '';
+        position: absolute;
+        left: 105%;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 1px;
+        width: 300%;
+        border-bottom: 1px solid #ddd;
+      }
+    }
+    h2 {
+      font-size: 1.4rem;
+    }
+    ul {
+      padding-bottom: 30px;
+      li {
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+
+        &:last-child {
+          border-bottom: none;
+        }
+        h2 {
+          margin: 15px 0 10px 0;
+        }
+        p {
+          display: flex;
+          justify-content: space-between;
+          img {
+            width: 32.5%;
+            height: 20vw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.picker-md {
+  .picker-toolbar {
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+    .picker-button {
+      color: #666 !important;
+      font-size: 16px;
+    }
+  }
+  .picker-above-highlight,
+  .picker-below-highlight {
+    display: block !important;
+  }
+  .picker-columns{
+    padding: 0 30px;
+
+    .picker-col {
+      .picker-opt {
+        left: -12px;
+        min-width: 72px;
+      }
+      &:nth-child(2){
+        .picker-opt {
+          &::after {
+            content: "月";
+            position: absolute;
+            right: 3px;
+          }
+        }
+      }
+      &:nth-child(3){
+        .picker-opt {
+          &::after {
+            content: "日";
+            position: absolute;
+            right: 3px;
+          }
+        }
+      }
+      &:nth-child(4){
+        .picker-opt {
+          &::after {
+            content: "点";
+            position: absolute;
+            right: 3px;
+          }
+        }
+      }
+      &:nth-child(5){
+        .picker-opt {
+          &::after {
+            content: "分";
+            position: absolute;
+            right: 3px;
+          }
+        }
+      }
+    }
+  }
+}

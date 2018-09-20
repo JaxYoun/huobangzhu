@@ -1,0 +1,2173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list id="3959f01c-1820-46b6-8a73-51696cc75801" name="ignore" comment="天加支付宝网页支付回调！" />
+    <list default="true" readonly="true" id="497cd014-4e28-4193-9765-da8674175adb" name="Default" comment="" />
+    <ignored path="$PROJECT_DIR$/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-api/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-core/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-management/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-starter/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-sdk/target/" />
+    <ignored path="$PROJECT_DIR$/hbz-app-config/target/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CompilerWorkspaceConfiguration">
+    <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/hbz$AppApp.coverage" NAME="AppApp Coverage Results" MODIFIED="1517464031581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/hbz$App.coverage" NAME="App Coverage Results" MODIFIED="1516773790999" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_TABLE_DETAILS" value="true" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="hbz" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="AgreementTemplateResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/AgreementTemplateResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="211">
+              <caret line="169" column="67" lean-forward="false" selection-start-line="169" selection-start-column="57" selection-end-line="169" selection-end-column="67" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FreemarkerConfig.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/core/config/FreemarkerConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="102">
+              <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AliPagePayResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/payment/alipay/AliPagePayResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebUserResource.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebUserResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="391">
+              <caret line="45" column="101" lean-forward="false" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="101" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HbzUserServiceImpl.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/HbzUserServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="160">
+              <caret line="260" column="5" lean-forward="false" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WebHbzFslOrderResource.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebHbzFslOrderResource.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="118">
+              <caret line="450" column="41" lean-forward="false" selection-start-line="450" selection-start-column="41" selection-end-line="450" selection-end-column="41" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="WeightUnit.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/type/WeightUnit.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ExcelUtils.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/helper/ExcelUtils.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-112">
+              <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StringHelper.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/helper/StringHelper.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="259">
+              <caret line="158" column="50" lean-forward="false" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="AnnotationType" />
+        <option value="Enum" />
+        <option value="HTML File" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>util</find>
+      <find>exportExcel</find>
+      <find>generateExcelFileName</find>
+      <find>readSitePushMessageRecord</find>
+      <find>pushMessage</find>
+      <find>getSitePushMessageRecordDetail</find>
+      <find>this.pushMessage</find>
+      <find>updateIfReadAndReadTimeById</find>
+      <find>getWarehouseBy</find>
+      <find>分页</find>
+      <find>阅读</find>
+      <find>split(</find>
+      <find>ExcelUtils</find>
+      <find>8080</find>
+      <find>handlerAdapters</find>
+      <find>3401</find>
+      <find>SmsService</find>
+      <find>smsService</find>
+      <find>rand</find>
+      <find>Instant</find>
+      <find>page</find>
+      <find>hql</find>
+      <find>read</find>
+      <find>readTime</find>
+      <find>手</find>
+      <find>手动</find>
+      <find>form</find>
+      <find>acc</find>
+      <find>securityParameterPass</find>
+      <find>free</find>
+    </findStrings>
+    <replaceStrings>
+      <replace />
+    </replaceStrings>
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/SitePushMessageRecordResource.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/SitePushMessageRecordRepository.java" />
+        <option value="$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/AppVersionResource.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/AppVersionService.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/AppVersionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/boot/Booter.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/po/Warehouse.java" />
+        <option value="$PROJECT_DIR$/hbz-management/src/main/resources/config/application.yml" />
+        <option value="$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/OnTheWayStartResource.java" />
+        <option value="$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/AlipayResource.java" />
+        <option value="$PROJECT_DIR$/hbz-management/src/main/resources/config/application-pro.yml" />
+        <option value="$PROJECT_DIR$/hbz-starter/src/main/resources/application-pro.yml" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-beans/4.3.8.RELEASE/spring-beans-4.3.8.RELEASE-sources.jar!/org/springframework/beans/factory/BeanFactory.java" />
+        <option value="D:/noSpacePath/Java/jdk1.8.0_144/jre/lib/rt.jar!/javax/net/ssl/X509TrustManager.class" />
+        <option value="$MAVEN_REPOSITORY$/org/projectlombok/lombok/1.16.10/lombok-1.16.10-sources.jar!/lombok/Cleanup.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/SitePushMessageRecordServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/management/service/impl/SitePushMessageServiceImpl.java" />
+        <option value="$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebBannerResource.java" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/BannerServiceImpl.java" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/fileupload/0.0.4-SNAPSHOT/fileupload-0.0.4-20170811.062850-43.jar!/com/troy/keeper/fileupload/web/rest/FileUploadResource.class" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/fileupload/0.0.4-SNAPSHOT/fileupload-0.0.4-20170811.062850-43-sources.jar!/com/troy/keeper/fileupload/web/rest/FileUploadResource.java" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/fileupload/0.0.4-SNAPSHOT/fileupload-0.0.4-20170811.062850-43-sources.jar!/com/troy/keeper/fileupload/dto/UploadFileDTO.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE.jar!/org/springframework/data/jpa/repository/JpaSpecificationExecutor.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/Repository.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/domain/Pageable.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/domain/PageRequest.class" />
+        <option value="$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/dto/SitePushMessageDTO.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.2.RELEASE/spring-security-web-4.2.2.RELEASE.jar!/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-config/4.2.2.RELEASE/spring-security-config-4.2.2.RELEASE.jar!/org/springframework/security/config/annotation/web/AbstractRequestMatcherRegistry.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/entity/Account.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/userdetails/User.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/CredentialsContainer.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-core/4.3.8.RELEASE/spring-core-4.3.8.RELEASE.jar!/org/springframework/core/annotation/Order.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-web/4.2.2.RELEASE/spring-security-web-4.2.2.RELEASE.jar!/org/springframework/security/web/authentication/SimpleUrlAuthenticationSuccessHandler.class" />
+        <option value="$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/WebSecurityConfig.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/web/http/HttpSessionStrategy.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/web/http/CookieHttpSessionStrategy.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/web/http/HeaderHttpSessionStrategy.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/SessionRepository.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/Session.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/session/spring-session/1.3.0.RELEASE/spring-session-1.3.0.RELEASE.jar!/org/springframework/session/ExpiringSession.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/Authentication.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/NoRepositoryBean.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/repository/BaseRepository.class" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaSpecificationExecutor.java" />
+        <option value="$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class" />
+        <option value="$MAVEN_REPOSITORY$/com/troy/keeper/excel-import/0.0.5-SNAPSHOT/excel-import-0.0.5-20171208.014711-9.jar!/com/troy/keeper/excelimport/paramter/ExcelReadParamter.class" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="D:/Program Files/apache-maven-3.3.9" />
+        <option name="userSettingsFile" value="D:\Program Files\apache-maven-3.3.9\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="货帮主Core" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="货帮主SDK工程" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="货帮主SDK工程" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
+        </path>
+      </expand>
+      <select />
+    </treeState>
+  </component>
+  <component name="MavenRunner">
+    <option name="jreName" value="#JAVA_HOME" />
+  </component>
+  <component name="NodeModulesDirectoryManager">
+    <handled-path value="$PROJECT_DIR$/hbz-app/platforms/android/cordova/node_modules" />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="1" />
+    <option name="y" value="1" />
+    <option name="width" value="1364" />
+    <option name="height" value="726" />
+  </component>
+  <component name="ProjectInspectionProfilesVisibleTreeState">
+    <entry key="Project Default">
+      <profile-state>
+        <expanded-state>
+          <State>
+            <id />
+          </State>
+          <State>
+            <id>Abstraction issuesJava</id>
+          </State>
+          <State>
+            <id>Google Web Toolkit issues</id>
+          </State>
+          <State>
+            <id>Java</id>
+          </State>
+          <State>
+            <id>Security issuesJava</id>
+          </State>
+          <State>
+            <id>Serialization issuesJava</id>
+          </State>
+        </expanded-state>
+        <selected-state>
+          <State>
+            <id>SerializableHasSerialVersionUIDField</id>
+          </State>
+        </selected-state>
+      </profile-state>
+    </entry>
+  </component>
+  <component name="ProjectView">
+    <navigator currentView="ProjectPane" proportions="" version="1">
+      <flattenPackages />
+      <showMembers />
+      <showModules />
+      <showLibraryContents />
+      <hideEmptyPackages />
+      <abbreviatePackageNames />
+      <autoscrollToSource />
+      <autoscrollFromSource />
+      <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="hbz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hbz" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hbz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hbz" type="462c0819:PsiDirectoryNode" />
+              <item name="hbz-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hbz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hbz" type="462c0819:PsiDirectoryNode" />
+              <item name="hbz-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hbz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hbz" type="462c0819:PsiDirectoryNode" />
+              <item name="hbz-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hbz" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hbz" type="462c0819:PsiDirectoryNode" />
+              <item name="hbz-api" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="nodejs_interpreter_path" value="D:/Program Files/nodejs/node" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="E:/TEST/wildeWork/xueYin/xueyin-engine/pom.xml" />
+    <property name="SearchEverywhereHistoryKey" value="webFsl&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebHbzFslOrderResource.java&#10;BaseRepo&#9;PSI&#9;JAVA://com.troy.keeper.core.base.repository.BaseRepository&#10;BaseRe&#9;FILE&#9;jar://D:/toryRepsitory/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/repository/BaseCommonRepository.class&#10;NoRepositoryBean  &#9;PSI&#9;JAVA://org.springframework.data.repository.NoRepositoryBean&#10;Commonrepo&#9;PSI&#9;JAVA://com.troy.keeper.core.base.repository.CommonRepository&#10;Dao&#9;PSI&#9;JAVA://com.troy.keeper.hbz.repository.impl.JdbcDaoImpl&#10;HbzRole&#9;PSI&#9;JAVA://com.troy.keeper.hbz.po.HbzRole&#10;webSecu&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.security.WebSecurityConfig&#10;Sitepushmessa&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/SitePushMessageResource.java&#10;webwarehouse&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.WebWarehouseResource&#10;warehouse.java&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/po/Warehouse.java&#10;Warehouse&#9;null&#9;null&#10;News&#9;PSI&#9;JAVA://com.troy.keeper.hbz.po.News&#10;Webnews&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.WebNewsResource&#10;sitepush&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/SitePushMessageRecordServiceImpl.java&#10;site&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/service/impl/SitePushMessageServiceImpl.java&#10;fileup&#9;null&#9;null&#10;Redis&#9;PSI&#9;JAVA://com.troy.keeper.hbz.sys.ExtSessionRepository#redisTemplate&#10;StringH&#9;PSI&#9;JAVA://com.troy.keeper.hbz.helper.StringHelper&#10;sitePushMessageRe&#9;PSI&#9;JAVA://com.troy.keeper.hbz.repository.SitePushMessageRecordRepository&#10;news&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/service/impl/NewsServiceImpl.java&#10;Banner&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/BannerResource.java&#10;WebBanner&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.WebBannerResource&#10;Sitepushme&#9;PSI&#9;JAVA://com.troy.keeper.hbz.po.SitePushMessageRecord&#10;ban&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/BannerResource.java&#10;sitepushmessage&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/SitePushMessageRecordServiceImpl.java&#10;sitepushmessageser&#9;PSI&#9;JAVA://com.troy.keeper.management.service.impl.SitePushMessageServiceImpl&#10;sms&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/SmsResource.java&#10;DispatcherSer&#9;PSI&#9;JAVA://org.springframework.web.servlet.DispatcherServlet&#10;Appversion&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/AppVersionServiceImpl.java&#10;app&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/resources/config/application-dev.yml&#10;WebEx&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.WebExcelExportResource&#10;Onth&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/OnTheWayStartResource.java&#10;warehousea&#9;PSI&#9;JAVA://com.troy.keeper.management.service.WarehouseAuditService&#10;Wareho&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/po/Warehouse.java&#10;Webf&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebHbzFslOrderResource.java&#10;String&#9;FILE&#9;jar://D:/noSpacePath/Java/jdk1.8.0_144/src.zip!/java/lang/String.java&#10;Appver&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/AppVersionResource.java&#10;App&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/AppVersionServiceImpl.java&#10;Bann&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/BannerResource.java&#10;ware&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-core/src/main/java/com/troy/keeper/hbz/po/Warehouse.java&#10;warehousere&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.WebWarehouseResource&#10;bann&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/BannerResource.java&#10;carg&#9;PSI&#9;JAVA://com.troy.keeper.management.web.rest.system.CargoInformationResource&#10;SitepushMessage&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/SitePushMessageResource.java&#10;Hbzversion&#9;PSI&#9;JAVA://com.troy.keeper.management.web.rest.system.HbzVersionManagementResource&#10;appversion&#9;PSI&#9;JAVA://com.troy.keeper.hbz.app.rest.web.AppVersionResource&#10;versionman&#9;PSI&#9;JAVA://com.troy.keeper.hbz.po.HbzVersionManagement&#10;-test&#9;FILE&#9;file://F:/develop/HBZ/trunk/hbz/hbz-starter/src/main/resources/application-test.yml&#10;banner&#9;PSI&#9;JAVA://com.troy.keeper.hbz.po.Banner" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth2" value="75" />
+    <property name="RequestMappingsPanelOrder2" value="2" />
+    <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth0" value="214" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth1" value="151" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth2" value="124" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth3" value="84" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth4" value="93" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatWidth5" value="615" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_flatOrder5" value="5" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth0" value="73" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder0" value="0" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth1" value="69" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder1" value="1" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth2" value="149" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder2" value="2" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth3" value="73" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder3" value="3" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth4" value="73" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder4" value="4" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeWidth5" value="845" />
+    <property name="FileHistory.org.jetbrains.idea.svn.history.SvnHistoryProvider_treeOrder5" value="5" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.troy.keeper.hbz.app.rest.web.payment.alipay" />
+      <recent name="com.troy.keeper.hbz.app.sys" />
+      <recent name="com.troy.keeper.core.config" />
+      <recent name="com.troy.keeper.hbz.service.wexin" />
+      <recent name="com.troy.keeper.hbz.app.rest.web.payment" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\web\payment\alipay" />
+      <recent name="F:\develop\HBZ\trunk\hbz\hbz-starter\src\main\resources\templates" />
+      <recent name="F:\develop\HBZ\trunk\hbz\hbz-sdk\libs\alipay" />
+      <recent name="F:\develop\HBZ\trunk\hbz\hbz-core\src\main\resources" />
+      <recent name="F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\ali" />
+    </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\warehouse\information\informationDetail.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\components\cityPicker.scss</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\components\cityPicker.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\components\cityPicker.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\joinList.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\index.scss</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\takeList.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\takeList.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\takeOrderDetail.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\takeOrder\joinList.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\sendOrder\sendList.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\sendOrder\sendList.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\sendOrder\sendOrderDetail.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\sendOrder\sendOrderDetail.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\personCenter.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\commentOrder\commentOrder.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\auth\personDriverAuth.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\auth\transportCompanyAuth.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\auth\deliveryBoyAuth.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\person\shop\shop.scss</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\home\home.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\login\forget.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\tabs\tabs.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\fulltransport\index.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\shipper.scss</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\helpMeSend\helpMeSend.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\helpMeSend\confirmOrder.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\sendGoods\index.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\sendGoods\selectGoodsModal.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\helpMeBuy\helpMeBuy.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\selectDriver.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\shipper\shipper.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\driver\driver.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\driver\findGoods\findGoods.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\app\services\user.service.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\app\app.module.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\app\config.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\theme\variables.scss</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\config.xml</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app-config\src\main\java\com\troy\keeper\hbz\app\security\SecurityLoginSuccessHandler.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app-config\src\main\java\com\troy\keeper\hbz\app\security\SecurityAuthMetadataSource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-starter\src\main\java\com\troy\keeper\hbz\app\apps\auths\SecurityAuthMetadataSourceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\repository\HbzAuthRepository.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\repository\HbzAssignWorkRepository.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\repository\HbzExOrderRepository.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\repository\HbzUrlRepository.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\impl\SitePushMessageServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\impl\HbzSmOrgServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\impl\HbzExOrderServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\impl\HbzOrderServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\HbzSmOrgService.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\service\HbzExOrderService.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\type\OrderTrans.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\dto\SmOrgDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\dto\HbzTypeValDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\dto\SitePushMessageDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\dto\FundTransToaccountTransferModelDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\po\HbzPersonDriverRegistry.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\dto\EnumQueryDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\dto\SmsVO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\constant\MapSpec.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzBuyOrderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzUserRegistryResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzExResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzUserResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzTenderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzSendOrderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzLtlOrderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\EnumResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzTakerResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzOrderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzProductResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-api\src\main\java\com\troy\keeper\hbz\app\rest\HbzFslOrderResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\repository\HbzExpressPiecesRepository.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\service\impl\CargoInformationServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\service\impl\LogisticsDetailsServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\service\impl\OnTheWayStartServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\service\impl\HbzExpressPiecesServiceImpl.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\utils\MapSpec.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\dto\EnumQueryDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\dto\HbzAssignWorkDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\dto\StartVehicleInformationDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\dto\ManagementHbzExOrderDTO.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\web\rest\system\WarehouseAuditResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\web\rest\system\enums\EnumResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\web\rest\system\HbzUserRegRest.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\web\rest\system\HbzPlatformOrganizationResource.java</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-management\src\main\java\com\troy\keeper\management\web\rest\system\HbzPayResource.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\components\cityPickerContent.ts</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\pages\components\cityPickerContent.html</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-app\src\assets\images\boy.png</PATH>
+          <PATH vcs="svn" revision="16807">F:\develop\HBZ\trunk\hbz\hbz-core\src\main\java\com\troy\keeper\hbz\type\SmsSource.java</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="Spring Boot.App">
+    <configuration name="App" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.troy.keeper.hbz.app.apps.App" />
+      <module name="hbz-starter" />
+      <envs />
+    </configuration>
+    <configuration name="AppApp" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.troy.keeper.management.AppApp" />
+      <module name="hbz-management" />
+      <envs />
+    </configuration>
+    <configuration name="AppVersionServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.troy.keeper.hbz.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.troy.keeper.hbz.service.impl.AppVersionServiceImpl" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hbz-core" />
+      <envs />
+    </configuration>
+    <configuration name="BannerServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.troy.keeper.hbz.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.troy.keeper.hbz.service.impl.BannerServiceImpl" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hbz-core" />
+      <envs />
+    </configuration>
+    <configuration name="JpushUtils" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.troy.keeper.hbz.helper.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.troy.keeper.hbz.helper.JpushUtils" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hbz-core" />
+      <envs />
+    </configuration>
+    <configuration name="SitePushMessageRecordServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.troy.keeper.hbz.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.troy.keeper.hbz.service.impl.SitePushMessageRecordServiceImpl" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hbz-core" />
+      <envs />
+    </configuration>
+    <configuration name="SitePushMessageServiceImpl" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.troy.keeper.management.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.troy.keeper.management.service.impl.SitePushMessageServiceImpl" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="hbz-management" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <module />
+    </configuration>
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="" />
+      <envs />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <envs />
+      <patterns />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
+      <option name="PROGRAM_PARAMETERS" />
+      <predefined_log_file id="idea.log" enabled="true" />
+    </configuration>
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <module name="" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="ANNOTATION_TYPE" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <envs />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="hbz_113_remote" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="10.0.40.113" />
+      <option name="PORT" value="5005" />
+    </configuration>
+    <list size="8">
+      <item index="0" class="java.lang.String" itemvalue="Remote.hbz_113_remote" />
+      <item index="1" class="java.lang.String" itemvalue="Spring Boot.App" />
+      <item index="2" class="java.lang.String" itemvalue="Spring Boot.AppApp" />
+      <item index="3" class="java.lang.String" itemvalue="Application.JpushUtils" />
+      <item index="4" class="java.lang.String" itemvalue="Application.AppVersionServiceImpl" />
+      <item index="5" class="java.lang.String" itemvalue="Application.SitePushMessageRecordServiceImpl" />
+      <item index="6" class="java.lang.String" itemvalue="Application.SitePushMessageServiceImpl" />
+      <item index="7" class="java.lang.String" itemvalue="Application.BannerServiceImpl" />
+    </list>
+    <recent_temporary>
+      <list size="5">
+        <item index="0" class="java.lang.String" itemvalue="Application.BannerServiceImpl" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SitePushMessageServiceImpl" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SitePushMessageRecordServiceImpl" />
+        <item index="3" class="java.lang.String" itemvalue="Application.AppVersionServiceImpl" />
+        <item index="4" class="java.lang.String" itemvalue="Application.JpushUtils" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SbtLocalSettings">
+    <option name="externalProjectsViewState">
+      <projects_view />
+    </option>
+  </component>
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",VISIBILITY_SORTER" />
+  </component>
+  <component name="SvnConfiguration" cleanupOnStartRun="true">
+    <configuration>C:\Users\youn\AppData\Roaming\Subversion</configuration>
+    <supportedVersion>125</supportedVersion>
+  </component>
+  <component name="SvnFileUrlMappingImpl">
+    <option name="myMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-api" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-api" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-app-config" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-app-config" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-core" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-core" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-management" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-management" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-sdk" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-sdk" />
+        </SvnCopyRootSimple>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz\hbz-starter" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz\hbz-starter" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+    <option name="myMoreRealMappingRoots">
+      <list>
+        <SvnCopyRootSimple>
+          <option name="myVcsRoot" value="F:\develop\HBZ\trunk\hbz" />
+          <option name="myCopyRoot" value="F:\develop\HBZ\trunk\hbz" />
+        </SvnCopyRootSimple>
+      </list>
+    </option>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="497cd014-4e28-4193-9765-da8674175adb" name="Default" comment="" />
+      <changelist id="3959f01c-1820-46b6-8a73-51696cc75801" name="ignore" comment="本地变化，忽略提交" />
+      <created>1507884916442</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1507884916442</updated>
+      <workItem from="1507884918023" duration="2479000" />
+      <workItem from="1507899153357" duration="1145000" />
+      <workItem from="1508118240168" duration="11082000" />
+      <workItem from="1508140652250" duration="5343000" />
+      <workItem from="1508203472005" duration="7290000" />
+      <workItem from="1508378797375" duration="7669000" />
+      <workItem from="1508467310794" duration="15602000" />
+      <workItem from="1508807960592" duration="8393000" />
+      <workItem from="1508921513256" duration="2274000" />
+      <workItem from="1509004078136" duration="4346000" />
+      <workItem from="1509066992863" duration="19383000" />
+      <workItem from="1509329300789" duration="4200000" />
+      <workItem from="1509412954600" duration="12464000" />
+      <workItem from="1509460197068" duration="76000" />
+      <workItem from="1509460709308" duration="2965000" />
+      <workItem from="1509498872961" duration="2542000" />
+      <workItem from="1509547027582" duration="6362000" />
+      <workItem from="1509585424217" duration="3568000" />
+      <workItem from="1509688338654" duration="2302000" />
+      <workItem from="1509931441977" duration="7452000" />
+      <workItem from="1510017739429" duration="2025000" />
+      <workItem from="1510191583711" duration="19310000" />
+      <workItem from="1510278667655" duration="20146000" />
+      <workItem from="1510538279563" duration="22878000" />
+      <workItem from="1510585127229" duration="1207000" />
+      <workItem from="1510623283684" duration="24024000" />
+      <workItem from="1510677343472" duration="628000" />
+      <workItem from="1510708481386" duration="20784000" />
+      <workItem from="1510795988059" duration="18876000" />
+      <workItem from="1510840343339" duration="4856000" />
+      <workItem from="1510846354926" duration="5422000" />
+      <workItem from="1510881530792" duration="22961000" />
+      <workItem from="1511059039584" duration="657000" />
+      <workItem from="1511071708176" duration="1350000" />
+      <workItem from="1511140662820" duration="3443000" />
+      <workItem from="1511226683639" duration="24475000" />
+      <workItem from="1511317884570" duration="20300000" />
+      <workItem from="1511399898040" duration="21551000" />
+      <workItem from="1511486712501" duration="22578000" />
+      <workItem from="1511627162812" duration="8892000" />
+      <workItem from="1511702899306" duration="6491000" />
+      <workItem from="1511745310851" duration="22825000" />
+      <workItem from="1511831535515" duration="21987000" />
+      <workItem from="1511918475914" duration="21560000" />
+      <workItem from="1512004373754" duration="11032000" />
+      <workItem from="1512052478280" duration="1285000" />
+      <workItem from="1512090976655" duration="18958000" />
+      <workItem from="1512116619099" duration="595000" />
+      <workItem from="1512350959450" duration="29234000" />
+      <workItem from="1512523774876" duration="17305000" />
+      <workItem from="1512651579015" duration="347000" />
+      <workItem from="1512695547563" duration="18208000" />
+      <workItem from="1512902091995" duration="793000" />
+      <workItem from="1512954955097" duration="20475000" />
+      <workItem from="1513001058976" duration="71000" />
+      <workItem from="1513041899722" duration="19666000" />
+      <workItem from="1513127642877" duration="22793000" />
+      <workItem from="1513175266516" duration="1129000" />
+      <workItem from="1513214385720" duration="22435000" />
+      <workItem from="1513302870220" duration="15528000" />
+      <workItem from="1513560039945" duration="11504000" />
+      <workItem from="1513603414571" duration="813000" />
+      <workItem from="1513645804622" duration="10813000" />
+      <workItem from="1513683694465" duration="52000" />
+      <workItem from="1513733484814" duration="16965000" />
+      <workItem from="1513819495682" duration="25077000" />
+      <workItem from="1513906618237" duration="19591000" />
+      <workItem from="1513948309707" duration="4852000" />
+      <workItem from="1514121141072" duration="1926000" />
+      <workItem from="1514164271313" duration="41870000" />
+      <workItem from="1514336886493" duration="2875000" />
+      <workItem from="1514340187424" duration="9334000" />
+      <workItem from="1514359364057" duration="1799000" />
+      <workItem from="1514361228709" duration="35212000" />
+      <workItem from="1514510201887" duration="23867000" />
+      <workItem from="1514855329834" duration="18496000" />
+      <workItem from="1514954328478" duration="13802000" />
+      <workItem from="1515028026894" duration="17191000" />
+      <workItem from="1515055056528" duration="6865000" />
+      <workItem from="1515114856568" duration="25969000" />
+      <workItem from="1515234377239" duration="717000" />
+      <workItem from="1515235727421" duration="100000" />
+      <workItem from="1515374020559" duration="32017000" />
+      <workItem from="1515460145632" duration="33151000" />
+      <workItem from="1515546411131" duration="26657000" />
+      <workItem from="1515634752332" duration="22545000" />
+      <workItem from="1515685806008" duration="704000" />
+      <workItem from="1515721143948" duration="1838000" />
+      <workItem from="1515722998019" duration="23590000" />
+      <workItem from="1515854913263" duration="747000" />
+      <workItem from="1515978626800" duration="2756000" />
+      <workItem from="1516027676933" duration="744000" />
+      <workItem from="1516065023649" duration="50332000" />
+      <workItem from="1516237869355" duration="460000" />
+      <workItem from="1516239695948" duration="33435000" />
+      <workItem from="1516337334097" duration="3832000" />
+      <workItem from="1516343184815" duration="3071000" />
+      <workItem from="1516346642836" duration="13357000" />
+      <workItem from="1516534573180" duration="4738000" />
+      <workItem from="1516546463271" duration="1499000" />
+      <workItem from="1516583811110" duration="49709000" />
+      <workItem from="1516756397306" duration="21371000" />
+      <workItem from="1516843026500" duration="21125000" />
+      <workItem from="1516929753772" duration="22132000" />
+      <workItem from="1517069142884" duration="567000" />
+      <workItem from="1517071275851" duration="161000" />
+      <workItem from="1517188634045" duration="9226000" />
+      <workItem from="1517275598186" duration="21521000" />
+      <workItem from="1517360780649" duration="23302000" />
+      <workItem from="1517447362775" duration="23966000" />
+      <workItem from="1517534240031" duration="4302000" />
+      <workItem from="1517635620027" duration="273000" />
+      <workItem from="1517793486928" duration="17417000" />
+      <workItem from="1517835619781" duration="78000" />
+      <workItem from="1517879380305" duration="21260000" />
+      <workItem from="1517916687806" duration="3877000" />
+      <workItem from="1517965741725" duration="15707000" />
+      <workItem from="1518052248612" duration="24299000" />
+      <workItem from="1518138723756" duration="2937000" />
+      <workItem from="1518251470496" duration="6142000" />
+      <workItem from="1518311436379" duration="19033000" />
+      <workItem from="1518398541985" duration="17816000" />
+      <workItem from="1519222256669" duration="1669000" />
+      <workItem from="1519303678010" duration="710000" />
+      <workItem from="1519367396920" duration="831000" />
+      <workItem from="1519434459335" duration="9523000" />
+      <workItem from="1519568330145" duration="743000" />
+      <workItem from="1519572315025" duration="622000" />
+      <workItem from="1519607031468" duration="27610000" />
+      <workItem from="1519693717115" duration="27189000" />
+      <workItem from="1519867629823" duration="4198000" />
+      <workItem from="1519876084396" duration="11693000" />
+      <workItem from="1519952869730" duration="21471000" />
+      <workItem from="1520163536176" duration="2437000" />
+      <workItem from="1520215068820" duration="16372000" />
+      <workItem from="1520385620178" duration="41585000" />
+      <workItem from="1520560117311" duration="19876000" />
+      <workItem from="1520818947123" duration="16496000" />
+      <workItem from="1520904463032" duration="39917000" />
+      <workItem from="1521076950832" duration="8550000" />
+      <workItem from="1521167972077" duration="10214000" />
+      <workItem from="1521211332527" duration="831000" />
+      <workItem from="1521607696363" duration="1972000" />
+      <workItem from="1521641210902" duration="418000" />
+      <workItem from="1521703989489" duration="7716000" />
+      <workItem from="1521816995515" duration="987000" />
+      <workItem from="1521908758077" duration="3280000" />
+      <workItem from="1521917802312" duration="541000" />
+      <workItem from="1521939667762" duration="1323000" />
+      <workItem from="1522028807766" duration="4534000" />
+      <workItem from="1522071572980" duration="751000" />
+      <workItem from="1522114555043" duration="11235000" />
+      <workItem from="1522467693843" duration="671000" />
+      <workItem from="1522821785649" duration="3382000" />
+      <workItem from="1523159809265" duration="14822000" />
+      <workItem from="1523411002338" duration="3457000" />
+      <workItem from="1523528900189" duration="243000" />
+      <workItem from="1523861029984" duration="3997000" />
+    </task>
+    <task id="LOCAL-00116" summary="修改專綫訂單狀態！">
+      <created>1517820691712</created>
+      <option name="number" value="00116" />
+      <option name="presentableId" value="LOCAL-00116" />
+      <option name="project" value="LOCAL" />
+      <updated>1517820691712</updated>
+    </task>
+    <task id="LOCAL-00117" summary="修改專綫訂單狀態！">
+      <created>1517885254608</created>
+      <option name="number" value="00117" />
+      <option name="presentableId" value="LOCAL-00117" />
+      <option name="project" value="LOCAL" />
+      <updated>1517885254609</updated>
+    </task>
+    <task id="LOCAL-00118" summary="修改专线保证金验证！">
+      <created>1517966168886</created>
+      <option name="number" value="00118" />
+      <option name="presentableId" value="LOCAL-00118" />
+      <option name="project" value="LOCAL" />
+      <updated>1517966168901</updated>
+    </task>
+    <task id="LOCAL-00119" summary="修改专线保证金验证！">
+      <created>1517970284070</created>
+      <option name="number" value="00119" />
+      <option name="presentableId" value="LOCAL-00119" />
+      <option name="project" value="LOCAL" />
+      <updated>1517970284070</updated>
+    </task>
+    <task id="LOCAL-00120" summary="修改专线保证金验证！">
+      <created>1517970402083</created>
+      <option name="number" value="00120" />
+      <option name="presentableId" value="LOCAL-00120" />
+      <option name="project" value="LOCAL" />
+      <updated>1517970402083</updated>
+    </task>
+    <task id="LOCAL-00121" summary="修改仓储审核查询列表接口！">
+      <created>1517978743474</created>
+      <option name="number" value="00121" />
+      <option name="presentableId" value="LOCAL-00121" />
+      <option name="project" value="LOCAL" />
+      <updated>1517978743474</updated>
+    </task>
+    <task id="LOCAL-00122" summary="修改仓储审核查询列表接口！">
+      <created>1517995527583</created>
+      <option name="number" value="00122" />
+      <option name="presentableId" value="LOCAL-00122" />
+      <option name="project" value="LOCAL" />
+      <updated>1517995527583</updated>
+    </task>
+    <task id="LOCAL-00123" summary="修改仓储审核查询列表接口！">
+      <created>1518069784192</created>
+      <option name="number" value="00123" />
+      <option name="presentableId" value="LOCAL-00123" />
+      <option name="project" value="LOCAL" />
+      <updated>1518069784192</updated>
+    </task>
+    <task id="LOCAL-00124" summary="推送消息app和后台区分开！">
+      <created>1518073875913</created>
+      <option name="number" value="00124" />
+      <option name="presentableId" value="LOCAL-00124" />
+      <option name="project" value="LOCAL" />
+      <updated>1518073875913</updated>
+    </task>
+    <task id="LOCAL-00125" summary="修改仓储审核查询列表接口！">
+      <created>1518077582346</created>
+      <option name="number" value="00125" />
+      <option name="presentableId" value="LOCAL-00125" />
+      <option name="project" value="LOCAL" />
+      <updated>1518077582346</updated>
+    </task>
+    <task id="LOCAL-00126" summary="排除banner、app版本检测接口权限！">
+      <created>1518321632323</created>
+      <option name="number" value="00126" />
+      <option name="presentableId" value="LOCAL-00126" />
+      <option name="project" value="LOCAL" />
+      <updated>1518321632323</updated>
+    </task>
+    <task id="LOCAL-00127" summary="修改仓储审核查询列表接口！">
+      <created>1518324667898</created>
+      <option name="number" value="00127" />
+      <option name="presentableId" value="LOCAL-00127" />
+      <option name="project" value="LOCAL" />
+      <updated>1518324667898</updated>
+    </task>
+    <task id="LOCAL-00128" summary="排除咨询获取接口的权限验证！">
+      <created>1518331842497</created>
+      <option name="number" value="00128" />
+      <option name="presentableId" value="LOCAL-00128" />
+      <option name="project" value="LOCAL" />
+      <updated>1518331842497</updated>
+    </task>
+    <task id="LOCAL-00129" summary="修改消息推送富文本内容接口！">
+      <created>1518402809127</created>
+      <option name="number" value="00129" />
+      <option name="presentableId" value="LOCAL-00129" />
+      <option name="project" value="LOCAL" />
+      <updated>1518402809127</updated>
+    </task>
+    <task id="LOCAL-00130" summary="修改推送消息接口富文本！">
+      <created>1518406043691</created>
+      <option name="number" value="00130" />
+      <option name="presentableId" value="LOCAL-00130" />
+      <option name="project" value="LOCAL" />
+      <updated>1518406043691</updated>
+    </task>
+    <task id="LOCAL-00131" summary="修改推送消息接口阅读时间！">
+      <created>1518414965148</created>
+      <option name="number" value="00131" />
+      <option name="presentableId" value="LOCAL-00131" />
+      <option name="project" value="LOCAL" />
+      <updated>1518414965148</updated>
+    </task>
+    <task id="LOCAL-00132" summary="添加版本删除接口！">
+      <created>1518417935805</created>
+      <option name="number" value="00132" />
+      <option name="presentableId" value="LOCAL-00132" />
+      <option name="project" value="LOCAL" />
+      <updated>1518417935805</updated>
+    </task>
+    <task id="LOCAL-00133" summary="排除咨询接口权限验证！">
+      <created>1518419267046</created>
+      <option name="number" value="00133" />
+      <option name="presentableId" value="LOCAL-00133" />
+      <option name="project" value="LOCAL" />
+      <updated>1518419267046</updated>
+    </task>
+    <task id="LOCAL-00134" summary="修改添加仓储时接口中，生成审核记录的逻辑！">
+      <created>1519609879233</created>
+      <option name="number" value="00134" />
+      <option name="presentableId" value="LOCAL-00134" />
+      <option name="project" value="LOCAL" />
+      <updated>1519609879233</updated>
+    </task>
+    <task id="LOCAL-00135" summary="添加仓储时接口，修改发布时间逻辑！">
+      <created>1519614240967</created>
+      <option name="number" value="00135" />
+      <option name="presentableId" value="LOCAL-00135" />
+      <option name="project" value="LOCAL" />
+      <updated>1519614240967</updated>
+    </task>
+    <task id="LOCAL-00136" summary="添加仓储时接口，修改发布时间逻辑！">
+      <created>1519621208345</created>
+      <option name="number" value="00136" />
+      <option name="presentableId" value="LOCAL-00136" />
+      <option name="project" value="LOCAL" />
+      <updated>1519621208345</updated>
+    </task>
+    <task id="LOCAL-00137" summary="web段获取菜单接口，完善公共菜单逻辑！">
+      <created>1519634007795</created>
+      <option name="number" value="00137" />
+      <option name="presentableId" value="LOCAL-00137" />
+      <option name="project" value="LOCAL" />
+      <updated>1519634007795</updated>
+    </task>
+    <task id="LOCAL-00138" summary="增加了电话号码有效性验证接口，菜单获取接口！">
+      <created>1519636482462</created>
+      <option name="number" value="00138" />
+      <option name="presentableId" value="LOCAL-00138" />
+      <option name="project" value="LOCAL" />
+      <updated>1519636482462</updated>
+    </task>
+    <task id="LOCAL-00139" summary="添加仓储时接口，修改发布时间逻辑！">
+      <created>1519698355274</created>
+      <option name="number" value="00139" />
+      <option name="presentableId" value="LOCAL-00139" />
+      <option name="project" value="LOCAL" />
+      <updated>1519698355275</updated>
+    </task>
+    <task id="LOCAL-00140" summary="推送消息，添加阅读时间字段！">
+      <created>1519704123777</created>
+      <option name="number" value="00140" />
+      <option name="presentableId" value="LOCAL-00140" />
+      <option name="project" value="LOCAL" />
+      <updated>1519704123777</updated>
+    </task>
+    <task id="LOCAL-00141" summary="推送消息查询，添加删除条件！">
+      <created>1519715397057</created>
+      <option name="number" value="00141" />
+      <option name="presentableId" value="LOCAL-00141" />
+      <option name="project" value="LOCAL" />
+      <updated>1519715397057</updated>
+    </task>
+    <task id="LOCAL-00142" summary="添加仓储时接口，修改发布时间逻辑！">
+      <created>1519868502307</created>
+      <option name="number" value="00142" />
+      <option name="presentableId" value="LOCAL-00142" />
+      <option name="project" value="LOCAL" />
+      <updated>1519868502308</updated>
+    </task>
+    <task id="LOCAL-00143" summary="修改仓储添加接口，调整操作提示信息位置！">
+      <created>1519868590514</created>
+      <option name="number" value="00143" />
+      <option name="presentableId" value="LOCAL-00143" />
+      <option name="project" value="LOCAL" />
+      <updated>1519868590514</updated>
+    </task>
+    <task id="LOCAL-00144" summary="修改仓储添加接口，修改仓储地址最少字数限制！">
+      <created>1519958439061</created>
+      <option name="number" value="00144" />
+      <option name="presentableId" value="LOCAL-00144" />
+      <option name="project" value="LOCAL" />
+      <updated>1519958439062</updated>
+    </task>
+    <task id="LOCAL-00145" summary="添加合同展现接口！">
+      <created>1519981693813</created>
+      <option name="number" value="00145" />
+      <option name="presentableId" value="LOCAL-00145" />
+      <option name="project" value="LOCAL" />
+      <updated>1519981693813</updated>
+    </task>
+    <task id="LOCAL-00146" summary="添加web端查询未读消息条数接口！">
+      <created>1520238072872</created>
+      <option name="number" value="00146" />
+      <option name="presentableId" value="LOCAL-00146" />
+      <option name="project" value="LOCAL" />
+      <updated>1520238072873</updated>
+    </task>
+    <task id="LOCAL-00147" summary="添加支付宝网页支付接口！">
+      <created>1520398686331</created>
+      <option name="number" value="00147" />
+      <option name="presentableId" value="LOCAL-00147" />
+      <option name="project" value="LOCAL" />
+      <updated>1520398686332</updated>
+    </task>
+    <task id="LOCAL-00148" summary="添加支付宝网页支付接口！">
+      <created>1520399365851</created>
+      <option name="number" value="00148" />
+      <option name="presentableId" value="LOCAL-00148" />
+      <option name="project" value="LOCAL" />
+      <updated>1520399365851</updated>
+    </task>
+    <task id="LOCAL-00149" summary="调整banner默认状态，app版本禁用状态！">
+      <created>1520415261008</created>
+      <option name="number" value="00149" />
+      <option name="presentableId" value="LOCAL-00149" />
+      <option name="project" value="LOCAL" />
+      <updated>1520415261008</updated>
+    </task>
+    <task id="LOCAL-00150" summary="天加支付宝网页支付回调！">
+      <created>1520491968024</created>
+      <option name="number" value="00150" />
+      <option name="presentableId" value="LOCAL-00150" />
+      <option name="project" value="LOCAL" />
+      <updated>1520491968024</updated>
+    </task>
+    <task id="LOCAL-00151" summary="天加支付宝网页支付回调！">
+      <created>1520492676306</created>
+      <option name="number" value="00151" />
+      <option name="presentableId" value="LOCAL-00151" />
+      <option name="project" value="LOCAL" />
+      <updated>1520492676306</updated>
+    </task>
+    <task id="LOCAL-00152" summary="天加支付宝网页支付回调！">
+      <created>1520580257661</created>
+      <option name="number" value="00152" />
+      <option name="presentableId" value="LOCAL-00152" />
+      <option name="project" value="LOCAL" />
+      <updated>1520580257662</updated>
+    </task>
+    <task id="LOCAL-00153" summary="天加支付宝网页支付回调！">
+      <created>1520582479172</created>
+      <option name="number" value="00153" />
+      <option name="presentableId" value="LOCAL-00153" />
+      <option name="project" value="LOCAL" />
+      <updated>1520582479172</updated>
+    </task>
+    <task id="LOCAL-00154" summary="天加支付宝网页支付回调！">
+      <created>1520586605350</created>
+      <option name="number" value="00154" />
+      <option name="presentableId" value="LOCAL-00154" />
+      <option name="project" value="LOCAL" />
+      <updated>1520586605350</updated>
+    </task>
+    <task id="LOCAL-00155" summary="修改附件上传路径！">
+      <created>1520910629699</created>
+      <option name="number" value="00155" />
+      <option name="presentableId" value="LOCAL-00155" />
+      <option name="project" value="LOCAL" />
+      <updated>1520910629700</updated>
+    </task>
+    <task id="LOCAL-00156" summary="修改支付金额获取字段！">
+      <created>1520913575629</created>
+      <option name="number" value="00156" />
+      <option name="presentableId" value="LOCAL-00156" />
+      <option name="project" value="LOCAL" />
+      <updated>1520913575629</updated>
+    </task>
+    <task id="LOCAL-00157" summary="修改支付金额获取字段！">
+      <created>1520933213774</created>
+      <option name="number" value="00157" />
+      <option name="presentableId" value="LOCAL-00157" />
+      <option name="project" value="LOCAL" />
+      <updated>1520933213774</updated>
+    </task>
+    <task id="LOCAL-00158" summary="修改仓储状态、banner排序！">
+      <created>1520995553165</created>
+      <option name="number" value="00158" />
+      <option name="presentableId" value="LOCAL-00158" />
+      <option name="project" value="LOCAL" />
+      <updated>1520995553165</updated>
+    </task>
+    <task id="LOCAL-00159" summary="修改仓储状态、banner排序！">
+      <created>1520997482040</created>
+      <option name="number" value="00159" />
+      <option name="presentableId" value="LOCAL-00159" />
+      <option name="project" value="LOCAL" />
+      <updated>1520997482041</updated>
+    </task>
+    <task id="LOCAL-00160" summary="修改app版本判断！">
+      <created>1521014507053</created>
+      <option name="number" value="00160" />
+      <option name="presentableId" value="LOCAL-00160" />
+      <option name="project" value="LOCAL" />
+      <updated>1521014507053</updated>
+    </task>
+    <task id="LOCAL-00161" summary="修改：极光推送配置--&gt;生产环境参数！">
+      <created>1521168500067</created>
+      <option name="number" value="00161" />
+      <option name="presentableId" value="LOCAL-00161" />
+      <option name="project" value="LOCAL" />
+      <updated>1521168500069</updated>
+    </task>
+    <task id="LOCAL-00162" summary="修改：starter-极光推送配置--&gt;生产环境参数！">
+      <created>1521168738825</created>
+      <option name="number" value="00162" />
+      <option name="presentableId" value="LOCAL-00162" />
+      <option name="project" value="LOCAL" />
+      <updated>1521168738825</updated>
+    </task>
+    <task id="LOCAL-00163" summary="修复推送消息时间问题和由时间引起的定时不发送问题！">
+      <created>1521707005252</created>
+      <option name="number" value="00163" />
+      <option name="presentableId" value="LOCAL-00163" />
+      <option name="project" value="LOCAL" />
+      <updated>1521707005252</updated>
+    </task>
+    <task id="LOCAL-00164" summary="为app端banner添加排序！">
+      <created>1521710685413</created>
+      <option name="number" value="00164" />
+      <option name="presentableId" value="LOCAL-00164" />
+      <option name="project" value="LOCAL" />
+      <updated>1521710685413</updated>
+    </task>
+    <option name="localTasksCounter" value="165" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="1859267000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <layout>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3026316" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34539473" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43256578" sideWeight="0.5060514" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16641453" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20723684" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13486843" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4506579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27302632" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3260212" sideWeight="0.8422131" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30181542" sideWeight="0.49281314" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.295764" sideWeight="0.15778689" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38322368" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54111844" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2680921" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.43256578" sideWeight="0.5060514" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.16641453" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="11" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Dynamic Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30181542" sideWeight="0.49281314" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24962178" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.38322368" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3026316" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.54111844" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.34539473" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20723684" sideWeight="0.49394855" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13486843" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4506579" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27302632" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3260212" sideWeight="0.8422131" order="5" side_tool="false" content_ui="combo" />
+      <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32894737" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32980332" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2680921" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.295764" sideWeight="0.15778689" order="3" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="修改推送消息接口富文本！" />
+    <MESSAGE value="修改推送消息接口阅读时间！" />
+    <MESSAGE value="添加版本删除接口！" />
+    <MESSAGE value="排除咨询接口权限验证！" />
+    <MESSAGE value="修改添加仓储时接口中，生成审核记录的逻辑！" />
+    <MESSAGE value="web段获取菜单接口，完善公共菜单逻辑！" />
+    <MESSAGE value="增加了电话号码有效性验证接口，菜单获取接口！" />
+    <MESSAGE value="推送消息，添加阅读时间字段！" />
+    <MESSAGE value="推送消息查询，添加删除条件！" />
+    <MESSAGE value="添加仓储时接口，修改发布时间逻辑！" />
+    <MESSAGE value="修改仓储添加接口，调整操作提示信息位置！" />
+    <MESSAGE value="修改仓储添加接口，修改仓储地址最少字数限制！" />
+    <MESSAGE value="添加合同展现接口！" />
+    <MESSAGE value="添加web端查询未读消息条数接口！" />
+    <MESSAGE value="添加支付宝网页支付接口！" />
+    <MESSAGE value="调整banner默认状态，app版本禁用状态！" />
+    <MESSAGE value="天加支付宝网页支付回调！" />
+    <MESSAGE value="修改附件上传路径！" />
+    <MESSAGE value="修改支付金额获取字段！" />
+    <MESSAGE value="修改仓储状态、banner排序！" />
+    <MESSAGE value="修改app版本判断！" />
+    <MESSAGE value="修改：极光推送配置--&gt;生产环境参数！" />
+    <MESSAGE value="修改：starter-极光推送配置--&gt;生产环境参数！" />
+    <MESSAGE value="修复推送消息时间问题和由时间引起的定时不发送问题！" />
+    <MESSAGE value="为app端banner添加排序！" />
+    <option name="LAST_COMMIT_MESSAGE" value="为app端banner添加排序！" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint type="java-method">
+          <url>jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot/1.5.3.RELEASE/spring-boot-1.5.3.RELEASE.jar!/org/springframework/boot/CommandLineRunner.class</url>
+          <line>8</line>
+          <properties class="org.springframework.boot.CommandLineRunner" method="run">
+            <option name="EMULATED" value="true" />
+          </properties>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/HbzOrderServiceImpl.java</url>
+          <line>232</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebFslOrderResource.java</url>
+          <line>50</line>
+          <properties />
+          <option name="timeStamp" value="18" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebCommonResource.java</url>
+          <line>56</line>
+          <properties />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebSpecialLineResource.java</url>
+          <line>75</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebSpecialLineResource.java</url>
+          <line>80</line>
+          <properties />
+          <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57-sources.jar!/com/troy/keeper/core/export/ExcelHandleUtil.java</url>
+          <line>139</line>
+          <properties />
+          <option name="timeStamp" value="46" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebProxyBuyResource.java</url>
+          <line>113</line>
+          <properties />
+          <option name="timeStamp" value="48" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebProxyDeliveryResource.java</url>
+          <line>366</line>
+          <properties />
+          <option name="timeStamp" value="55" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/WebPayServiceImpl.java</url>
+          <line>39</line>
+          <properties />
+          <option name="timeStamp" value="74" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/BaseEntityServiceImpl.java</url>
+          <line>55</line>
+          <properties />
+          <option name="timeStamp" value="82" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/NewsServiceImpl.java</url>
+          <line>134</line>
+          <properties />
+          <option name="timeStamp" value="95" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/troy/keeper/fileupload/0.0.4-SNAPSHOT/fileupload-0.0.4-20170811.062850-43-sources.jar!/com/troy/keeper/fileupload/service/impl/UploadServiceImpl.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="133" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/troy/keeper/fileupload/0.0.4-SNAPSHOT/fileupload-0.0.4-20170811.062850-43-sources.jar!/com/troy/keeper/fileupload/web/rest/FileUploadResource.java</url>
+          <line>35</line>
+          <properties />
+          <option name="timeStamp" value="134" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/SmsResource.java</url>
+          <line>22</line>
+          <properties />
+          <option name="timeStamp" value="148" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebSpecialLineResource.java</url>
+          <line>286</line>
+          <properties />
+          <option name="timeStamp" value="173" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/com/google/code/gson/gson/2.8.0/gson-2.8.0.jar!/com/google/gson/JsonPrimitive.class</url>
+          <line>120</line>
+          <properties />
+          <option name="timeStamp" value="222" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>jar://$MAVEN_REPOSITORY$/cn/jpush/api/jpush-client/3.3.3/jpush-client-3.3.3-sources.jar!/cn/jpush/api/push/model/PushPayload.java</url>
+          <line>141</line>
+          <properties />
+          <option name="timeStamp" value="223" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebPagePayResource.java</url>
+          <line>129</line>
+          <properties />
+          <option name="timeStamp" value="232" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+      <option name="time" value="247" />
+    </breakpoint-manager>
+    <watches-manager />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/hbz-starter/src/main/java/com/troy/keeper/hbz/app/apps/auths/SecurityAuthMetadataSourceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="76" column="23" lean-forward="false" selection-start-line="76" selection-start-column="12" selection-end-line="76" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/SecurityAccessDecisionManager.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="43" column="57" lean-forward="true" selection-start-line="43" selection-start-column="57" selection-end-line="43" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/WebSecurityConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="137" column="28" lean-forward="true" selection-start-line="137" selection-start-column="28" selection-end-line="137" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/DelegateServletInputStream.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="13" lean-forward="false" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/SecurityRequestFilter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="68" column="35" lean-forward="false" selection-start-line="68" selection-start-column="35" selection-end-line="68" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/userdetails/UserDetails.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="14" column="22" lean-forward="false" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/userdetails/User.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="24" column="13" lean-forward="false" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/entity/Account.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/sys/BootstrapProcessor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="966">
+          <caret line="92" column="66" lean-forward="true" selection-start-line="92" selection-start-column="66" selection-end-line="92" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/CommonResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="12" column="36" lean-forward="true" selection-start-line="12" selection-start-column="36" selection-end-line="12" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-starter/src/main/java/com/troy/keeper/hbz/app/apps/auths/SecurityUserDetailsServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="34" column="97" lean-forward="false" selection-start-line="34" selection-start-column="89" selection-end-line="34" selection-end-column="97" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/SecurityUserDetailsService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="30" lean-forward="false" selection-start-line="5" selection-start-column="30" selection-end-line="5" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebAreaResourc.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="13" lean-forward="false" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebNewsResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="67" column="74" lean-forward="false" selection-start-line="67" selection-start-column="74" selection-end-line="67" selection-end-column="74" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/HbzBuyOrderResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="50" column="17" lean-forward="false" selection-start-line="50" selection-start-column="17" selection-end-line="50" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/HbzUserService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="31" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/noSpacePath/Java/jdk1.8.0_144/src.zip!/java/security/Principal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-564">
+          <caret line="34" column="42" lean-forward="true" selection-start-line="34" selection-start-column="42" selection-end-line="34" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/Authentication.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="43" lean-forward="false" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/web/Resource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-app-config/src/main/java/com/troy/keeper/hbz/app/security/SecurityAccessDeniedHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="51" column="39" lean-forward="false" selection-start-line="51" selection-start-column="39" selection-end-line="51" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/security/spring-security-core/4.2.2.RELEASE/spring-security-core-4.2.2.RELEASE.jar!/org/springframework/security/core/context/SecurityContextHolder.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/EntityRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="35" lean-forward="true" selection-start-line="13" selection-start-column="35" selection-end-line="13" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/impl/CostStaticsRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="31" column="13" lean-forward="false" selection-start-line="31" selection-start-column="13" selection-end-line="31" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/impl/EntityRepositoryImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="28" column="53" lean-forward="false" selection-start-line="28" selection-start-column="53" selection-end-line="28" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/impl/JdbcDaoImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="20" column="40" lean-forward="false" selection-start-line="20" selection-start-column="40" selection-end-line="20" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/repository/JdbcDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/repository/CommonRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="31" lean-forward="false" selection-start-line="11" selection-start-column="31" selection-end-line="11" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/NoRepositoryBean.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="16" column="22" lean-forward="false" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="37" column="24" lean-forward="false" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/CrudRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="10" column="73" lean-forward="false" selection-start-line="10" selection-start-column="73" selection-end-line="10" selection-end-column="73" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/repository/BaseCommonRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="33" column="25" lean-forward="true" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/Repository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/1.13.3.RELEASE/spring-data-commons-1.13.3.RELEASE.jar!/org/springframework/data/repository/PagingAndSortingRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="17" lean-forward="false" selection-start-line="13" selection-start-column="17" selection-end-line="13" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/troy/keeper/troy-keeper-core/0.0.5-SNAPSHOT/troy-keeper-core-0.0.5-20171129.015754-57.jar!/com/troy/keeper/core/base/repository/BaseRepository.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="13" column="110" lean-forward="false" selection-start-line="13" selection-start-column="110" selection-end-line="13" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/1.11.3.RELEASE/spring-data-jpa-1.11.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaSpecificationExecutor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="31" column="7" lean-forward="true" selection-start-line="31" selection-start-column="7" selection-end-line="31" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/resources/config/application-dev.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="206">
+          <caret line="19" column="22" lean-forward="false" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/resources/config/application-common.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/resources/config/application-assets.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="34" column="35" lean-forward="true" selection-start-line="34" selection-start-column="35" selection-end-line="34" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/resources/config/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="8" column="19" lean-forward="true" selection-start-line="8" selection-start-column="19" selection-end-line="8" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="13" lean-forward="true" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/helper/StringHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="259">
+          <caret line="158" column="50" lean-forward="false" selection-start-line="158" selection-start-column="50" selection-end-line="158" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.8.RELEASE/spring-webmvc-4.3.8.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="13" column="23" lean-forward="false" selection-start-line="13" selection-start-column="19" selection-end-line="13" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/management/web/rest/system/AgreementTemplateResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="169" column="67" lean-forward="false" selection-start-line="169" selection-start-column="57" selection-end-line="169" selection-end-column="67" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-management/src/main/java/com/troy/keeper/core/config/FreemarkerConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="19" column="14" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/payment/alipay/AliPagePayResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="52" column="12" lean-forward="false" selection-start-line="52" selection-start-column="12" selection-end-line="52" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebUserResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="45" column="101" lean-forward="false" selection-start-line="45" selection-start-column="82" selection-end-line="45" selection-end-column="101" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/service/impl/HbzUserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="260" column="5" lean-forward="false" selection-start-line="260" selection-start-column="5" selection-end-line="260" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/helper/ExcelUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-112">
+          <caret line="33" column="29" lean-forward="false" selection-start-line="33" selection-start-column="29" selection-end-line="33" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-core/src/main/java/com/troy/keeper/hbz/type/WeightUnit.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/troy/keeper/excel-import/0.0.5-SNAPSHOT/excel-import-0.0.5-20171208.014711-9.jar!/com/troy/keeper/excelimport/paramter/ExcelReadParamter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="62" column="39" lean-forward="false" selection-start-line="62" selection-start-column="39" selection-end-line="62" selection-end-column="39" />
+          <folding>
+            <element signature="e#1595#1596#0" expanded="true" />
+            <element signature="e#1641#1642#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hbz-api/src/main/java/com/troy/keeper/hbz/app/rest/web/WebHbzFslOrderResource.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="450" column="41" lean-forward="false" selection-start-line="450" selection-start-column="41" selection-end-line="450" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>scala-sdk-2.11.11</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>hbz-app-config</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

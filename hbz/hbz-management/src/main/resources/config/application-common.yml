@@ -1,0 +1,23 @@
+security:
+  parameter:
+    user: j_user
+    pass: j_pass
+  url:
+    login: /login
+    home: /home
+    auths: /security
+    logout: /logout
+session:
+  header: X-AUTH-TOKEN
+  strategy: header
+debug: true
+#server:
+#    port: 8080
+  #port: 443
+  #ssl:
+    #key-store: D:\keystore\hbz.keystore
+    #key-password: 123456
+sms:
+  url: http://mb345.com:999/ws/BatchSend2.aspx
+  corpID: LKSDK0005742
+  secure: zh9527@

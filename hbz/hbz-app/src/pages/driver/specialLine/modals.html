@@ -1,0 +1,23 @@
+<ion-content padding class="special-line special-line-modal">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>车长选择</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ul class="my-check-box">
+        <li *ngFor="let t of transArray" (click)="goSelectBack(t)" [ngClass]="{'selected': t.isSelected}">
+          <span>{{t.transSize}}</span>
+          <i></i>
+        </li>
+      </ul>
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="saveNew()" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-cancel">取消</button>
+    </div>
+  </div>
+
+</ion-content>

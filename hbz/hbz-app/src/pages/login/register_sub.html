@@ -1,0 +1,34 @@
+<ion-content class="login-content">
+  <public-header></public-header>
+  <div class="login register register-sub">
+    <ul>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-mima1"></use>
+          </svg>
+        </label>
+        <input type="password" [(ngModel)]="password_1" maxlength="20" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+        <span *ngIf="!password_1" class="placeholder">请输入密码</span>
+      </li>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-mima1"></use>
+          </svg>
+        </label>
+        <input type="password" [(ngModel)]="password_2" maxlength="20" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')">
+        <span *ngIf="!password_2" class="placeholder">请再次输入密码</span>
+      </li>
+      <li>
+        <ion-item>
+          <ion-label>点击同意货帮主平台服务协议</ion-label>
+          <ion-checkbox [(ngModel)]="cucumber" (ionChange)="updateCucumber()"></ion-checkbox>
+        </ion-item>
+        <a class="readme" (click)="presentModal()">《货帮主平台服务协议》</a>
+      </li>
+      <li></li><!-- 留空 -->
+    </ul>
+    <button disabled={{isNext}} (click)="register()" class="confirm">确定</button>
+  </div>
+</ion-content>

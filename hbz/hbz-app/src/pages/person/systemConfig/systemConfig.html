@@ -1,0 +1,53 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content>
+  <ion-list class="my-icon-list">
+    <ion-item (click)="goToAnyWhere('1')" style="margin-top:50px;">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+        </svg>
+      </span>
+      关于货帮主
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAnyWhere('2')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+        </svg>
+      </span>
+      平台使用协议
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="checkUpdate()">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+        </svg>
+      </span>
+      检查更新
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="clearCache()">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+        </svg>
+      </span>
+      清空缓存
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list class="my-icon-list">
+    <ion-item (click)="loinOut()">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-hetong"></use>
+        </svg>
+      </span>
+      退出登录
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+</ion-content>

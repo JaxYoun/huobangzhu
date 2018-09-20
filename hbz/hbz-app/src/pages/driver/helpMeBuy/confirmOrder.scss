@@ -1,0 +1,101 @@
+
+.confirmOrder {
+  ion-datetime {
+    opacity: 1;
+  }
+  .none-border {
+    border: none !important;
+  }
+  .pay-method {
+    ion-card-header{
+      font-size: 1.2rem;
+      background: #ececec;
+      color: #666;
+      line-height: 28px;
+      padding: 0;
+      text-indent: 1em;
+      border-top: 1px solid #ccc;
+      border-bottom: 1px solid #fff;
+    }
+    ion-card-content {
+      padding: 0;
+    }
+    ion-item {
+      border-bottom: 1px solid #ddd;
+    }
+    ion-label {
+      padding: 0;
+      font-size: 1.4rem;
+    }
+
+  }
+  ion-label {
+    font-size: 1.5rem !important;
+  }
+  input, .datetime-text {
+    font-size: 1.5rem;
+    border: none !important;
+    border-bottom: 1px solid #ddd !important;
+    border-radius: 0 !important;
+    color: #333 !important;
+    opacity: 1 !important;
+  }
+}
+
+
+
+.payonline{
+
+  .info {
+    padding: 12px;
+    height: auto;
+    background: darken($color, 12);
+    color: #fff;
+    font-size: 1.6rem;
+
+    p {
+      margin: 0;
+      line-height: 2rem;
+    }
+    .price {
+      margin: 25px auto 10px auto;
+      background: #fff;
+      border-radius: 10px;
+      text-align: center;
+      color: $color;
+      max-width: 50%;
+      line-height: 3rem;
+      font-size: 2rem;
+
+      span {
+        font-size: 1rem;
+      }
+    }
+  }
+  ion-list {
+    border-top: 1px solid #ddd;
+    margin-top: 30px;
+
+    ion-avatar {
+      font-size: 2em;
+      vertical-align: bottom;
+      padding-top: 5px;
+    }
+    ion-item {
+      border-bottom: 1px solid #ddd;
+
+      .item-inner {
+        border-bottom: none !important;
+      }
+    }
+  }
+  .confirm {
+    @extend .confirm-button;
+  }
+}
+
+.car-collect {
+  .confirm {
+    @extend .confirm-button;
+  }
+}

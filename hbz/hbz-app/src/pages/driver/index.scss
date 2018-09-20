@@ -1,0 +1,55 @@
+fullCarryMap {
+	#map_container{
+		width: 100%;
+		height: 100%;
+	}
+	#btn-location{
+		position: relative;
+		top: 10px;
+		left: 0;
+		z-index: 999;
+	}
+	.btn_loaction{
+		padding-right:10px;
+	}
+}
+
+.full-carry {
+  .header {
+    line-height: 40px !important;
+    height: 48px;
+
+    i {
+      margin-right: -15px;
+      margin-top: 10px !important;
+      border-radius: 0 !important;
+      background: #ffa21d !important;
+      color: #fff !important;
+      position: relative;
+      padding-right: 5px !important;
+      padding-left: 15px !important;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 0;
+        height: 0;
+        z-index: 99;
+        background: none;
+        border-width: 10px;
+        border-style:solid;
+        border-color:transparent  transparent  transparent  #fff;
+      }
+
+    }
+  }
+}
+
+.help-me-buy-take {
+    .line-list {
+      margin-top: 228px !important;
+      margin-bottom: 50px;
+    }
+}

@@ -1,0 +1,205 @@
+<app-header title="确认发货信息"></app-header>
+<ion-content class="fulltransport confirm-order">
+  <h1>订单编号：{{obj.orderNo}}</h1>
+  <ion-card class="none-border">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      货物详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>货物名称:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>预估重量:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.commodityWeight" disabled="true"></ion-input>
+          <ion-label unit>吨</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>预估体积:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.commodityVolume" disabled="true"></ion-input>
+          <ion-label unit>方</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>接运时间:</ion-label>
+          <ion-input [(ngModel)]="obj.orderTakeStart" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>送达时间:</ion-label>
+            <ion-input [(ngModel)]="obj.destlimit" disabled="true"></ion-input>
+          </ion-item>
+        <ion-item>
+          <ion-label stacked>货物描述:</ion-label>
+          <ion-textarea [(ngModel)]="obj.commodityDescribe" disabled="true"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      车辆要求
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>车辆类型:</ion-label>
+          <ion-input [(ngModel)]="obj.transType" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>最低载重:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.maxLoad" disabled="true"></ion-input>
+          <ion-label unit>吨</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>车长选择:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.transLen"  disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      费用
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>预估总价:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.expectedPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>预估单价:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.unitPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        取货信息
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>取货地址:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.pickUpAddress" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label stacked>联系人:</ion-label>
+              <ion-input type="text" [(ngModel)]="obj.linkMan" disabled="true"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>联系电话:</ion-label>
+              <ion-input type="number"  [(ngModel)]="obj.linkTelephone" disabled="true"></ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-label stacked>详细地址:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.pickUpAddressInfo" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+  <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        送货信息
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>取货地址:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.deliverAddress" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+              <ion-label stacked>联系人:</ion-label>
+              <ion-input type="text" [(ngModel)]="obj.destLinker" disabled="true"></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>联系电话:</ion-label>
+              <ion-input type="number"  [(ngModel)]="obj.destTelephone" disabled="true"></ion-input>
+            </ion-item>
+          <ion-item>
+            <ion-label stacked>详细地址:</ion-label>
+            <ion-input type="text" [(ngModel)]="obj.deliverAddressInfo" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        信息补充
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+            <ion-item>
+              <ion-label stacked>补充说明:</ion-label>
+              <ion-textarea type="text"  [(ngModel)]="obj.linkRemark" disabled="true"></ion-textarea>
+            </ion-item>
+        </ion-list>
+        <ul class="photos">
+          <li *ngFor="let item of photoList">
+            <img src="{{item}}" alt="图片加载中...">
+          </li>
+        </ul>
+      </ion-card-content>
+    </ion-card>
+    <!-- <ion-card class="none-border pay-method">
+      <ion-card-header>
+        付款方式选择：
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list radio-group [(ngModel)]="settlementTypeSelect" class="my-radio">
+            <ion-item *ngFor="let item of settlementTypeObj | ObjNgFor">
+              <ion-label>{{item.value}}</ion-label>
+              <ion-radio value="{{item.key}}"></ion-radio>
+            </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card> -->
+    <ion-card class="none-border pay-method">
+      <ion-card-header>
+        发货渠道选择：
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list radio-group [(ngModel)]="settlementTypeSelect" class="my-radio">
+            <ion-item *ngFor="let item of settlementTypeObj | ObjNgFor">
+              <ion-label>{{item.value}}</ion-label>
+              <ion-radio value="{{item.key}}"></ion-radio>
+            </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <button ion-button class="ok" (click)="confirm()">确认发货渠道</button>
+</ion-content>

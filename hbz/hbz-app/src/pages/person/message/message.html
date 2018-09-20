@@ -1,0 +1,48 @@
+    <app-header title="通知列表"></app-header>
+    
+    
+<ion-content>
+      <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+
+  <div>
+    <div>
+      <ul class="msg-list">
+        <li (click)="goToDetail(item)" *ngFor="let item of messageArray">
+          <div>
+            <span>
+              <i *ngIf="item.ifRead == '未阅读'" style="background: #ff2323;border-radius: 50%;margin-left: 10px;padding: 0px 5px;"></i>
+              {{item.sitePushMessage.messageType.name}}
+            </span>
+            <span>{{item.formatedCreateDate}}</span>
+          </div>
+          <div>
+            <span>{{item.sitePushMessage.title}}</span>
+            <span><ion-icon name="ios-arrow-forward"></ion-icon></span>
+          </div>
+        </li>
+        <!-- <li>
+          <div>
+            <span>整车运输订单</span>
+            <span>2017-10-10 15:39</span>
+          </div>
+          <div>
+            <span>订单号D3949494已完成</span>
+            <span><ion-icon name="ios-arrow-forward"></ion-icon></span>
+          </div>
+        </li> -->
+      </ul>
+    </div>
+  </div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+
+    
+</ion-content>

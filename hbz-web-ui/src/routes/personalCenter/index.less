@@ -1,0 +1,91 @@
+.center {
+
+  .head-image {
+    width: 160px;
+    height: 160px;
+    border: 2px solid#ddd;
+    border-radius: 80px;
+    margin: 0 auto;
+    img {
+      width: 100%;
+      height: 100%;
+      border-radius: 80px;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+  }
+  .user-name {
+    font-size: 2vw;
+    color: #0f87af;
+    text-align: center;
+  }
+  .user-account,.user-number {
+    width: 60%;
+    margin: 0 auto;
+    font-size: 1.5vw;
+    // text-align: center;
+    border-bottom: 1px solid #cecece;
+
+    .account-icon,.number-icon {
+      font-size: 2.5vw;
+      color: #4abce2;
+    }
+
+    span {
+      &:first-child{
+        margin-left: 2%;
+      }
+      &:last-child{
+        margin-left: 20%;
+      }
+    }
+  }
+
+  .user-authentication{
+    width:100%;
+    height: 250px;
+    overflow: hidden;
+    li {
+      width: 46%;
+      margin-left:2%;
+      float: left;
+
+      div{
+        height: 250px;
+        text-align: center;
+        // line-height: 150px;
+        border: 1px solid transparent;
+        P {
+          &:first-child{
+            font-size:1.5vw;
+            margin-top: 25%;
+          }
+        }
+        &:hover{
+          cursor: pointer;
+          background: url('/bg_02.png') no-repeat center;
+          background-size: 50%;
+        }
+      }
+      div.registered{
+        background: url('/bg_01.png') no-repeat center;
+        background-size: 50%;
+        p {
+          &:first-child{
+            color:#46c093;
+          }
+        }
+      }
+      div.un-registered{
+        background: url('/bg_02.png') no-repeat center;
+        background-size: 50%;
+        p {
+          &:first-child{
+            color:#aaa;
+          }
+        }
+      }
+    }
+  }
+}

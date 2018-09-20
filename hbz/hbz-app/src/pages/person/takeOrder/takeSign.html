@@ -1,0 +1,17 @@
+<app-header title="签收确认"></app-header>
+
+    <ion-content padding class="upload-id-card">
+        <h1>上传图片：</h1>
+        <ul class="upload-list">
+          <li (click)="createImage('certificates')">
+            <div *ngIf="!certificates">
+                <p>+</p>
+                <p>上传图片</p>
+            </div>
+            <img [src]="certificates" *ngIf="certificates"/>
+          </li>
+        </ul>
+        <button ion-button class="ok" (click)="submitUpload()">确认上传</button>
+    </ion-content>
+
+

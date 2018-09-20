@@ -1,0 +1,35 @@
+ion-content{
+  &.has-refresher {
+    background: $color;
+    .scroll-content {
+      background: #fff;
+      margin-top: 0 !important;
+      &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100px;
+        background: $color;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+ion-refresher{
+  top: 48px;
+  z-index: 999;
+  ion-spinner {
+    color: #fff !important;
+    z-index: 999;
+  }
+  ion-refresher-content {
+    background: transparent;
+    .refresher-pulling-text,.refresher-pulling-icon, .refresher-refreshing-text {
+      color: #fff;
+      font-size: 1.5rem;
+    }
+  }
+}

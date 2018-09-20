@@ -1,0 +1,119 @@
+.register {
+  margin: 2vh 0;
+
+  ul {
+    li:last-child {
+      display: flex;
+      padding-top: 20px;
+
+      button {
+        height: 40px;
+        line-height: 40px;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 18px;
+      }
+      button:first-child {
+        width: 55%;
+        background: #4abce2;
+
+        &.waitting {
+          background: #fff !important;
+          color: #4abce2;
+          border: 1px solid #4abce2;
+        }
+      }
+      button:last-child {
+        flex: auto;
+        margin-left: 5vw;
+        background: #f8a131;
+      }
+    }
+  }
+  & > button:last-child {
+    margin: 0 24px;
+    height: 48px;
+    line-height: 48px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 16px;
+    background: #1fbe88;
+  }
+  button[disabled] {
+    opacity: 1;
+    background: #bababa;
+  }
+}
+
+.register-sub {
+  padding-bottom: 7vh;
+  li {
+    display: flex;
+  }
+  li:nth-child(3) {
+    flex-wrap: wrap;
+    height: auto;
+  }
+  li:last-child {
+    height: 0;
+  }
+  ion-item {
+    padding-left: 2.8vw;
+    width: 100vw;
+
+    ion-checkbox {
+      vertical-align: top;
+      margin-right: 9px !important;
+    }
+    ion-label {
+      margin: 0;
+      display: inline-block;
+      color: #666;
+      line-height: 20px;
+      font-size: 14px;
+    }
+    & > .item-inner {
+      border: none !important;
+    }
+  }
+  .readme {
+    flex-basis: 100%;
+    text-indent: 6em;
+    color: #4abce2;
+  }
+  .checkbox-icon {
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    border-width: 1px;
+    border-color: #aaa;
+  }
+  .checkbox-checked{
+    background: $color;
+    border-color: $color;
+    .checkbox-inner{
+      left: 8px;
+      top: 5px;
+    }
+  }
+  .confirm {
+    @extend .confirm-button;
+    font-size: 2.3rem !important;
+    background: $color !important;
+    letter-spacing: .5em;
+    font-weight: 200;
+  }
+  .confirm:disabled{
+    background: #bababa !important;
+  }
+}
+
+.go-back{
+  margin-top: 10vh;
+  width: 100%;
+  font-size: 1.5rem;
+  background: #f0f0f0;
+  color: #999;
+  line-height: 32px;
+  text-align: center;
+}

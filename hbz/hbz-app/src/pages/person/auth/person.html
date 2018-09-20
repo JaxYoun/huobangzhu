@@ -1,0 +1,82 @@
+<app-header title="平台认证"></app-header>
+<ion-content>
+  <!-- <div>
+    <ul class="auth-list">
+      <li *ngFor="let item of registryObj | ObjNgFor">
+        <div *ngIf="item.key == 'DeliveryBoy'">
+          配送员
+          <div *ngIf="item.value == 'UN_DO'" class="notverified">
+            <span>未认证</span>
+            <button (click)="goToAuth(item.key)">去认证</button>
+          </div>
+          <div *ngIf="item.value != 'UN_DO'" class="verified">
+            <span>已认证</span>
+            <button (click)="goToAuth(item.key)">去修改</button>
+          </div>
+        </div>
+        <div *ngIf="item.key == 'PersonDriver'">
+          个人司机
+          <div *ngIf="item.value == 'UN_DO'" class="notverified">
+              <span>未认证</span>
+              <button (click)="goToAuth(item.key)">去认证</button>
+            </div>
+            <div *ngIf="item.value != 'UN_DO'" class="verified">
+              <span>已认证</span>
+              <button (click)="goToAuth(item.key)">去修改</button>
+            </div>
+          </div>
+        <div *ngIf="item.key == 'PersonConsignor'">
+          个人货主
+          <div *ngIf="item.value == 'UN_DO'" class="notverified">
+              <span>未认证</span>
+              <button (click)="goToAuth(item.key)">去认证</button>
+            </div>
+            <div *ngIf="item.value != 'UN_DO'" class="verified">
+              <span>已认证</span>
+              <button (click)="goToAuth(item.key)">去修改</button>
+            </div>
+          </div>
+        <div *ngIf="item.key == 'EnterpriseConsignor'">
+          货主企业
+          <div *ngIf="item.value == 'UN_DO'" class="notverified">
+              <span>未认证</span>
+              <button (click)="goToAuth(item.key)">去认证</button>
+            </div>
+            <div *ngIf="item.value != 'UN_DO'" class="verified">
+              <span>已认证</span>
+              <button (click)="goToAuth(item.key)">去修改</button>
+            </div>
+          </div>
+        <div *ngIf="item.key == 'TransEnterprise'">
+          运输企业
+          <div *ngIf="item.value == 'UN_DO'" class="notverified">
+              <span>未认证</span>
+              <button (click)="goToAuth(item.key)">去认证</button>
+            </div>
+            <div *ngIf="item.value != 'UN_DO'" class="verified">
+              <span>已认证</span>
+              <button (click)="goToAuth(item.key)">去修改</button>
+            </div>
+          </div>
+      </li>
+    </ul>
+  </div> -->
+
+  <!-- key: "DeliveryBoy", name: "配送员", authType: "UN_REGISTER", authTime: "2017-12-26 15:31" -->
+  <div>
+    <ul class="wallet-list">
+
+      <li *ngFor="let item of registryArray" [ngClass]="{'done': item.flag}">
+        <div>
+          <span>{{item.name}}</span>
+          <span>{{item.authTime}}</span>
+        </div>
+        <div>
+          <span>{{item.authTypeChi}}</span>
+          <button class="pay" ion-button (click)="goToAuth(item)" *ngIf="item.authType == 'UN_DO' || item.authType =='ERR_REGISTER'">前往认证</button>
+          <button class="refund" ion-button (click)="goToAuth(item)" *ngIf="item.authType == 'REGISTRYED'">修改资料</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</ion-content>

@@ -1,0 +1,46 @@
+<app-header title="订单详情"></app-header>
+<ion-content>
+   <div class="w-top">
+        <h1>{{wareHouseObj.name}}</h1>
+        <p>{{wareHouseObj.formatedLastModifiedDate}}</p>
+    </div>
+    <ul class="property">
+      <li>
+        <h2>仓库容量</h2>
+        <p>{{wareHouseObj.capacity}}/m<sup>2</sup></p>
+      </li>
+      <li>
+        <h2>租赁价格</h2>
+        <p>{{wareHouseObj.unitPrice}}元/m<sup>2</sup></p>
+      </li>
+      <li>
+        <h2>租赁时间</h2>
+        <p>{{wareHouseObj.minRentTime}}个月以上</p>
+      </li>
+    </ul>
+      <div class="w-center">
+        <div class="info">
+          <p><span>联系人：{{wareHouseObj.ownerName}}</span>联系电话：{{wareHouseObj.telephone}}</p>
+          <p>仓库地址：{{wareHouseObj.address}}</p>
+        </div>
+        <div #map id="map_container" class="map"></div>
+      </div>
+
+    <div class="w-bottom">
+        <p>诚意金金额：{{obj.earnestPrice}}</p>
+        <p>订单状态：{{obj.payStatusChi}}</p>
+    </div>
+
+    <div class="w-down">
+      <!--
+          "NEW" : "未支付",
+          "PAID" : "已支付",
+          "ACCEPTED" : "已受理",
+          "REFUSED" : "拒绝受理",
+          "REFUND" : "已退款"
+      -->
+      <button ion-button class="confirm" *ngIf="obj.payStatus == 'NEW'" (click)="gotoPay()">去支付</button>
+      <button ion-button class="confirm" *ngIf="obj.payStatus == 'PAID'" (click)="gotoRetun()">去退款</button>
+
+    </div>
+</ion-content>

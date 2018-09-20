@@ -1,0 +1,226 @@
+<ion-content>
+	<app-header title="{{title}}" class="none-bg"></app-header>
+  <div class="user-info">
+    <div class="header">
+      <div class="info">
+        <div class="avatar" (click)="goToSetting()">
+          <img src="{{currentUser.imageUrl}}" alt="avatar">
+          <!-- <i>+</i> -->
+        </div>
+        <h1>
+          <p>{{currentUser.login}}</p>
+          <p>{{currentUser.nickName}}</p>
+        </h1>
+        <h2>
+          <span>{{currentUserComplexScore || 0}} 分</span>  <!-- 消费积分 -->
+        </h2>
+      </div>
+    </div>
+  </div>
+  <ion-list class="my-icon-list">
+    <ion-item (click)="goToAnyWhere('SendList')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+        </svg>
+      </span>
+      发运订单
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+
+    <!-- 折叠开始 -->
+    <ion-item (click)="onChangeStatus()">
+        <span item-start>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufa1"></use>
+            <use xlink:href="#icon-chufa2"></use>
+          </svg>
+        </span>
+        收运订单
+        <!-- <ion-icon name="ios-arrow-down"  *ngIf="isShow"    item-end></ion-icon>
+        <ion-icon name="ios-arrow-forward" *ngIf="!isShow"  item-end></ion-icon> -->
+    </ion-item>
+
+    <ion-item *ngIf="isShow" (click)="goToAnyWhere('TakeList')"  class="sub-item">
+      收运订单
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="isShow" (click)="goToAnyWhere('JoinList')"  class="sub-item">
+      我参与订单
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+
+
+    <!-- 折叠结束 -->
+
+
+    <ion-item (click)="goToAnyWhere('LeaseList')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa1"></use>
+          <use xlink:href="#icon-dingdan2"></use>
+        </svg>
+      </span>
+      租赁订单
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAnyWhere('commentOrder')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-hetong"></use>
+          <use xlink:href="#icon-dingdan1"></use>
+        </svg>
+      </span>
+      订单评价
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list class="my-icon-list">
+    <ion-item (click)="goToAnyWhere('MessagePage')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-tongzhi"></use>
+        </svg>
+      </span>
+      个人通知
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAnyWhere('Score')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-jifen1"></use>
+        </svg>
+      </span>
+      积分详情
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAnyWhere('wallet')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-2"></use>
+        </svg>
+      </span>
+      钱包管理
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item (click)="goToAnyWhere('ContractList')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-hetong"></use>
+        </svg>
+      </span>
+      合同模板
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+  <ion-list class="my-icon-list">
+     <!-- 折叠开始 -->
+     <ion-item (click)="onChangeStatusWareHouse()">
+        <span item-start>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufa1"></use>
+            <use xlink:href="#icon-xinwen_zixun"></use>
+          </svg>
+        </span>
+        我的仓储资讯
+    </ion-item>
+    <ion-item *ngIf="isShowWarehouse" (click)="goToAnyWhere('MyWareHouse')" class="sub-item">
+        我的仓储资讯列表
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="isShowWarehouse" (click)="goToAnyWhere('MyWarehouseEdit')" class="sub-item">
+        发布仓储资讯
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  <!-- 折叠结束 -->
+
+
+    <ion-item (click)="goToAnyWhere('Shop')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-21"></use>
+        </svg>
+      </span>
+      积分商城
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  </ion-list>
+
+
+  <ion-list class="my-icon-list">
+      <ion-item (click)="goToAnyWhere('Person')">
+        <span item-start>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-renzheng"></use>
+          </svg>
+        </span>
+        平台认证
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+      </ion-item>
+      <ion-item (click)="goToAnyWhere('CarInfoList')">
+        <span item-start>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-renzheng"></use>
+          </svg>
+        </span>
+        车辆信息
+        <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+      </ion-item>
+     <!-- 折叠开始 -->
+     <ion-item (click)="onChangeStatusShowAddress()">
+        <span item-start>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-chufa1"></use>
+            <use xlink:href="#icon-zhiyuandizhi4"></use>
+          </svg>
+        </span>
+        常用地址管理
+    </ion-item>
+    <ion-item *ngIf="isShowAddress" (click)="goToAnyWhere('FulltransportAddress')" class="sub-item">
+        专线地址列表
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="isShowAddress" (click)="goToAnyWhere('HelpAddress-Buy')" class="sub-item">
+        配送地址列表
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <ion-item *ngIf="isShowAddress" (click)="goToAnyWhere('HelpAddress-Ex')" class="sub-item">
+        快递地址列表
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+  <!-- 折叠结束 -->
+  </ion-list>
+
+
+  <ion-list class="my-icon-list">
+    <ion-item (click)="goToAnyWhere('SystemConfig')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-21"></use>
+          <use xlink:href="#icon-shezhi"></use>
+        </svg>
+      </span>
+      系统设置
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item>
+    <!-- <ion-item (click)="goToAnyWhere('WechatPay')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-21"></use>
+          <use xlink:href="#icon-shezhi"></use>
+        </svg>
+      </span>
+      微信支付
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item> -->
+    <!-- <ion-item (click)="goToAnyWhere('PushMessagePage')">
+      <span item-start>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-21"></use>
+        </svg>
+      </span>
+      PushMessagePage
+      <ion-icon name="ios-arrow-forward" item-end></ion-icon>
+    </ion-item> -->
+  </ion-list>
+</ion-content>

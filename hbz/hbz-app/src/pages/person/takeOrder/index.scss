@@ -1,0 +1,12 @@
+
+leaseList, joinList, sendList, takeList{
+  .my-search-list > ul li > label {
+    min-width: 80px;
+  }
+  .my-search-list > ul li:last-child{
+    display: none;
+  }
+  .line-list {
+    margin-top: 170px !important;
+  }
+}

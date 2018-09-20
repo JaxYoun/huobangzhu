@@ -1,0 +1,38 @@
+<app-header title="" class="none-bg"></app-header>
+<ion-content>
+  <div class="my-banner">
+    <ion-slides pager loop="true" >
+      <ion-slide *ngFor="let item of bannerArray" >
+        <img src="{{item.headerBit}}" (click)="goToDetail(item)">
+      </ion-slide>
+    </ion-slides>
+  </div>
+  <div class="recommend-list">
+    <h2>
+      <span class="tag">精品推荐</span>
+      <span class="flag">最新</span>
+      <span class="text">全场只需8折，8折就能就能就能带走你想要的绿色食品</span>
+    </h2>
+    <ul>
+      <li *ngFor="let item of hotProductArray" (click)="goToDetail(item)">
+        <div *ngIf="!item.isBlank">
+          <img src="{{item.headerBit}}">
+          <h3>{{item.product.ware.name}}</h3>
+          <p>
+            <!-- <i>￥</i>{{item.product.amount}}</p> -->
+            <i>￥</i>{{item.product.ware.marketAmount}}</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <div class="category-box">
+    <ul class="category-icon-list">
+      <li (click)="goToType(item)" *ngFor="let item of typeArray">
+        <i>
+          <img src="{{item.headerBit}}"/>
+        </i>
+        <p>{{item.name}}</p>
+      </li>
+    </ul>
+  </div>
+</ion-content>

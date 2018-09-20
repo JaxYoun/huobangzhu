@@ -1,0 +1,14 @@
+.my-warehouse-edit {
+  textarea.text-input {
+    margin: 13px 0;
+  }
+  ion-item{
+    min-height: 52px;
+    &[unit]{
+      .input-wrapper{
+        height: 52px;
+      }
+
+    }
+  }
+}

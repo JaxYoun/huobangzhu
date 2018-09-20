@@ -1,0 +1,179 @@
+配置git环境变量\ node环境 注意node版本
+android6.0   API 	android-23    build-tools 23.0.2
+npm install -g cordova@7.1.0
+npm install -g ionic@3.20.0
+cordova --version
+6.3.0   Using cordova-fetch for cordova-android@^5.2.2
+7.0.0   
+7.1.0   Using cordova-fetch for cordova-android@^6.2.3  
+7.1.0   Using cordova-fetch for cordova-android@6.0   Android target: android-24
+
+ionic cordova platform add android@6.3.0  Android target: android-26
+ionic cordova platform add android@6.1.2 Android target: android-25
+ionic cordova build android Android target: android-26
+
+环境：
+cordova --version 7.1.0
+ionic --version 3.20.0
+cordova-android@6.3.0  Android target: android-26
+android_home:D:\j2ee\Android\test-sdk\android-sdk-windows  使用新的Android路径，之前安装估计有问题。重新下载的包
+android6.0   API 	android-26    build-tools 23.0.2
+
+
+极光推送
+注意：插件从 v3.4.0 开始支持 cordova-android 7.0.0，因 cordova-android 7.0.0 修改了 Android 项目结构，因此不兼容之前的版本，升级前请务必注意。
+如果需要安装之前版本的插件，请先安装 v1.2.0 以下版本（建议安装 v1.1.12）的 cordova-plugin-jcore，再安装旧版本插件（比如 v3.3.2），否则运行会报错。
+ 查看日志：adb logcat > d:\logjpush.txt
+ionic cordova plugin add cordova-plugin-jcore@1.1.12
+ionic cordova plugin add jpush-phonegap-plugin@3.3.2 --variable APP_KEY=06b469dabeb5f2bd8b6aeacc
+2、修改：
+  项目中\hbz-app\node_modules\jpush-phonegap-plugin\src\android\JPushPlugin.java文件
+      添加import com.troy.hbz.R; （即添加包名才能使用推送）
+
+3、config.xml中指定的APPKEY，在插件包里面有可能没有覆盖过来，此时需要手动修改
+  项目中\hbz-app\plugins\fetch.json
+    113行： "APP_KEY": "06b469dabeb5f2bd8b6aeacc",
+  即可
+
+  校验
+      项目中\hbz-app\platforms\android\android.json文件中 有可能APP_KEY没有更新过来，需要手动修改
+        406行： "APP_KEY": "06b469dabeb5f2bd8b6aeacc",
+        162行：android:value=\"06b469dabeb5f2bd8b6aeacc\" />",
+
+
+微信插件集成
+    wechatappid=微信支付ID
+    ionic cordova plugin add cordova-plugin-wechat --variable wechatappid=wxb4ba3c02aa476ea1 
+   
+
+支付宝插件集成：
+1、下载插件包（APP_ID使用的是货帮主的支付宝） 
+      cordova plugin add https://github.com/ejiyuan/cordova-plugin-alipay.git --variable APP_ID=2018030102294391 --variable SANDBOX_MODE=false
+      或者 下载插件到本地 (网络地址不可用就使用本地安装)
+      cordova plugin add D:/j2ee/app_cordova/ttt/cordova-plugin-alipay-master --variable APP_ID=2018030102294391 --variable SANDBOX_MODE=false
+
+APP_ID为支付宝生产环境的正式ID；SANDBOX_MODE沙箱模式为false ---------APP拉起支付宝支付的界面。
+APP_ID为支付宝生产环境的沙箱ID；SANDBOX_MODE沙箱模式为true  ---------APP拉起支付宝手机网站支付的H5页面。
+
+2、页面集成
+home.ts文件
+  declare let cordova;
+  getData() {
+    html 表示从后台获取的支付宝提交支付需要的参数
+    // this.http.get(this.url).subscribe(obj => {
+    //   this.html = obj.text();
+    // });
+    this.html = "alipay_sdk=alipay-sdk-java-dynamicVersionNo&app_id=2017082508369611&biz_content=%7B%22out_trade_no%22%3A%22BO201710271444512202%22%2C%22product_code%22%3A%22QUICK_MSECURITY_PAY%22%2C%22subject%22%3A%22%E5%A4%A7%E7%90%86%E6%B5%8B%E8%AF%95%E6%99%AF%E7%82%B9%22%2C%22timeout_express%22%3A%2230m%22%2C%22total_amount%22%3A%220.02%22%7D&charset=UTF-8&format=json&method=alipay.trade.app.pay&notify_url=https%3A%2F%2Fweixin.i-dali.cn%2Fi-dali-weixin%2Fali%2FwapNotify&sign=aLpKi%2BORmGfe%2FeVPhEvstARZrBVkzFNL540V0m%2F4ITkq5v47vMtYq9SLEaO4CIz0X65BYx6mdVin7E%2FIK5PCzhyki115MNIAMomCReCY9owjEy9MAsPyIHThfH0t33UivoX4TcwLDyeIx5u%2FRW2Hus%2F4a3UjZT1zBZSDeOUWc6s0R23WmFQwOwm2DOYrGwWkXkHl1ZbYvfcECqwXQXyru2I9MyMOwqj7qe9HweNxiTBTVKUgr%2FNE6l7lIBX8OkBwbnZfSMEX2dAGjMD9XTOuG8HRYqd6fT5eAyClRjAlrUKpQskUfNLaEoXc9ldOyOkpQDNGtPea8XHXr3hMenAvUA%3D%3D&sign_type=RSA2&timestamp=2017-10-27+14%3A45%3A40&version=1.0&sign=aLpKi%2BORmGfe%2FeVPhEvstARZrBVkzFNL540V0m%2F4ITkq5v47vMtYq9SLEaO4CIz0X65BYx6mdVin7E%2FIK5PCzhyki115MNIAMomCReCY9owjEy9MAsPyIHThfH0t33UivoX4TcwLDyeIx5u%2FRW2Hus%2F4a3UjZT1zBZSDeOUWc6s0R23WmFQwOwm2DOYrGwWkXkHl1ZbYvfcECqwXQXyru2I9MyMOwqj7qe9HweNxiTBTVKUgr%2FNE6l7lIBX8OkBwbnZfSMEX2dAGjMD9XTOuG8HRYqd6fT5eAyClRjAlrUKpQskUfNLaEoXc9ldOyOkpQDNGtPea8XHXr3hMenAvUA%3D%3D";
+  }
+
+  goToPay() {
+    cordova.plugins.alipay.payment(this.html, (success) => {
+      console.log(success);
+      alert(success);
+    }, (error) => {
+      console.log(error);
+    });
+  }
+
+
+生成图标
+    使用1024x1024LOGOA.png图标放在resources目录下
+    更目录使用命令生成图标ionic cordova resources
+          $ ionic resources
+          $ ionic resources --icon  ##单独生成应用图标
+          $ ionic resources --splash  ##单独生成应启动画面图片
+启动页参数
+    <preference name="ShowSplashScreenSpinner" value="false" />
+    <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="FadeSplashScreen" value="true" />
+    <preference name="SplashScreenBackgroundColor" value="false" />
+    <preference name="SplashScreenDelay" value="3000" />
+    <preference name="SplashMaintainAspectRatio" value="true" />
+    <preference name="FadeSplashScreenDuration" value="300" />
+    <preference name="SplashShowOnlyFirstTime" value="false" />
+    <preference name="SplashScreen" value="screen" />
+    <preference name="SplashScreenDelay" value="3000" />
+    ShowSplashScreenSpinner——是否显示启动屏转圈圈那个 Spinner；
+    AutoHideSplashScreen——是否自动隐藏SplashScreen；
+    FadeSplashScreen——是否逐渐消失SplashScreen；
+    SplashScreenBackgroundColor——背景颜色；
+    SplashMaintainAspectRatio——如果值设置为 true，则图像将不会伸展到适合屏幕。如果设置为 false ，它将被拉伸；
+    FadeSplashScreenDuration——逐渐消失SplashScreen的动画时延；
+    SplashShowOnlyFirstTime——是否只第一次显示；
+    SplashScreen——它是 platform / android / res / drawable - 文件夹中的图像的名称。Cordova默认生成 screen.png 图片;
+    SplashScreenDelay——SplashScreen显示的延时时间
+
+
+
+
+
+
+  整个百度地图的调用就完成了
+
+1.当接口无法访问 
+百度地图、自定义API无法访问，远程调试结果显示404 
+原因是cordova 5.x的版本增加了“Content-Security-Policy”用于解决安全访问的问题。默认情况下，只能访问本机资源。 
+解决方法： 
+1.添加白名单插件，在项目目录下执行 
+ionic plugin add cordova-plugin-whitelist 
+2.在index.html头部增加
+
+<meta http-equiv="Content-Security-Policy" content="script-src * 'unsafe-eval'; connect-src * 'unsafe-eval'; object-src 'self'; style-src * 'unsafe-inline'; img-src *" >
+2.百度地图无法显示
+
+<script src="http://api.map.baidu.com/api?v=2.0&ak=HumGuK48Lis3kPdlHZBxvbvsqgHySljX"></script>
+
+
+
+
+    相机拍照
+
+
+ionic 拍照，小米手机拍照不能获取图片，是因为小米手机使用系统目录是存放照片报错。
+          需要自定保存相册的目录，目前ionic没有发现方法可以自定义目录
+
+      故：解决此问题，将保存系统相册的属性设置为false即不保存到相册
+      saveToPhotoAlbum: false                                   //保存进手机相册
+
+编译时提示：
+      ERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:fontVariationSettings
+      ERROR: In <declare-styleable> FontFamilyFont, unable to find attribute android:ttcIndex
+      解决：在platforms/android/build.gradle中顶级节点加入：
+
+      configurations.all {
+          resolutionStrategy {
+              force 'com.android.support:support-v4:27.1.0'
+          }
+      }
+
+编译时提示：
+   ERROR:  com.google.android.gms.license
+D:\j2ee\app_cordova\hbz-app\platforms\android\project.properties
+修改为以下
+cordova.system.library.5=com.google.android.gms:play-services-location:11.+
+
+
+-- 删除某类型订单数据
+select * from hbz_order where created_by ='9' and order_type='LTL'
+DELETE from logistics_details where hbz_express_pieces_id in (select id from hbz_express_pieces where hbz_ex_order_id in (select id FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' and order_type='LTL')));
+DELETE from hbz_express_pieces where hbz_ex_order_id in (select id FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' and order_type='LTL'));
+DELETE FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' and order_type='LTL');
+DELETE FROM hbz_order_rec WHERE orderid IN (select id  from hbz_order where created_by ='9' and order_type='FSL');
+DELETE FROM `hbz_fsl_order` where id in (select id from hbz_order where created_by ='9' and order_type='FSL');
+DELETE FROM  hbz_tender where ORD in (select id from hbz_order where created_by ='9' and order_type='FSL');
+DELETE from hbz_order where created_by ='9' and order_type='FSL';
+
+-- 删除我的（id=9）所有订单数据
+DELETE from logistics_details where hbz_express_pieces_id in (select id from hbz_express_pieces where hbz_ex_order_id in (select id FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' )));
+DELETE from hbz_express_pieces where hbz_ex_order_id in (select id FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' ));
+DELETE FROM hbz_ex_order WHERE id IN (select id  from hbz_order where created_by ='9' );
+DELETE FROM hbz_order_rec WHERE orderid IN (select id  from hbz_order where created_by ='9' );
+DELETE FROM `hbz_fsl_order` where id in (select id from hbz_order where created_by ='9' );
+DELETE FROM  hbz_tender where ORD in (select id from hbz_order where created_by ='9' );
+DELETE from hbz_buy_order where id in (select id from hbz_order where created_by ='9' );
+DELETE from hbz_send_order where id in (select id from hbz_order where created_by ='9' );
+DELETE from hbz_rate WHERE order_id IN (select id  from hbz_order where created_by ='9' );
+DELETE from hbz_ltl_order  where id in (select id from hbz_order where created_by ='9' );
+DELETE from hbz_taker_info WHERE order_id IN (select id  from hbz_order where created_by ='9' );
+DELETE from hbz_order where created_by ='9';
+DELETE from hbz_bond where created_by ='9';

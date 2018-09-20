@@ -1,0 +1,40 @@
+ion-tabs{
+  .ion-md-my-home{
+    content: url('./../assets/icon/home.png');
+    height: 2.4rem;
+  }
+  .ion-md-my-person{
+    content: url('./../assets/icon/person.png');
+    height: 2.4rem;
+  }
+  .ion-md-my-driver{
+    content: url('./../assets/icon/driver.png');
+    height: 2.4rem;
+  }
+  .ion-md-my-goods{
+    content: url('./../assets/icon/goods.png');
+    height: 2.4rem;
+  }
+  .ion-md-my-cangku{
+    content: url('./../assets/icon/cangku.png');
+    height: 2.4rem;
+  }
+  .tab-button[aria-selected=true] {
+    color: $color !important;
+    .ion-md-my-home{
+      content: url('./../assets/icon/home2.png');
+    }
+    .ion-md-my-person{
+        content: url('./../assets/icon/person2.png');
+    }
+    .ion-md-my-driver{
+        content: url('./../assets/icon/driver2.png');
+    }
+    .ion-md-my-goods{
+        content: url('./../assets/icon/goods2.png');
+    }
+    .ion-md-my-cangku{
+        content: url('./../assets/icon/cangku2.png');
+    }
+  }
+}

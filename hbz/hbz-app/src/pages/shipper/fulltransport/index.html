@@ -1,0 +1,254 @@
+<app-header title="{{typeName}}"></app-header>
+<ion-content class="fulltransport upload-id-card">
+
+  <ion-card toggleCard [showItem]="obj.commodityName" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      货物详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>货物名称:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.commodityName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>货物类型:</ion-label>
+          <ion-select interface="popover" [(ngModel)]="goodsTypeSelect" (ngModelChange)="queryPrice()" cancelText="取消" okText="确认">
+            <ion-option value="{{item.key}}" *ngFor="let item of goodsType | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item >
+          <ion-label stacked>预估重量:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.commodityWeight" (ngModelChange)="queryPrice()"></ion-input>
+          <ion-label unit>吨</ion-label>
+        </ion-item>
+        <ion-item >
+          <ion-label stacked>预估体积:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.commodityVolume" (ngModelChange)="queryPrice()"></ion-input>
+          <ion-label unit>方</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>接运时间:</ion-label>
+          <ion-datetime max="2050-12-31" displayFormat="MM-DD HH:mm" [(ngModel)]="obj.orderTakeStart" doneText="确认" cancelText="取消"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>送达时间:</ion-label>
+          <ion-datetime max="2050-12-31" displayFormat="MM-DD HH:mm" [(ngModel)]="obj.destlimit" doneText="确认" cancelText="取消"></ion-datetime>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>货物描述:</ion-label>
+          <ion-textarea [(ngModel)]="obj.commodityDescribe"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card toggleCard [showItem]="transType[transTypeSelect]" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span class="flip-horizontal">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      车辆要求
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>车辆类型:</ion-label>
+          <ion-select interface="popover" [(ngModel)]="transTypeSelect" cancelText="取消" okText="确认">
+            <ion-option value="{{item.key}}" *ngFor="let item of transType | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item >
+          <ion-label stacked>最低载重:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.maxLoad"></ion-input>
+          <ion-label unit>吨</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>车长选择:</ion-label>
+          <ion-input type="text" [(ngModel)]="transArrayString" (click)="openSelectCarModal()" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card toggleCard [showItem]="obj.linkMan" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-peisong"></use>
+        </svg>
+      </span>
+      取货信息
+      <!-- <i>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zengjia"></use>
+        </svg>
+      </i> -->
+    </ion-card-header>
+    <ion-card-content (click)="openModal({type: 'pickUp'})" >
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>取货地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="pickUpAddress" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系人:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.linkMan" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.linkTelephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>详细地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="pickUpAddressInfo" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card toggleCard [showItem]="obj.destLinker" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span class="flip-horizontal">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-peisong"></use>
+        </svg>
+      </span>
+      送货信息
+      <!-- <i>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-zengjia"></use>
+        </svg>
+      </i> -->
+    </ion-card-header>
+    <ion-card-content (click)="openModal({type: 'deliver'})">
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>取货地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="deliverAddress" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系人:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.destLinker" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.destTelephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>详细地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="deliverAddressInfo" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card toggleCard [showItem]="obj.linkRemark" (change)="backState($event)" [canLeave]="backState()">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      信息补充
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>补充说明:</ion-label>
+          <ion-textarea type="text" [(ngModel)]="obj.linkRemark"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <div class="upload-container">
+          <h2>添加图片</h2>
+          <ul class="upload-list">
+              <li (click)="createImage('photo1')">
+                <div *ngIf="!photo1">
+                    <p>+</p>
+                    <p>图像照片</p>
+                </div>
+                <img *ngIf="photo1" [src]="photo1" />
+              </li>
+              <li (click)="createImage('photo2')">
+                <div *ngIf="!photo2">
+                    <p>+</p>
+                    <p>图像照片</p>
+                </div>
+                <img *ngIf="photo2" [src]="photo2" />
+              </li>
+              <li (click)="createImage('photo3')">
+                <div *ngIf="!photo3">
+                    <p>+</p>
+                    <p>图像照片</p>
+                </div>
+                <img *ngIf="photo3" [src]="photo3" />
+              </li>
+            </ul>
+        </div>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-feiyong"></use>
+        </svg>
+      </span>
+      费用参考及选择
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item *ngIf="isShowPrice">
+          <ion-label stacked>平台参考距离:</ion-label>
+          <ion-input type="text" [(ngModel)]="refDistance" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="isShowPrice">
+          <ion-label stacked>平台参考总价:</ion-label>
+          <ion-input type="text" [(ngModel)]="refTotalPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item *ngIf="isShowPrice">
+          <ion-label stacked>平台参考单价:</ion-label>
+          <ion-input type="text" [(ngModel)]="refPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>预估总价:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.expectedPrice" (ngModelChange)="countPrice()"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item *ngIf="isShowPrice">
+          <ion-label stacked>预估单价:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.unitPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      温馨提示
+    </ion-card-header>
+    <ion-card-content>
+      <div>
+          <p>系统参考价格,按以下规则进行计算</p>
+          <p>1.重货:按KG/KM计价</p>
+          <p>2.轻货:按m³/KM体积计价</p>
+          <p>3.特殊商品:由于情况复杂,平台不做价格计算</p>
+          <p>由客户自定义总价。</p>
+      </div>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button class="ok" (click)="fslCreate()">保存</button>
+</ion-content>

@@ -1,0 +1,131 @@
+<app-header title="订单详情"></app-header>
+<ion-content class="fulltransport confirmOrder">
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      商品要求
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>商品名称:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>购买数量:</ion-label>
+          <ion-input type="number"  [(ngModel)]="obj.commodityCount" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>预估价格:</ion-label>
+          <ion-input type="text" value="{{obj.commodityAmount + '元'}}" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>补充说明:</ion-label>
+          <ion-textarea [(ngModel)]="obj.buyNeedInfo" disabled="true"></ion-textarea>
+        </ion-item>
+      </ion-list>
+      <ul class="photos">
+          <li *ngIf="obj.relatedPictures">
+            <img src="{{obj.relatedPictures}}" alt="图片加载中...">
+          </li>
+        </ul>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      配送要求
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>联系人:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.linker" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系电话:</ion-label>
+          <ion-input type="number"  [(ngModel)]="obj.linkTelephone" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>联系地址:</ion-label>
+          <ion-input type="text"   [(ngModel)]="obj.destInfo" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>详细地址:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.destAddress" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-shijian"></use>
+        </svg>
+      </span>
+      配送时间
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>时间要求:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.timeLimit" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item *ngIf="startTimeDivShow">
+          <ion-label stacked>起送时间:</ion-label>
+          <ion-input [(ngModel)]="obj.startTime" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-feiyong"></use>
+        </svg>
+      </span>
+      费用构成
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>商品费用:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityAmount" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>配送费用:</ion-label>
+          <ion-input type="number"  [(ngModel)]="remuneration" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>费用合计:</ion-label>
+          <ion-input type="number"  [(ngModel)]="totalPrice" disabled="true"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <div class="service-agreement">
+    <div class="service-agreement-checkbox">
+      <ion-label>点击同意货帮主平台服务协议</ion-label>
+      <ion-checkbox [(ngModel)]="cucumber" (ionChange)="updateCucumber()"></ion-checkbox>
+    </div>
+    <a class="service-agreement-readme" (click)="presentModal()">《货帮主平台服务协议》</a>
+  </div>
+
+  <button ion-button class="ok" disabled={{isNext}} (click)="confirm()">接单</button>
+</ion-content>

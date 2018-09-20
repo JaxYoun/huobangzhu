@@ -1,0 +1,48 @@
+<app-header title="车辆信息"></app-header>
+
+<ion-content class="car-info-list">
+  <div class="user-info">
+    <div class="avatar">
+      <img src="{{currentUser.imageUrl}}" alt="avatar">
+    </div>
+    <div class="info">
+      <p>{{currentUser.login}}</p>
+      <p>{{currentUser.driverTypeName}}</p>
+      <p>
+        <button ion-button (click)="saveOrUpdate('add')">添加车辆</button>
+      </p>
+
+    </div>
+  </div>
+  <h2 class="title">已添加车辆</h2>
+  <ion-list>
+    <ion-item *ngFor="let item of carList">
+      <ion-thumbnail item-start>
+        <img src="{{huocheImg}}">
+      </ion-thumbnail>
+      <h2>{{item.plateNumber}}</h2>
+      <p>{{item.transTypeName}}</p>
+      <button ion-button clear item-end (click)="saveOrUpdate('edit',item)">修改</button>
+    </ion-item>
+  </ion-list>
+  <!-- <div style="width:30px;height:30px;">
+        <img src="{{currentUser.imageUrl}}" alt="avatar">
+    </div>
+    <div>
+        <h1>{{currentUser.login}}</h1>
+        <h1>{{currentUser.driverTypeName}}</h1>
+        <button ion-button class="confirm" (click)="saveOrUpdate('add')">添加车辆</button>
+    </div>
+
+    <div>
+        <h1>已添加车辆</h1>
+        <ul>
+          <li *ngFor="let item of carList">
+            <span>{{item.plateNumber}}</span>
+            <span>{{item.transTypeName}}</span>
+            <a (click)="saveOrUpdate('edit',item)">修改车辆</a>
+          </li>
+        </ul>
+    </div> -->
+
+</ion-content>

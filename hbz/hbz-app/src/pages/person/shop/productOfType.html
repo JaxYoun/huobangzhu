@@ -1,0 +1,37 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content>
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+      
+  <ul class="product-list">
+    <li (click)="goToDetail(item)" *ngFor="let item of productArray">
+      <div>
+        <img src="{{item.ware.header}}" alt="">
+      </div>
+      <div>
+        <h1>{{item.ware.name}}</h1>
+        <p class="info">可兑换: {{item.leave}} 瓶 &nbsp; 规格: {{item.ware.specifications}}</p>
+        <p class="price">
+          <span><i>积分</i>{{item.score}}</span>
+          <span>市场价: ￥{{item.ware.marketAmount}} 元</span>
+        </p>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

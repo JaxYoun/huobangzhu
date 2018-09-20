@@ -1,0 +1,39 @@
+<ion-content class="login-content">
+  <public-header></public-header>
+  <div class="login">
+    <ul>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-icon-test"></use>
+          </svg>
+        </label>
+        <input type="tel" [(ngModel)]="loginName" maxlength="11">
+        <span *ngIf="!loginName" class="placeholder">用户名</span>
+      </li>
+      <li>
+        <label>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-mima1"></use>
+          </svg>
+        </label>
+        <input type="password" [(ngModel)]="password" maxlength="20">
+        <span *ngIf="!password" class="placeholder">密码</span>
+      </li>
+    </ul>
+    <div *ngIf="isShow" class="authcode">
+      <span></span>
+      <div class="input">
+        <input type="text" [(ngModel)]="authCode" placeholder="验证码" maxlength="6">
+        <label>
+          <img src={{codeImage}} (click)="sendYZM()" alt="验证码">
+        </label>
+      </div>
+    </div>
+    <button ion-button class="submit" (click)="login()">登 录</button>
+    <p class="links">
+      <a (click)="goToRegister()">注册</a> |
+      <a (click)="forgetPassword()">忘记密码</a>
+    </p>
+  </div>
+</ion-content>

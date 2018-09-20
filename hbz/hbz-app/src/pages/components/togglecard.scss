@@ -1,0 +1,72 @@
+ion-card{
+  &[toggleCard] {
+    ion-card-header {
+      position: relative;
+      padding-right: 25px;
+      &:after{
+        content: '';
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        width: 10px;
+        height: 10px;
+        border-right: 1px solid;
+        border-bottom: 1px solid;
+        color: #888;
+        font-size: 2rem;
+        transform: rotate(-45deg) translateY(-50%);
+      }
+      .header-text{
+        color: #999;
+        font-style: normal;
+        padding-left: 12px;
+      }
+    }
+    &.show-content {
+      overflow: visible;
+      background: #fff;
+      ion-card-header{
+        background: #fff;
+        &::after {
+          display: none;
+        }
+      }
+      ion-card-content {
+        background: #fff;
+      }
+    }
+    .confirm {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      font-size: 1.8rem;
+      height: 48px;
+      line-height: 48px;
+      width: 100%;
+      background: $color;
+      color: #fff;
+      display: none;
+    }
+    &.hide-content {
+      padding-bottom: 13px;
+      ion-card-content {
+        display: none;
+      }
+    }
+    &.show-content {
+      position: fixed;
+      bottom: 48px;
+      top: 48px;
+      background: #fff;
+      z-index: 99;
+      overflow: auto;
+      ion-card-content {
+        display: block;
+      }
+      .confirm{
+        display: block;
+      }
+    }
+  }
+}

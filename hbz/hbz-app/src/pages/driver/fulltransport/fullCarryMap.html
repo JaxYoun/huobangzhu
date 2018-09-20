@@ -1,0 +1,16 @@
+<app-header title="附近"></app-header>
+
+    <ion-content padding>
+        <ion-list radio-group [(ngModel)]="selectedDistance" (ngModelChange)="getNearCar2()" class="my-radio">
+            <ion-item *ngFor="let item of distanceObj | ObjNgFor">
+              <ion-label>{{item.value}}</ion-label>
+              <ion-radio value="{{item.key}}"></ion-radio>
+            </ion-item>
+        </ion-list>
+        <div #map id="map_container"></div>
+    </ion-content>
+
+
+
+
+

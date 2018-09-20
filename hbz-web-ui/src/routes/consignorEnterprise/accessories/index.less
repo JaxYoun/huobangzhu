@@ -1,0 +1,225 @@
+.address-list {
+  margin-bottom: 20px;
+  &>button{
+    i{
+      color: #1fbe88;
+      font-size: 16px;
+      font-weight: bold;
+    }
+  }
+  &>.user{
+    padding-bottom: 24px;
+    border-bottom: 1px dashed #ddd;
+    
+    .location{
+      float: left;
+      color: #fff;
+      background-color: #1fbe88;
+      padding: 6px 11px;
+      border-radius: 24px;
+      font-size: 26px !important;
+      margin-right: 10px;
+    }
+    .options>span:last-child {
+      padding-right: 24px;
+      float: right;
+      a{
+        color: #666;
+      }
+      i{
+        cursor: pointer;
+        margin-right: 8px;
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-left: 1px solid #666;
+        border-bottom: 1px solid #666;
+        position: relative;
+        b{
+          display: inline-block;
+          width: 10px;
+          height: 10px;
+          border-left: 1px solid #666;
+          border-bottom: 1px solid #666;
+          position: absolute;
+          top:-4px;
+          left: 3px;
+        }
+      }
+      .turnleft{
+        transform:rotate(-48deg);
+      }
+      .turnright{
+        transform:rotate(133deg);
+      }
+    }
+    .moreAddress{
+      padding-right: 24px;
+    }
+  }
+  ul {
+    margin: 0;
+    margin-left: 32px;
+    padding: 24px;
+    li {
+      margin-bottom: 12px;
+      border-bottom: 1px dashed #ddd;
+      padding-bottom: 20px;
+
+      .options {
+        // margin-top: 15px;
+        font-size: 0.8rem;
+        // &>span:first-child {
+        //  // padding-left: 20px;
+        // }
+        &>span:last-child {
+          float: right;
+          .edit{
+            border-color: #4abce2;
+            color: #4abce2;
+          }
+          .delete{
+            color: #ff5b5b;
+            border-color: #ff5b5b;
+          }
+        }
+      }
+    }
+    li:hover{
+      background-color: #4abce2;
+      .user{
+        background-color: #4abce2;
+      }
+    }
+  }
+  .user {
+    position: relative;
+    z-index: 99;
+    background: #fff;
+    left: 0;
+    top: 0;
+    right: 0;
+    color: #666;
+
+    h4,p {
+      margin: 0;
+      padding: 0;
+    }
+    h4 {
+      font-size: 1rem;
+      line-height: 2.5rem;
+      padding-bottom: 4px;
+      color: #111;
+
+      i {
+        font-style: normal;
+        font-size: 12px;
+        height: 14px;
+        line-height: 12px;
+        margin-left: 15px;
+        display: inline-block;
+        padding: 2px 4px;
+        color: #fff;
+        background: #FFA26A;
+        position: relative;
+
+        &::before {
+          content: "";
+          position: absolute;
+          left: -14px;
+          top: 0px;
+          height: 0;
+          width: 0;
+          border-left: 7px solid transparent;
+          border-top: 7px solid transparent;
+          border-right: 7px solid #FFA26A;
+          border-bottom: 7px solid transparent;
+        }
+        &:after {
+          content: "";
+          position: absolute;
+          left: -1px;
+          top: 6px;
+          width: 3px;
+          height: 3px;
+          border-radius: 50%;
+          background: #fff;
+        }
+      }
+      span {
+        float: right;
+        font-size: 1rem;
+        color: #666;
+      }
+    }
+  }
+  .locationblue{
+    float: left;
+    color: #fff;
+    background-color: #4abce2;
+    padding: 6px 11px;
+    border-radius: 24px;
+    font-size: 26px !important;
+    margin-right: 10px;
+  }
+}
+// 详情
+.detail{
+  h4{
+    font-size: 1rem;
+    font-weight: bold;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+  }
+  &>div{
+    padding-top: 10px;
+    margin-bottom: 25px;
+    button>i{
+      font-size: 16px;
+      font-weight: bold;
+      padding: 5px 20px;
+    }
+  }
+  .details{
+    span{
+      padding: 5px 10px;
+      color: #fff;
+      margin-right: 10px;
+      border-radius: 5px;
+    }
+    span:first-child{
+      background-color: #a97ff5;
+    }
+    span:nth-child(2){
+      background-color: #ec9d3f;
+    }
+    span:last-child{
+      background-color: #eb70b8;
+    }
+  }
+  .cost{
+    display: inline-block;
+    padding: 7px;
+    margin: 7px;
+    background-color: #4abce2;
+    border-radius: 10px;
+    color: #fff;
+    span:last-child{
+      font-size: 1.2rem;
+    }
+  }
+}
+.gocost{
+  text-align: center;
+  button{
+    color: #fff;
+    background-color: #1fbe88;
+    padding: 10px 60px;
+    height: 40px;
+  }
+}
+:global{
+  .ant-form-item{
+    margin-bottom: 5px;
+  }
+}

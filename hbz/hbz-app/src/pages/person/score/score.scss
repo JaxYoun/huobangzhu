@@ -1,0 +1,102 @@
+page-score {
+  .scroll-content {
+    background: #f1f1f1;
+  }
+  ul,li {
+    margin: 0;
+    padding: 0;
+  }
+  .score-top {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-top: 30px;
+
+    em {
+      font-style: normal;
+      font-size: 2.8rem;
+      color: #444;
+    }
+    p {
+      font-size: 1.1rem;
+      margin: 0;
+      text-indent: 1em;
+      color: #888;
+    }
+    li {
+      text-align: center;
+      padding: 0 20px;
+      border-right: 1px solid #ccc;
+      &:last-child {
+        border-right: none;
+      }
+
+      span:first-child {
+        color: #666;
+      }
+    }
+  }
+  .score-list{
+    position: relative;
+    margin: 30px 3% 0 3%;
+    padding: 0 3% 50px 0;
+    border: 1px solid #eee;
+    border-bottom: none;
+    background: #fff;
+
+
+    &:before {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: -5px;
+      right: -5px;
+      height: 8px;
+      border-radius: 50px;
+      background: #000;
+      opacity: .1;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: -5px;
+      left: -1px;
+      right: -2px;
+      height: 5px;
+      background:linear-gradient(135deg, #fff 25%, transparent 25%) -50px 0,linear-gradient(225deg, #fff 25%, transparent 25%) -50px 0,linear-gradient(315deg, #fff 15%, transparent 25%),linear-gradient(45deg, #fff 15%, transparent 25%);
+      background-size: 10px 10px;
+      background-color: #f1f1f1;
+      background-position: 0 -5px;
+      transform: scaleY(-1);
+    }
+    li {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+      padding: 12px 0;
+      border-bottom: 1px solid #eee;
+
+      span {
+        width: 33%;
+        text-align: center;
+        color: #666;
+
+        &:nth-child(1) {
+          width: 20%;
+        }
+        &.up {
+          color: #31c076;
+        }
+        &.down {
+          color: #f33;
+        }
+      }
+    }
+    li:nth-child(1) {
+      font-size: 1.5rem;
+      span {
+        color: #333;
+      }
+    }
+  }
+}

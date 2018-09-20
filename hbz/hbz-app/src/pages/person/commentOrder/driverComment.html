@@ -1,0 +1,73 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+<div class="page-content-wrapper bg-white">
+  <ion-list class="comment-list">
+    <ion-item *ngFor="let myComment of myOrdersArray">
+      <h2>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-siji1"></use>
+          </svg>
+        </span>{{myComment.order.orderNo}}</h2>
+      <ul>
+        <li>
+          <span>订单类型：</span>
+          <em>{{myComment.order.orderTypeChi}}</em>
+        </li>
+        <li>
+          <span>订单状态：</span>
+          <em>{{myComment.order.orderTrans}}</em>
+        </li>
+        <!-- <li>
+          <span>取货地址：</span>
+          <em>{{myComment.order.originAddress}}</em>
+        </li>
+        <li>
+          <span>配送地址：</span>
+          <em>{{myComment.order.destAddress}}</em>
+        </li> -->
+        <p *ngIf="myComment.order.orderType != 'BUY'">
+            <span>取货地址：</span>
+            <em>{{myComment.order.originLocation}}</em>
+          </p>
+          <p *ngIf="myComment.order.orderType != 'BUY'">
+            <span>取货详细地址：</span>
+            <em>{{myComment.order.originLocationInfo}}</em>
+          </p>
+          <p>
+            <span>配送地址：</span>
+            <em>{{myComment.order.destLocation}}</em>
+          </p>
+          <p>
+            <span>配送详细地址：</span>
+            <em>{{myComment.order.destLocationInfo}}</em>
+          </p>
+        <!-- <li>
+          <span>价格：</span>
+          <em>{{myComment.order.amount}}元</em>
+        </li> -->
+        <li>
+          <span>价格：</span>
+          <em *ngIf="myComment.order.orderType == 'FSL' || myComment.order.orderType == 'LTL'">{{myComment.order.expectedPrice}}元</em>
+          <em *ngIf="myComment.order.orderType == 'BUY' || myComment.order.orderType == 'SEND' || myComment.order.orderType == 'EX'">{{myComment.order.amount}}元</em>
+        </li>
+      </ul>
+      <div class="operation">
+        <button *ngIf="myComment.star == 0" ion-button outline (click)="goDetail(myComment)">去评价</button>
+        <button *ngIf="myComment.star != 0" ion-button outline (click)="goDetail(myComment)">详情</button>
+      </div>
+    </ion-item>
+  </ion-list>
+</div>
+
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

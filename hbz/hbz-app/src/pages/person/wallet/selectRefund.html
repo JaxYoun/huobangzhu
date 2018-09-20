@@ -1,0 +1,33 @@
+<ion-content padding class="my-modal my-modal-style">
+  <div class="modal-card">
+    <div class="modal-card-header">
+      <h1>{{title}}</h1>
+      <button ion-button (click)="dismiss()">
+        <ion-icon name="md-close"></ion-icon>
+      </button>
+    </div>
+    <div class="modal-card-content">
+      <ion-card (click)="selectBond(item)" *ngFor="let item of walletArray">
+        <ion-card-header>
+          {{item.bondNo}}
+        </ion-card-header>
+        <ul class="modal-list">
+          <li>缴纳时间：{{item.createdDate}}</li>
+          <li>缴纳金额：{{item.amount}} 元</li>
+          <li *ngIf="item.bondStatus == 0">状态：新建</li>
+          <li *ngIf="item.bondStatus == 1">状态：已交</li>
+          <li *ngIf="item.bondStatus == 2">状态：冻结</li>
+          <li class="bond-status">
+              <span *ngIf="item.bondStatus == 0" style="color:orange;">去支付</span>
+              <span *ngIf="item.bondStatus == 1" style="color:green;">去退款</span>
+              <span *ngIf="item.bondStatus == 2" style="color:red;">冻结</span>
+          </li>
+        </ul>
+      </ion-card>
+    </div>
+    <div class="modal-card-footer">
+      <button ion-button (click)="selectAndGo()" class="addnew-ok">确定</button>
+      <button ion-button (click)="dismiss()" class="addnew-ok">取消</button>
+    </div>
+  </div>
+</ion-content>

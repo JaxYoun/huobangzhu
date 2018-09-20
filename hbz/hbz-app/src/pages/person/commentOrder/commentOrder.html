@@ -1,0 +1,73 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+  <div class="user-info">
+    <div class="header">
+      <div class="info">
+        <div class="avatar">
+          <img src="{{currentUser.imageUrl}}" alt="avatar">
+          <!-- <i>+</i> -->
+        </div>
+        <h1>
+            <p>{{currentUser.login}}</p>
+            <p>{{currentUser.nickName}}</p>
+        </h1>
+      </div>
+    </div>
+  </div>
+  <ul class="comment-order"> <!-- 等登录接口修改后，从里面获取 -->
+    <li>
+      <div>我的司机评价</div>
+      <div>
+        <star-level [starLevel]="driverStarLevel"></star-level>
+      </div>
+    </li>
+    <li>
+      <div>我的货主评价</div>
+      <div>
+        <star-level [starLevel]="shipperStarLevel"></star-level>
+      </div>
+    </li>
+  </ul>
+  <div class="home-buttons">
+    <ul (click)="goto('CONSIGNOR','waitComment')">
+      <li></li>
+      <li>
+        <h2>评价司机-待评价</h2>
+        <p>对司机的服务进行评价</p>
+      </li>
+      <li>
+        {{providerWaitCount}}
+      </li>
+    </ul>
+    <ul (click)="goto('CONSIGNOR','alreadyComment')">
+      <li></li>
+      <li>
+        <h2>评价司机-已评价</h2>
+        <p>查看对司机的评价</p>
+      </li>
+      <li>
+        {{providerAlreadyCount}}
+      </li>
+    </ul>
+    <ul (click)="goto('PROVIDER','waitComment')">
+      <li></li>
+      <li>
+        <h2>评价货主-待评价</h2>
+        <p>对货主进行评价</p>
+      </li>
+      <li>
+        {{consignorWaitCount}}
+      </li>
+    </ul>
+    <ul (click)="goto('PROVIDER','alreadyComment')">
+      <li></li>
+      <li>
+        <h2>评价货主-已评价</h2>
+        <p>查看对货主的评价</p>
+      </li>
+      <li>
+        {{consignorAlreadyCount}}
+      </li>
+    </ul>
+  </div>
+</ion-content>

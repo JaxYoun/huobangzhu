@@ -1,0 +1,98 @@
+<app-header title="{{title}}"></app-header>
+<ion-content>
+  <div class="main-content">
+    <h1>{{goodsName}}</h1>
+    <div class="stars" *ngIf="myComment.star == 0">
+      <star-level [starLevel]="star" selectable="true" (change)="changeStar($event)"></star-level>
+      <textarea placeholder="请输入评价..." [(ngModel)]="comment"></textarea>
+    </div>
+    <div class="stars" *ngIf="myComment.star != 0">
+      <star-level [starLevel]="star"></star-level>
+      <textarea disabled="true" [(ngModel)]="comment"></textarea>
+    </div>
+  </div>
+  <ion-list class="comment-list">
+    <ion-item>
+      <h2>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-siji1"></use>
+          </svg>
+        </span>{{myComment.order.orderNo}}</h2>
+      <ul>
+          <li>
+              <span>订单类型：</span>
+              <em>{{myComment.order.orderTypeChi}}</em>
+            </li>
+            <li>
+              <span>订单状态：</span>
+              <em>{{myComment.order.orderTrans}}</em>
+            </li>
+            <!-- <li>
+              <span>取货地址：</span>
+              <em>{{myComment.order.originAddress}}</em>
+            </li>
+            <li>
+              <span>配送地址：</span>
+              <em>{{myComment.order.destAddress}}</em>
+            </li> -->
+
+            <li *ngIf="myComment.order.orderType != 'BUY'">
+              <span>取货地址：</span>
+              <em>{{myComment.order.originLocation}}</em>
+            </li>
+            <li *ngIf="myComment.order.orderType != 'BUY'">
+              <span>取货详细地址：</span>
+              <em>{{myComment.order.originLocationInfo}}</em>
+            </li>
+            <li>
+              <span>配送地址：</span>
+              <em>{{myComment.order.destLocation}}</em>
+            </li>
+            <li>
+              <span>配送详细地址：</span>
+              <em>{{myComment.order.destLocationInfo}}</em>
+            </li>
+
+            <!-- <li>
+              <span>价格：</span>
+              <em>{{myComment.order.amount}}元</em>
+            </li> -->
+            <li>
+              <span>价格：</span>
+              <em *ngIf="myComment.order.orderType == 'FSL' || myComment.order.orderType == 'LTL'">{{myComment.order.expectedPrice}}元</em>
+              <em *ngIf="myComment.order.orderType == 'BUY' || myComment.order.orderType == 'SEND' || myComment.order.orderType == 'EX'">{{myComment.order.amount}}元</em>
+            </li>
+      </ul>
+      <ul *ngIf="myComment.type == 'CONSIGNOR'"> <!-- 评价司机 -->
+        <li>
+          <span>接运人：</span>
+          <em>{{myComment.order.takeUser.nickName}}</em>
+        </li>
+        <li>
+          <span>联系电话：</span>
+          <em>{{myComment.order.takeUser.telephone}}</em>
+        </li>
+        <li>
+          <span>接运时间：</span>
+          <em>{{myComment.order.takeTime}}</em>
+        </li>
+      </ul>
+      <ul *ngIf="myComment.type == 'PROVIDER'"> <!-- 评价货主 -->
+        <li>
+          <span>发货人：</span>
+          <em>{{myComment.order.createUser.nickName}}</em>
+        </li>
+        <li>
+          <span>联系电话：</span>
+          <em>{{myComment.order.createUser.telephone}}</em>
+        </li>
+        <li>
+          <span>创建时间：</span>
+          <em>{{myComment.order.createTime}}</em>
+        </li>
+      </ul>
+    </ion-item>
+  </ion-list>
+  <button *ngIf="myComment.star == 0" ion-button class="submit" (click)="confirm()">提交评价</button>
+</ion-content>

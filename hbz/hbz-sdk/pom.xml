@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>hbz</artifactId>
+        <groupId>com.troy.keeper</groupId>
+        <version>0.0.5-SNAPSHOT</version>
+    </parent>
+    <groupId>com.troy.keeper</groupId>
+
+    <artifactId>hbz-sdk</artifactId>
+    <name>货帮主SDK工程</name>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>log1-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alipay</groupId>
+            <artifactId>sdk-jar</artifactId>
+            <version>1.0</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-core</artifactId>
+            <version>3.2.3</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun</groupId>
+            <artifactId>aliyun-java-sdk-dysmsapi</artifactId>
+            <version>1.0.0-SANPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>com.aliyun.api.gateway</groupId>
+            <artifactId>java.demo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-logging</groupId>
+            <artifactId>commons-logging</artifactId>
+            <version>1.1.1</version>
+        </dependency>
+
+    </dependencies>
+</project>

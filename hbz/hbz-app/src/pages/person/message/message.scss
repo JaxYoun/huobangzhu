@@ -1,0 +1,44 @@
+page-message {
+  background: #f1f1f1;
+  .scroll-content {
+    background: #f1f1f1;
+  }
+  h2 {
+    font-size: 1.4rem;
+    padding-left: 12px;
+  }
+  .msg-list {
+    padding: 0;
+    background: #f1f1f1;
+    margin-top: 50px;
+    li {
+      width: 100%;
+      padding: 0 12px;
+      box-sizing: border-box;
+      background: #fff;
+      margin-top: 10px;
+      &>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        line-height: 3rem;
+        font-size: 1.5rem;
+      }
+      div:first-child {
+        border-bottom: 1px solid #ddd;
+        span:last-child {
+          font-size: 1.2rem;
+          color: #999;
+        }
+      }
+      div:last-child {
+        font-size: 1.4rem;
+        ion-icon {
+          color: #ccc;
+          vertical-align: middle;
+        }
+      }
+    }
+  }
+}
+

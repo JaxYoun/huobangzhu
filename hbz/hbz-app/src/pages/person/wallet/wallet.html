@@ -1,0 +1,59 @@
+<!--
+  样式使用说明：
+
+  1.ul 选择器 wallet-list
+
+  2.li 已缴纳 done
+
+  3.li 有效 valid
+
+  4.li 无效 valid
+
+-->
+
+<app-header title="{{title}}"></app-header>
+<ion-content>
+  <div>
+    <ul class="wallet-list">
+      <li *ngFor="let item of walletArray" [ngClass]="{'done':item.status}">
+        <div>
+          <span>{{item.name}}</span>
+          <span>
+            <i>￥</i>{{item.total}}</span>
+        </div>
+        <div>
+          <span>{{item.statusChi}}</span>
+          <button class="pay" ion-button (click)="bondPay(item)" *ngIf="item.bondType != 'BOND_SL' || item.totalCount === 0">交保证金</button>
+          <button class="refund" ion-button (click)="bondRefund(item)" *ngIf="item.totalCount > 0">详情</button>
+        </div>
+      </li>
+    </ul>
+    <div>
+      <h2>优惠券</h2>
+      <ul class="wallet-list">
+        <li class="valid">
+          <div>
+            <span>发货现金折扣券</span>
+            <span>
+              <i>￥</i>998.00</span>
+          </div>
+          <div>
+            <span>可使用</span>
+            <button ion-button>去使用</button>
+          </div>
+        </li>
+        <li class="invalid">
+          <div>
+            <span>发货现金折扣券</span>
+            <span>
+              <i>￥</i>998.00</span>
+          </div>
+          <div>
+            <span>已失效</span>
+            <button ion-button></button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+</ion-content>

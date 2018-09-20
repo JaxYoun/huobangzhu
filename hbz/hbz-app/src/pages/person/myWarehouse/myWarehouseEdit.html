@@ -1,0 +1,60 @@
+<app-header title="{{title}}"></app-header>
+<ion-content class="fulltransport upload-id-card my-warehouse-edit">
+
+    <ul class="upload-list" center>
+        <li (click)="createImage()">
+          <div *ngIf="!certificates">
+              <p>+</p>
+              <p>仓库图像照片</p>
+          </div>
+          <img [src]="certificates" *ngIf="certificates"/>
+        </li>
+      </ul>
+
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label fixed>仓库名称:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.name"></ion-input>
+        </ion-item>
+        <ion-item unit>
+          <ion-label fixed>仓库容量:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.capacity"></ion-input>
+          <ion-label unit>㎡</ion-label>
+        </ion-item>
+        <ion-item unit>
+          <ion-label fixed>租赁价格:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.unitPrice"></ion-input>
+          <ion-label unit>元/㎡</ion-label>
+        </ion-item>
+        <ion-item unit>
+          <ion-label fixed>租赁时间:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.minRentTime"></ion-input>
+          <ion-label unit>月</ion-label>
+          <!-- <ion-select interface="popover" [(ngModel)]="minRentTimeSelect" cancelText="取消" okText="确认">
+            <ion-option value="{{item.key}}" *ngFor="let item of goodsType | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select> -->
+          <!-- <ion-datetime monthNames="1月,2月,3月,4月,5月,6月,7月,8月,9月,10月,11月,12月" max="2050-12-31" displayFormat="YYYY-MM-DD HH:mm" [(ngModel)]="obj.minRentTime" doneText="确认" cancelText="取消"></ion-datetime> -->
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>联系人:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.ownerName"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>联系电话:</ion-label>
+          <ion-input type="tel" [(ngModel)]="obj.telephone" maxlength="11"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>仓库地址:</ion-label>
+          <ion-input type="text" [(ngModel)]="obj.address" disabled="true" placeholder="点击从地图获取详细地址" (click)="openMapModal()"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label fixed>仓库描述:</ion-label>
+          <ion-textarea [(ngModel)]="obj.warehouseDescribe"></ion-textarea>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button class="ok" (click)="create()">保存</button>
+</ion-content>

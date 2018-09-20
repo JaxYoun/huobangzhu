@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      {{title}}
+    </ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="gotoMessage()">
+        <i *ngIf="isRead" class="icon-xinfeng-set"></i>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-xinfeng"></use>
+        </svg>
+      </button>
+    </ion-buttons>
+    <button ion-button icon-only close *ngIf="dismiss" (click)="pagedDismiss()"></button>
+  </ion-navbar>
+</ion-header>

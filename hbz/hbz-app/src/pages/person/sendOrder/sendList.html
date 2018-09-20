@@ -1,0 +1,104 @@
+<app-header title="发运列表"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+
+  <div class="my-search-list">
+    <ul>
+      <li>
+        <label>订单类型</label>
+        <ion-select interface="popover" [(ngModel)]="orderTypeSelect" (ngModelChange)="onSelectChange()" cancelText="取消" okText="确认">
+          <ion-option value="{{item.key}}" *ngFor="let item of orderTypeObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </li>
+      <!-- <li>
+        <label>订单状态</label>
+        <ion-select interface="popover" [(ngModel)]="orderTransSelect" (ngModelChange)="onSelectChange2()" cancelText="取消" okText="确认">
+          <ion-option value="{{item.key}}" *ngFor="let item of orderTransObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </li> -->
+      <li hidden></li>
+      <!-- <li>
+        <button ion-button>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-sousuo"></use>
+          </svg>
+        </button>
+      </li> -->
+      <!-- <li>
+        <button ion-button>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-sousuo"></use>
+          </svg>
+        </button>
+      </li> -->
+      <!-- <li>
+        <label>发运时间</label>
+        <ion-datetime max="2050-12-31" displayFormat="YYYY-MM-DD" [(ngModel)]="createTime" doneText="确认" cancelText="取消"></ion-datetime>
+      </li> -->
+      <!-- <li>
+        <button ion-button>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-sousuo"></use>
+          </svg>
+        </button>
+      </li> -->
+    </ul>
+  </div>
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" >
+      <div class="content">
+        <div class="info" (click)="goDetail(myOrder)">
+          <p>
+            <span>订单编号：</span>
+            <span>{{myOrder.orderNo}}</span>
+          </p>
+          <p>
+            <span>订单类型：</span>
+            <span>{{myOrder.orderTypeChi}}</span>
+          </p>
+          <p>
+            <span>订单状态：</span>
+            <span>{{myOrder.orderTransChi}}</span>
+          </p>
+          <p *ngIf="myOrder.orderType != 'BUY'">
+            <span>取货地址：</span>
+            <span>{{myOrder.originLocation}}</span>
+          </p>
+          <p *ngIf="myOrder.orderType != 'BUY'">
+            <span>取货详细地址：</span>
+            <span>{{myOrder.originLocationInfo}}</span>
+          </p>
+          <p>
+            <span>配送地址：</span>
+            <span>{{myOrder.destLocation}}</span>
+          </p>
+          <p>
+            <span>配送详细地址：</span>
+            <span>{{myOrder.destLocationInfo}}</span>
+          </p>
+          <p>
+            <span>价格：</span>
+            <span *ngIf="myOrder.orderType == 'FSL' || myOrder.orderType == 'LTL'">{{myOrder.expectedPrice}}元</span>
+            <span *ngIf="myOrder.orderType == 'BUY' || myOrder.orderType == 'SEND' || myOrder.orderType == 'EX'">{{myOrder.amount}}元</span>
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+        <div>
+          <p class="buttons"><button class="delete" (click)="delOrder(myOrder)">删除</button></p>
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

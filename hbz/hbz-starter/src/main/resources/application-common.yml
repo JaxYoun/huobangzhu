@@ -1,0 +1,42 @@
+security:
+  parameter:
+    user: j_user
+    pass: j_pass
+  url:
+    logout: /api/security/logout
+    login: /login
+    home: /home
+    auths: /api/security
+session:
+  provider: redis
+  header: X-AUTH-TOKEN
+  strategy: header
+debug: false
+server:
+  port: 81
+  #port: 443
+  #ssl:
+    #key-store: D:\keystore\hbz.keystore
+    #key-password: 123456
+sms:
+  url: http://mb345.com:999/ws/BatchSend2.aspx
+  corpID: LKSDK0005742
+  secure: zh9527@
+
+freemarker:
+  enabled: true
+  order: 1
+  allow-request-override: false
+  allow-session-override: false
+  cache: true
+  check-template-location: true
+  expose-request-attributes: false
+  expose-session-attributes: false
+  expose-spring-macro-helpers: true
+  prefer-file-system-access: true
+  suffix: .ftl
+  template-loader-path: classpath:/templates/
+  settings:
+    template_update_delay: 0
+    default_encoding: UTF-8
+    classic_compatible: true

@@ -1,0 +1,76 @@
+<app-header title="车辆征集"></app-header>
+
+<ion-content class="car-collect">
+    <h1>订单编号：{{orderNo}}</h1>
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-honor"></use>
+            </svg>
+          </span>
+          资质要求
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>司机类型:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="driverSelect" cancelText="取消" okText="确认" >
+                <ion-option value="{{item.val}}" *ngFor="let item of driverList">{{item.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>注册资金要求:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="registryMoneySelect" cancelText="取消" okText="确认" >
+                  <ion-option value="{{item.val}}" *ngFor="let item of registryMoneyList">{{item.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-baozhengjin"></use>
+            </svg>
+          </span>
+          保证金要求
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>保证金额度:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="bondSelect" cancelText="取消" okText="确认" >
+                  <ion-option value="{{item.val}}" *ngFor="let item of bondList">{{item.name}}</ion-option>
+              </ion-select>元
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-xinyu"></use>
+            </svg>
+          </span>
+          司机信誉
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>信誉等级:</ion-label>
+              <ion-select interface="popover" [(ngModel)]="needSelect" cancelText="取消" okText="确认" >
+                  <ion-option value="{{item.val}}" *ngFor="let item of needList">{{item.name}}</ion-option>
+              </ion-select>以上
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+  <!-- <button ion-button class="confirm" (click)="confirm()">去付款</button> -->
+  <button ion-button class="confirm" (click)="confirm()">保存</button>
+</ion-content>

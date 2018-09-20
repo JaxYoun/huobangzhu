@@ -1,0 +1,953 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: '../assets/fonts';
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+@import 'ionic.globals';
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary: #488aff,
+  secondary: #32db64,
+  danger: #f53d3d,
+  light: #f4f4f4,
+  dark: #222
+);
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import 'ionic.theme.default';
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import 'ionic.ionicons';
+
+// Fonts
+// --------------------------------------------------
+
+@import 'roboto';
+@import 'noto-sans';
+
+// $color: #4abce2;
+$color: #26b3f4;
+.confirm-button {
+  font-size: 2rem;
+  width: 92%;
+  margin: 4%;
+  box-sizing: border-box;
+  background: #1fbe88 !important;
+  border-radius: 5px;
+}
+app-header {
+  ion-header {
+    .ion-md-arrow-back {
+      &::before {
+        content: '' !important;
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        transform: rotate(45deg);
+      }
+    }
+
+    ion-buttons {
+      min-width: 44px;
+      margin: 0 6px;
+      .button-inner {
+        font-size: 2.2rem;
+      }
+    }
+    button {
+      color: #fff !important;
+    }
+    button[close] {
+      color: #fff;
+      background: transparent !important;
+      width: 50px;
+      position: absolute;
+      left: 0;
+      top: 0;
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 16px;
+        top: 16px;
+        width: 15px;
+        height: 15px;
+        border-left: 1px solid;
+        border-bottom: 1px solid;
+        transform: rotate(45deg);
+      }
+    }
+    .toolbar-md {
+      min-height: 48px;
+    }
+
+    .toolbar-background-md {
+      background: $color;
+    }
+    .back-button {
+      color: #fff;
+    }
+
+    .toolbar-title {
+      font-weight: 100;
+      text-align: center;
+      font-size: 1.8rem;
+      color: #fff;
+    }
+
+    &::after {
+      background-image: none !important;
+    }
+  }
+  &.none-bg {
+    .toolbar-background-md {
+      background: none;
+    }
+  }
+}
+
+.scroll-content {
+  background: #fff;
+  margin-top: 48px !important;
+  border-top: none !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.my-radio {
+  .item-radio {
+    min-height: 36px;
+    .item-inner {
+      min-height: 36px;
+    }
+    ion-label,
+    ion-radio {
+      margin: 4px 0;
+      font-size: 1.4rem !important;
+    }
+    .radio-icon {
+      border: none;
+      top: -3px;
+      .radio-inner {
+        background: none;
+      }
+    }
+  }
+  .item-radio-checked {
+    background: $color;
+
+    ion-label {
+      color: #fff !important;
+    }
+    .radio-checked {
+      transform: scaleX(-1) rotate(-30deg);
+      border-color: $color;
+      border: none;
+      .radio-inner {
+        background-color: none;
+        &::before {
+          content: 'L';
+          color: #fff;
+        }
+      }
+    }
+  }
+  &.my-radio-noback {
+    .item-radio {
+      padding-right: 20px;
+    }
+    .radio-icon {
+      top: 3px;
+      left: 3px;
+      width: 24px;
+      height: 24px;
+      border: 1px solid #ddd;
+    }
+    .radio-inner {
+      left: 5px;
+      top: -2px;
+      font-size: 20px;
+    }
+    .item-radio-checked {
+      background: none;
+      ion-label {
+        color: #333 !important;
+      }
+      .radio-icon {
+        background: $color;
+        border-color: $color;
+      }
+      .radio-checked {
+      }
+    }
+  }
+}
+
+.my-search-list {
+  position: fixed;
+  top: 48px;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 56px;
+    width: 100%;
+    background: $color;
+  }
+  & > ul {
+    position: absolute;
+    top: -16px;
+    left: 3vw;
+    right: 3vw;
+    padding: 12px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 5px #ddd;
+
+    li {
+      display: flex;
+      margin: 8px 0;
+      height: 36px;
+      &[hidden] {
+        display: none;
+      }
+      &:last-child {
+        justify-content: center;
+        margin-bottom: 0;
+
+        button {
+          height: 30px;
+          background: saturate($color, 20) !important;
+          border-radius: 5px;
+          opacity: 0.8;
+          .button-inner {
+            font-size: 24px;
+            color: #fff;
+          }
+        }
+      }
+      & > label {
+        min-width: 80px;
+        color: $color;
+        line-height: 32px;
+      }
+      & > ion-select,
+      & > ion-input,
+      & > ion-datetime,
+      & > city-picker {
+        flex: auto;
+        position: relative;
+        height: 32px;
+        border: 1px solid #ddd;
+        border-radius: 5px;
+        padding: 5px;
+        max-width: 100vw;
+        color: #666;
+        text-align: left;
+        .wrapper {
+          height: 100%;
+          overflow: hidden;
+        }
+        ion-item {
+          padding: 0 0 0 0;
+          min-height: auto;
+          border: none !important;
+          height: 100%;
+          .item-inner {
+            border: none !important;
+            padding: 0;
+          }
+          .text-input-md {
+            margin: 0;
+            width: 100%;
+            height: 2rem;
+            border: none !important;
+            text-indent: 5px;
+          }
+        }
+      }
+      & > ion-input {
+        padding: 0 5px;
+
+        input {
+          border: none !important;
+          margin: 0;
+        }
+      }
+      & > ion-datetime {
+        .datetime-text {
+          border: none !important;
+          height: 24px;
+          line-height: 24px;
+          text-indent: 0;
+        }
+      }
+      & > city-picker {
+        ion-item {
+          padding: 0 0 0 0;
+          min-height: auto;
+          border: none !important;
+          .item-inner {
+            border: none !important;
+            padding: 0;
+          }
+          .text-input-md {
+            margin: 0;
+            width: 100%;
+            height: 2rem;
+            border: none !important;
+            text-indent: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+.search {
+  city-picker {
+    .wrapper {
+      height: 100%;
+      overflow: hidden;
+    }
+    ion-item {
+      padding: 0 0 0 0;
+      min-height: auto;
+      border: none !important;
+      height: 100%;
+      .item-inner {
+        border: none !important;
+        padding: 0;
+      }
+      .text-input-md {
+        margin: 0;
+        width: 100%;
+        height: 2rem;
+        border: none !important;
+        text-indent: 5px;
+      }
+    }
+  }
+}
+.select-md .select-icon {
+  margin-left: 7px;
+  .select-icon-inner {
+    left: 0 !important;
+    margin-top: -6px !important;
+    width: 10px !important;
+    height: 10px !important;
+    border-top: 1px solid !important;
+    border-right: 1px solid !important;
+    border-left: 1px solid transparent !important;
+    border-bottom: 1px solid transparent !important;
+    transform: rotate(135deg);
+  }
+}
+
+.button-md {
+  background-color: $color;
+}
+
+star-level.inline {
+  float: right;
+  padding: 0;
+  margin: 0 !important;
+  z-index: 1 !important;
+
+  ul {
+    li {
+      display: inline-block;
+      width: 1.2rem !important;
+      padding: 0 !important;
+      font-size: 1.5rem !important;
+      box-shadow: none !important;
+      margin: 0 !important;
+      text-align: center;
+    }
+  }
+}
+
+.my-check-box {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-direction: row;
+
+  li {
+    position: relative;
+    width: 21%;
+    margin: 2%;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    line-height: 3.5rem;
+    text-align: center;
+    overflow: hidden;
+
+    span {
+      color: #333;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+    i {
+      position: absolute;
+      top: -20px;
+      right: -20px;
+      width: 38px;
+      height: 38px;
+      background: none;
+      border-radius: 50%;
+    }
+    &.selected {
+      border-color: $color;
+
+      span {
+        font-weight: 500;
+      }
+
+      i {
+        background: $color;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: 6px;
+          top: 23px;
+          width: 8px;
+          height: 4px;
+          border-bottom: 1px solid #fff;
+          border-left: 1px solid rgb(255, 255, 255);
+          transform: rotate(-40deg);
+        }
+      }
+    }
+  }
+}
+
+.my-modal {
+  background: none !important;
+  background-color: none !important;
+  position: relative;
+
+  &-style {
+    .scroll-content {
+      background: transparent;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.7;
+    }
+  }
+  ion-item {
+    .item-inner {
+      border-bottom: none !important;
+    }
+    ion-select {
+      padding-top: 6px;
+      padding-bottom: 6px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 14px;
+      text-indent: 1em;
+      margin-top: 6px;
+    }
+  }
+  .confirm {
+    @extend .confirm-button;
+    background: #1fbe88 !important;
+  }
+  ul.modal-list {
+    padding-left: 16px;
+    margin-top: 0;
+  }
+}
+
+.modal-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px #111;
+  overflow: hidden;
+  position: relative;
+
+  &-header {
+    h1 {
+      font-size: 1.8rem;
+      line-height: 4.4rem;
+      padding: 0 20px;
+      margin: 0;
+      font-weight: normal;
+      text-align: left;
+    }
+    button {
+      position: absolute;
+      height: 32px;
+      font-size: 2.2rem;
+      right: 8px;
+      top: 5px;
+      color: #ccc;
+      font-weight: 100;
+      background: none !important;
+      padding: 0 !important;
+    }
+  }
+
+  &-content {
+    padding: 0 10px;
+  }
+
+  &-footer {
+    margin-top: 20px;
+
+    button {
+      width: 50%;
+      float: left;
+      margin: 0 !important;
+      padding: 0;
+      border-radius: 0 !important;
+      letter-spacing: 4px;
+      font-size: 1.7rem;
+      color: $color;
+      background: #f1f1f1 !important;
+
+      &:first-child {
+        border-right: 1px solid #ddd;
+      }
+    }
+  }
+}
+
+.service-agreement {
+  padding: 30px;
+  color: #666;
+
+  &-checkbox {
+    ion-label {
+      display: inline-block;
+      margin: 0;
+      padding-left: 6px;
+      line-height: 20px;
+      height: 20px;
+      vertical-align: middle;
+    }
+    ion-checkbox {
+      float: left;
+
+      .checkbox-icon {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        border-color: #666;
+        border-width: 1px;
+
+        &.checkbox-checked {
+          background: $color;
+          border-color: $color;
+
+          .checkbox-inner {
+            top: 2px;
+            left: 5px;
+          }
+        }
+      }
+    }
+  }
+  &-readme {
+    display: inline-block;
+    text-indent: 4em;
+    color: $color;
+    letter-spacing: 2px;
+    line-height: 30px;
+    white-space: nowrap;
+  }
+}
+
+.select-popover {
+  ion-backdrop {
+    opacity: 0.6;
+  }
+  ion-item {
+    &.item-radio-checked {
+      ion-label {
+        color: $color;
+      }
+    }
+  }
+  ion-radio {
+    .radio-icon {
+      border-color: #fff;
+
+      .radio-inner {
+        left: 1px;
+        border-radius: 0;
+        transform: rotate(-45deg);
+        background-color: #fff !important;
+      }
+
+      &.radio-checked {
+        border-color: $color;
+        background-color: $color !important;
+
+        .radio-inner {
+          width: 10px;
+          height: 5px;
+          background-color: $color !important;
+          border-left: 1px solid;
+          border-bottom: 1px solid;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.my-badge {
+  border-radius: 8px;
+  padding: 0 8px;
+  color: #fff;
+  background: $color;
+
+  @at-root #{&}-large {
+    min-width: 80px;
+    height: 48px;
+    font-size: 2.3rem;
+    font-weight: 100;
+  }
+}
+
+.nobg-header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  h1 {
+    color: #fff;
+    font-size: 2rem;
+    text-align: center;
+    padding: 10px 0;
+    margin: 0;
+  }
+  & > button[start] {
+    position: absolute;
+    left: 10px;
+    top: 0;
+    font-size: 1.8rem;
+    background: none;
+    color: #fff;
+    & > .button-inner {
+      font-size: 1.4rem;
+      & > span {
+        padding-right: 5px;
+      }
+    }
+  }
+  & > button[end] {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    font-size: 1.8rem;
+    background: none;
+    color: #fff;
+  }
+}
+
+.my-icon-list {
+  ion-item {
+    color: #444;
+
+    & > span:first-child {
+      color: saturate($color, 30);
+      font-size: 2.5rem;
+      line-height: 1rem;
+    }
+    .ion-ios-arrow-forward {
+      color: #ccc;
+      font-weight: 100;
+    }
+    .ion-ios-arrow-down {
+      display: none;
+    }
+  }
+  .sub-item {
+    padding-left: 4rem;
+  }
+}
+
+.flip-horizontal {
+  transform: scaleX(-1);
+}
+
+mapModals {
+  #map_container {
+    width: 100%;
+    height: 54%;
+  }
+  #btn-location {
+    position: relative;
+    top: 10px;
+    left: 0;
+    z-index: 999;
+  }
+  .btn_loaction {
+    padding-right: 10px;
+  }
+  #r-result {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    height: 290px;
+    background-color: #ffffff;
+  }
+  #r-result ul li {
+    border-bottom: 1px solid #e6e6e6;
+    padding: 12px 0px;
+  }
+  #r-text {
+    position: absolute;
+    z-index: 999;
+    top: 5px;
+    left: 0;
+    right: 0;
+    text-align: center;
+
+    #searchInput {
+      font-size: 1.5rem;
+      line-height: 24px;
+      margin: 0 auto;
+      border-radius: 50px;
+      width: 60%;
+      text-indent: 2em;
+      border: 1px solid #999;
+    }
+  }
+  #r-center {
+    position: absolute;
+    z-index: 999;
+    width: 30px;
+    height: 30px;
+    left: 50%;
+    top: 27%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.news-content {
+  .scroll-content {
+    padding: 3%;
+  }
+}
+
+.page-content-wrapper {
+  margin-top: 48px;
+  &.bg-white {
+    background: #fff;
+    ion-item {
+      background: #fff;
+    }
+  }
+}
+.text-input-md {
+  height: 3rem;
+  min-height: 36px;
+  margin-bottom: 0 !important;
+}
+.datetime-md {
+  padding-right: 0 !important;
+}
+.input-wrapper {
+  position: relative;
+  ion-label[fixed] + ion-label[unit] {
+    right: 22px;
+    bottom: 8px;
+  }
+  ion-label[unit] {
+    position: absolute;
+    height: 36px;
+    right: 12px;
+    bottom: 0;
+    line-height: 36px;
+    color: #999;
+    text-align: left;
+    font-size: 16px;
+    width: auto !important;
+    margin: 0;
+  }
+}
+
+.modal-header {
+  height: 48px;
+  overflow: hidden;
+  .toolbar-md {
+    min-height: 48px;
+    max-height: 48px;
+  }
+  .toolbar-background {
+    background: $color;
+  }
+  .toolbar-title {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  .bar-button {
+    color: #fff;
+  }
+}
+
+.map-address {
+  position: relative;
+
+  .icon {
+    right: 15px;
+    top: 44px;
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: url(../assets/icon/marker1.png) no-repeat center;
+    background-size: contain;
+  }
+  input {
+    padding: 0 12px;
+    text-indent: 0em;
+  }
+}
+
+.upload-container {
+  margin: 20px 0 0 0;
+  padding: 0 0 0 16px;
+  & > h2 {
+    margin: 10px 0;
+    padding: 0 2vw;
+    font-size: 1.8rem;
+  }
+}
+.upload-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &[center] {
+    justify-content: center;
+  }
+
+  & > h2 {
+    width: 100%;
+    margin: 15px 0 5px 15px;
+  }
+  & > li {
+    list-style: none;
+    text-align: center;
+    margin: 2vw;
+    width: 40vw;
+
+    div {
+      background: #e2edf1;
+      border-radius: 5px;
+      color: #86b6c6;
+      padding: 25px 0;
+      width: 100%;
+
+      p {
+        margin: 5px;
+      }
+    }
+
+    img {
+      width: auto;
+      height: 100px;
+      border-radius: 5px;
+    }
+
+    p:first-child {
+      width: 35px;
+      height: 35px;
+      margin: 0 auto;
+      font-size: 3rem;
+      text-align: center;
+      line-height: 32px;
+      color: #86b6c6;
+      border: 2px solid;
+      border-radius: 50%;
+    }
+  }
+}
+
+.line-list {
+  .buttons {
+    text-align: right;
+
+    button {
+      padding: 3px 8px;
+      color: #fff;
+      border-radius: 3px;
+      margin: 0 0 0 5px;
+    }
+    .edit {
+      background: #16bbb1;
+    }
+    .delete {
+      background: #f18e0d;
+    }
+  }
+}

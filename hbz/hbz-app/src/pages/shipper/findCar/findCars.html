@@ -1,0 +1,93 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content class="find-car full-carry">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+  <div class="search">
+    <ul>
+      <li>
+        <div class="from">起点</div>
+        <!-- <ion-select>
+          <ion-option selected>成都</ion-option>
+          <ion-option>天津</ion-option>
+        </ion-select> -->
+        <city-picker [address]='originAreaCode'  [shortName]="true" (change)="onChangeAddressOrigin($event)"></city-picker>
+
+        <div class="line-icon">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tejiajipiaojiantou-wangfan"></use>
+          </svg>
+        </div>
+        <div class="to">到达</div>
+        <!-- <ion-select>
+          <ion-option selected>北京</ion-option>
+          <ion-option>上海</ion-option>
+        </ion-select> -->
+        <city-picker [address]='destAreaCode'  [shortName]="true" (change)="onChangeAddressDest($event)"></city-picker>
+      </li>
+    </ul>
+  </div>
+  <div class="nearby">
+    <!-- <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-ditu"></use>
+    </svg> -->
+  </div>
+  <ul class="line-list">
+    <li *ngFor="let item of nearSourceArray" (click)="gotoDetail(item)">
+      <div class="header">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufadi"></use>
+        </svg>
+        <span>{{item.originArea.areaName}}</span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa"></use>
+        </svg>
+        <span>{{item.destArea.areaName}}</span>
+      </div>
+
+          <div class="content">
+            <div class="info">
+              <p>
+                <span>货物发站：</span>
+                <span>{{item.originAreaName}}</span>
+              <p>
+                <span>货物达到：</span>
+                <span>{{item.destAreaName}}</span>
+              </p>
+              <p>
+                <span>车辆类型：</span>
+                <span>{{item.transType}}</span>
+              </p>
+              <p>
+                <span>最低载重：</span>
+                <span>{{item.maxLoad}}吨</span>
+              </p>
+              <!-- <p>
+                <span>车长：</span>
+                <span>{{item.transType}}</span>
+              </p> -->
+              <p>
+                <span>价格：</span>
+                <span>￥{{item.unitPrices}}元</span>
+              </p>
+              <p></p><!-- 留空，不删 -->
+            </div>
+          </div>
+        </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

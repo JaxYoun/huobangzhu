@@ -1,0 +1,63 @@
+<app-header title="" class="none-bg"></app-header>
+<ion-content>
+  <div class="banner">
+    <img src="{{obj.ware.img}}" alt="">
+    <!-- 大图ware.img -->
+  </div>
+  <div class="product-info">
+    <h1>{{obj.ware.summary}}</h1>
+    <p class="price">
+      <span>
+        <i>积分</i>{{obj.score}}</span>
+      <span>市场价: ￥{{obj.ware.marketAmount}} 元</span>
+    </p>
+  </div>
+  <div class="product-info">
+    <span class="quick-know">快速了解</span>
+    <p class="info">可兑换: {{obj.leave}} 份 &nbsp; 规格: {{obj.ware.specifications}} &nbsp; 产地：{{obj.ware.productionAddress}}</p>
+  </div>
+  <div class="product-content" [innerHTML]="obj.ware.introduction"></div>
+  <div [ngClass]="{'product-choose': true, 'visible': isChoose}">
+    <div class="mask" (click)="closeChoose()"></div>
+    <div class="content">
+      <ul class="product-list">
+        <li>
+          <div>
+            <img src="{{obj.ware.header}}" alt="">
+            <!-- 小图ware.header -->
+          </div>
+          <div>
+            <h1>{{obj.ware.summary}}</h1>
+            <p class="info">可兑换: {{obj.leave}} 瓶 &nbsp; 规格: {{obj.ware.specifications}} &nbsp; 产地：{{obj.ware.productionAddress}}</p>
+            <p class="price">
+              <span>
+                <i>积分</i>{{obj.score}}</span>
+            </p>
+          </div>
+        </li>
+      </ul>
+      <div class="user-form">
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>联系人:</ion-label>
+            <ion-input type="text" [(ngModel)]="paramObj.link"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>联系电话:</ion-label>
+            <ion-input type="tel" [(ngModel)]="paramObj.telephone" maxlength="11"></ion-input>
+          </ion-item>
+
+          <city-picker [address]="destInfoName" label="区域" (change)="onChangeAddress($event)"></city-picker>
+
+          <ion-item>
+            <ion-label stacked>详细地址：</ion-label>
+            <ion-input type="text" placeholder="详细地址详细到门牌号"  [(ngModel)]="paramObj.destAddr"></ion-input>
+          </ion-item>
+        </ion-list>
+      </div>
+      <!-- <button ion-button (click)="confirm()" [ngClass]="{'confirm': true, 'disabled': !isExchange}">立即兑换</button> -->
+      <button ion-button (click)="confirm()" class="confirm">立即兑换</button>
+    </div>
+  </div>
+  <button ion-button class="confirm" (click)="exchange()">立即兑换</button>
+</ion-content>

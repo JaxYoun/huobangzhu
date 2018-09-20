@@ -1,0 +1,66 @@
+<app-header title="车辆征集"></app-header>
+
+<ion-content padding class="paymonthly wave-cards modals">
+
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-huoche-copy"></use>
+            </svg>
+          </span>
+          资质要求
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>司机类型:</ion-label>
+              {{driverSelect}}
+            </ion-item>
+            <ion-item>
+              <ion-label stacked>注册资金要求:</ion-label>
+              {{registryMoneySelect}}
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-huoche-copy"></use>
+            </svg>
+          </span>
+          保证金要求
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>保证金额度:</ion-label>
+              {{bondSelect}}元
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+    <ion-card>
+        <ion-card-header>
+          <span>
+            <svg class="icon" aria-hidden="true">
+              <use xlink:href="#icon-huoche-copy"></use>
+            </svg>
+          </span>
+          司机信誉
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list>
+            <ion-item>
+              <ion-label stacked>信誉等级:</ion-label>
+              {{needSelect}}以上
+            </ion-item>
+          </ion-list>
+        </ion-card-content>
+      </ion-card>
+
+</ion-content>

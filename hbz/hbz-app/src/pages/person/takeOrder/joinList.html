@@ -1,0 +1,93 @@
+<app-header title="我参与订单列表"></app-header>
+
+<ion-content class="find-car select-car-by-order">
+
+
+  <ion-refresher (ionRefresh)="doRefresh($event)">
+    <ion-refresher-content pullingIcon="arrow-dropdown" pullingText="下拉刷新" refreshingSpinner="circles" refreshingText="数据加载中...">
+    </ion-refresher-content>
+  </ion-refresher>
+<!-- 
+  <div class="my-search-list">
+    <ul>
+      <li>
+        <label>订单状态</label>
+        <ion-select interface="popover" [(ngModel)]="orderTransSelect" (ngModelChange)="onSelectChange2()" cancelText="取消" okText="确认">
+          <ion-option value="{{item.key}}" *ngFor="let item of orderTransObj | ObjNgFor">{{item.value}}</ion-option>
+        </ion-select>
+      </li>
+      <li>
+      </li>
+    </ul>
+  </div> -->
+
+  <ul class="line-list">
+    <li *ngFor="let myOrder of myOrdersArray" (click)="goDetail(myOrder)">
+      <div class="content">
+        <div class="info">
+          <p>
+            <span>订单编号：</span>
+            <span>{{myOrder.order.orderNo}}</span>
+          </p>
+          <p>
+            <span>订单类型：</span>
+            <span *ngIf="myOrder.order.orderType == 'FSL'">整车专线</span>
+            <span *ngIf="myOrder.order.orderType == 'LTL'">零担专线</span>
+          </p>
+          <p>
+            <span>订单状态：</span>
+            <span>{{myOrder.order.orderTransChi}}</span>
+          </p>
+          <p>
+            <span>取货地址：</span>
+            <span>{{myOrder.order.originArea.level1Name}}-{{myOrder.order.originArea.level2Name}}-{{myOrder.order.originArea.level3Name}}</span>
+          </p>
+          <p>
+            <span>取货详细地址：</span>
+            <span>{{myOrder.order.originAddress}}</span>
+          </p>
+          <p>
+            <span>配送地址：</span>
+            <span>{{myOrder.order.destArea.level1Name}}-{{myOrder.order.destArea.level2Name}}-{{myOrder.order.destArea.level3Name}}</span>
+          </p>
+          <p>
+            <span>配送详细地址：</span>
+            <span>{{myOrder.order.destAddress}}</span>
+          </p>
+          <p>
+            <span>价格：</span>
+            <span>{{myOrder.order.expectedPrice}}元</span>
+          </p>
+          <p>
+            <span>参与状态：</span>
+            <span>{{myOrder.takeStatus}}</span>
+          </p>
+          <!--
+            NEW、CONFIRMED    未开始
+            ORDER_TO_BE_RECEIVED、LOCKED_ORDER 征集中
+            WAIT_TO_TAKE、TRANSPORT、WAIT_TO_CONFIRM、WAIT_FOR_PAYMENT、PAID、LIQUIDATION_COMPLETED  征集完成
+            OVER_TIME、WAIT_TO_REFUNDDE、APPLY_FOR_REFUND、REFUND_FINISHT、INVALID 征集取消
+          -->
+          <p>
+            <span>征集状态：</span>
+            <span class="status-doing" *ngIf="myOrder.order.orderTrans == 'NEW' || myOrder.order.orderTrans == 'CONFIRMED'">未开始</span>
+            <span class="status-doing" *ngIf="myOrder.order.orderTrans == 'ORDER_TO_BE_RECEIVED' || myOrder.order.orderTrans == 'LOCKED_ORDER'">征集中</span>
+            <span class="status-doing" *ngIf="myOrder.order.orderTrans == 'WAIT_TO_TAKE' || myOrder.order.orderTrans == 'TRANSPORT'
+                || myOrder.order.orderTrans == 'WAIT_TO_CONFIRM' || myOrder.order.orderTrans == 'WAIT_FOR_PAYMENT'
+                || myOrder.order.orderTrans == 'PAID' || myOrder.order.orderTrans == 'LIQUIDATION_COMPLETED'">征集完成</span>
+            <span class="status-doing" *ngIf="myOrder.order.orderTrans == 'OVER_TIME' || myOrder.order.orderTrans == 'WAIT_TO_REFUNDDE'
+                || myOrder.order.orderTrans == 'APPLY_FOR_REFUND' || myOrder.order.orderTrans == 'REFUND_FINISHT'
+                || myOrder.order.orderTrans == 'INVALID'">征集取消</span>
+          </p>
+          <p></p>
+          <!-- 留空，不删 -->
+        </div>
+      </div>
+    </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content loadingSpinner="bubbles" loadingText="加载更多数据...">
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

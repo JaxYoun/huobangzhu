@@ -1,0 +1,59 @@
+.carInfo {
+  display: flex;
+  justify-content: flex-start;
+  .img {
+    width: 20%;
+    height: 100%;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+  .content {
+    margin-left: 20%;
+    display: flex;
+    flex-direction:column;
+    text-align: center;
+    p, button {
+      margin-top: 10%;
+    }
+    p {
+      font-size: 1.5em;
+    }
+  }
+}
+
+.card {
+  padding: 0 20px;
+  :global{
+    .ant-card-head {
+      border-bottom: 1px dashed #aaa;
+      border-radius: 0;
+    }
+  }
+  .content {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.5em;
+    div {
+      width: 30%;
+      text-align: center;
+    }
+  }
+}
+
+.title {
+  text-align: left;
+  .send{
+    font-size: 30px;
+    color: #16bbb1;
+    margin-right: 20px;
+  }
+  span {
+    font-size: 20px;
+  }
+  .dao {
+    font-size: 30px;
+    color: #30cb96;
+  }
+}

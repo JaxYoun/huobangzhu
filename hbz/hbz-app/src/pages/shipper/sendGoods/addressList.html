@@ -1,0 +1,35 @@
+<app-header title="地址选择" dismiss="true"></app-header>
+<ion-content class="address-list">
+  <ul>
+      <!-- 1、未知2、家3、公司4、常用地 -->
+    <li *ngFor="let item of addressArray" >
+      <div class="user" (click)="selectBack(item)">
+            <!-- 判断是否选择 -->
+            <div *ngIf="item.isSelected" class="selected">
+              <svg class="icon" aria-hidden="true">
+                <use xlink:href="#icon-dui"></use>
+              </svg>
+            </div>
+        <h4>
+          {{item.linker}}
+          <i *ngIf="item.type == 1">未知</i>
+          <i *ngIf="item.type == 2">家</i>
+          <i *ngIf="item.type == 3">公司</i>
+          <i *ngIf="item.type == 4">常用地</i>
+          <span>{{item.linkTelephone}}</span>
+        </h4>
+        <p>{{item.location}} {{item.address}}</p>
+      </div>
+      <div class="options">
+        <span>
+          <ion-radio style="left: 23px;" checked="{{item.idefault == 1}}" (click)="setDefaultLink(item.id)"></ion-radio>设为默认地址
+        </span>
+        <span>
+          <i (click)="gotoEdit('edit',item)">编辑</i>
+          <i (click)="delLink(item.id)">删除</i>
+        </span>
+      </div>
+    </li>
+  </ul>
+  <button ion-button class="confirm" (click)="gotoAdd('add')">新增</button>
+</ion-content>

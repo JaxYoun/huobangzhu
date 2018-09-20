@@ -1,0 +1,86 @@
+person {
+  background: #f1f1f1;
+  .scroll-content {
+    background: #f1f1f1;
+  }
+  h2 {
+    font-size: 1.4rem;
+    padding-left: 12px;
+  }
+  .wallet-list {
+    padding: 0;
+    background: #f1f1f1;
+    li {
+      width: 100%;
+      padding: 0 12px;
+      box-sizing: border-box;
+      background: #fff;
+      margin-top: 10px;
+
+      i {
+        font-style: normal;
+        font-size: 1rem;
+      }
+      &>div {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        font-size: 1.5rem;
+        button {
+          min-width: 74px;
+        }
+      }
+      div:first-child {
+        border-bottom: 1px solid #ddd;
+        &>span:last-child {
+          color: #f30;
+          height: 2rem;
+          line-height: 2rem;
+        }
+      }
+      div:last-child {
+        font-size: 1.2rem;
+        &>span:first-child {
+          color: #f8a13a;
+          height: 2rem;
+          line-height: 2rem;
+        }
+        button{
+          height: 2rem;
+          font-size: inherit;
+          color: #fff;
+          margin-left: 8px;
+          &.pay {
+            background-color: #27dc89;
+          }
+          &.refund {
+            background-color: #f8a13a;
+          }
+        }
+      }
+      &.done {
+          &>div:last-child {
+            &>span:first-child {
+              color: #27dc89;
+            }
+          }
+      }
+      &.invalid {
+        &>div:last-child {
+          button {
+            opacity: 0;
+          }
+        }
+      }
+      &.valid {
+        &>div:last-child {
+          &>span:first-child {
+            color: #27dc89;
+          }
+        }
+      }
+    }
+  }
+}
+

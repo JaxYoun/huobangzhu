@@ -1,0 +1,83 @@
+<app-header title="专线发布"></app-header>
+
+<ion-content class="fulltransport special-line">
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-gomessage"></use>
+        </svg>
+      </span>
+      货物发站
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <city-picker [address]="sendInfoName" label="联系地址" (change)="onChangeAddressSend($event)"></city-picker>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-backmessage"></use>
+        </svg>
+      </span>
+      货物达到
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <city-picker [address]="arriveInfoName" label="联系地址" (change)="onChangeAddressArrive($event)"></city-picker>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-huoche-copy"></use>
+        </svg>
+      </span>
+      车辆配置
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>车辆类型:</ion-label>
+          <ion-select interface="popover" [(ngModel)]="transTypeSelect" cancelText="取消" okText="确认" >
+              <ion-option value="{{item.key}}" *ngFor="let item of transType | ObjNgFor">{{item.value}}</ion-option>
+          </ion-select>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>最低载重:</ion-label>
+          <ion-input type="number" [(ngModel)]="obj.maxLoad"></ion-input>
+          <ion-label unit>吨</ion-label>
+        </ion-item>
+        <ion-item>
+          <ion-label stacked>车长选择:</ion-label>
+          <ion-input type="text" [(ngModel)]="transArrayString" (click)="openModal()" disabled="true"></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <ion-card>
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-feiyong"></use>
+        </svg>
+      </span>
+      费用
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label stacked>单价:</ion-label>
+          <ion-input [(ngModel)]="obj.unitPrices"></ion-input>
+          <ion-label unit>元</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+  <button ion-button class="confirm" (click)="fslCreate()">确认发布</button>
+</ion-content>

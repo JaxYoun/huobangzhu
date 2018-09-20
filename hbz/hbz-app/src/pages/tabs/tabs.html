@@ -1,0 +1,9 @@
+<!--图标加文字-->
+<ion-tabs #mainTabs tabbarPlacement="bottom" (ionChange)="onChange($event)" selectedIndex="0">
+    <!-- tabBadge="{{tabBadge}}"  通知数量 -->
+  <ion-tab [root]="tab1Root" tabsHideOnSubPages="true" tabTitle="{{ 'HOME' | translate }}" tabIcon="my-home" tabBadgeStyle="danger"></ion-tab>
+  <ion-tab [root]="tab2Root" tabsHideOnSubPages="true" tabTitle="{{ 'SHIPPER' | translate }}" tabIcon="my-goods"></ion-tab>
+  <ion-tab [root]="tab3Root" tabsHideOnSubPages="true" tabTitle="{{ 'DRIVER' | translate }}" tabIcon="my-driver"></ion-tab>
+  <ion-tab [root]="tab4Root" tabsHideOnSubPages="true" tabTitle="{{ 'WAREHOUSE' | translate }}" tabIcon="my-cangku"></ion-tab>
+  <ion-tab [root]="tab5Root" tabsHideOnSubPages="true" tabTitle="{{ 'PERSONAL' | translate }}" tabIcon="my-person"></ion-tab>
+</ion-tabs>

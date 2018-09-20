@@ -1,0 +1,63 @@
+<app-header title="选择司机"></app-header>
+
+<ion-content padding class="paymonthly wave-cards modals select-driver">
+
+  <!-- 老司机信息卡片 开始 -->
+  <ion-card *ngFor="let item of drivers" [ngClass]="{'selected-card': item.isSelected}" (click)=onChange(item)>
+    <!-- true： 判断是否被选中 -->
+    <div class="custom-header">
+      <ion-card-header *ngIf="item.type == 'PersonDriver'">个人</ion-card-header>
+      <ion-card-header *ngIf="item.type == 'TransEnterprise'">企业</ion-card-header>
+      <div class="selected" *ngIf="item.isSelected">
+        <!-- true： 判断是否被选中 -->
+        <svg class="icon">
+          <use xlink:href="#icon-dui"></use>
+        </svg>
+      </div>
+    </div>
+
+    <ion-card-content>
+
+
+      <ion-avatar item-start>
+        <img src="{{item.user.imageUrl}}">
+      </ion-avatar>
+      <div class="info">
+        <h2 *ngIf="item.type == 'PersonDriver'">
+          {{item.showName}}
+          <star-level [starLevel]="item.user.starLevel" class="my-stars"></star-level>
+        </h2>
+        <h2 *ngIf="item.type == 'TransEnterprise'">
+          {{item.showName}}
+        </h2>
+        <h2 *ngIf="item.type == 'TransEnterprise'">
+          {{item.user.nickName}}
+          <star-level [starLevel]="item.user.starLevel" class="my-stars"></star-level>
+        </h2>
+        <p>电话：
+          <span>{{item.user.telephone}}</span>
+        </p>
+        <p>报价：
+          <span>{{item.offer}}元</span>
+        </p>
+        <p *ngIf="item.type == 'PersonDriver'">车牌：
+          <span>{{item.user.PersonDriver.licensePlateNumber}}</span>
+        </p>
+        <!-- <p *ngIf="item.type == 'PersonDriver'">驾驶证号码：<span>{{item.user.PersonDriver.certificateNo}}</span></p> -->
+        <p *ngIf="item.type == 'PersonDriver'">车辆：
+          <span>
+            <i>{{item.order.commodityVolume}}</i>
+            <i>{{item.order.commodityWeight}}</i>
+            <i>{{item.order.transType}}</i>
+          </span>
+        </p>
+        <p></p>
+
+      </div>
+
+    </ion-card-content>
+  </ion-card>
+  <!-- 老司机信息卡片 结束 -->
+
+  <button ion-button class="confirm" (click)="confirm()">确认</button>
+</ion-content>

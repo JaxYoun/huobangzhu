@@ -1,0 +1,66 @@
+<app-header title="详情"></app-header>
+<ion-content class="fulltransport confirm-order">
+  <!-- <h1>征集中</h1> -->
+  <h1 (click)="doDetail()">订单编号：{{obj.orderNo}}</h1>
+  <ion-card class="none-border">
+    <ion-card-header>
+      <span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-goods"></use>
+        </svg>
+      </span>
+      订单详情
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list>
+        <!-- <ion-item>
+          <ion-label stacked>订单编号:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.orderNo" disabled="true"></ion-input>
+        </ion-item> -->
+        <ion-item>
+          <ion-label stacked>货物名称:</ion-label>
+          <ion-input type="text"  [(ngModel)]="obj.commodityName" disabled="true"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label stacked>车辆类型:</ion-label>
+            <ion-input [(ngModel)]="obj.transType" disabled="true"></ion-input>
+          </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card>
+      <ion-card-header>
+        <span>
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-huoche-copy"></use>
+          </svg>
+        </span>
+        征集条件
+      </ion-card-header>
+      <ion-card-content>
+        <ion-list>
+          <ion-item>
+            <ion-label stacked>司机类型:</ion-label>
+            <ion-input [(ngModel)]="driverSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>注册资金:</ion-label>
+            <ion-input type="text" [(ngModel)]="registryMoneySelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>保证金额度:</ion-label>
+            <ion-input type="text" [(ngModel)]="bondSelect" disabled="true"></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label stacked>信誉等级:</ion-label>
+            <ion-input type="text" [(ngModel)]="needSelect" disabled="true"></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-card-content>
+    </ion-card>
+    <div class="drivers">
+      <h1>参与司机<span>共{{joinDriversArray.length}}人</span></h1>
+    </div>
+    <button ion-button class="ok" (click)="takeCreateOrder()">参与征集</button>
+</ion-content>

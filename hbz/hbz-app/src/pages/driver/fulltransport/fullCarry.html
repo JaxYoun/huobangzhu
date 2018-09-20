@@ -1,0 +1,96 @@
+<app-header title="{{title}}"></app-header>
+
+<ion-content class="find-car full-carry">
+
+    <ion-refresher (ionRefresh)="doRefresh($event)">
+        <ion-refresher-content
+          pullingIcon="arrow-dropdown"
+          pullingText="下拉刷新"
+          refreshingSpinner="circles"
+          refreshingText="数据加载中...">
+        </ion-refresher-content>
+      </ion-refresher>
+
+  <div class="search">
+    <ul>
+      <li>
+        <div class="from">起点</div>
+        <city-picker [address]='originAreaCode'  [shortName]="true" (change)="onChangeAddressOrigin($event)"></city-picker>
+        <div class="line-icon">
+          <svg class="icon" aria-hidden="true">
+            <use xlink:href="#icon-tejiajipiaojiantou-wangfan"></use>
+          </svg>
+        </div>
+        <div class="to">到达</div>
+        <city-picker [address]='destAreaCode'  [shortName]="true" (change)="onChangeAddressDest($event)"></city-picker>
+      </li>
+    </ul>
+  </div>
+  <div class="nearby">
+    <svg class="icon" aria-hidden="true">
+      <use xlink:href="#icon-ditu"></use>
+    </svg>
+    <span (click)="showMap()">附近车辆</span>
+  </div>
+  <ul class="line-list">
+    <li *ngFor="let item of nearSourceArray" (click)="gotoDetail(item)">
+      <div class="header">
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufadi"></use>
+        </svg>
+        <span>{{item.originArea.level2Name}}</span>
+        <svg class="icon" aria-hidden="true">
+          <use xlink:href="#icon-chufa"></use>
+        </svg>
+        <span>{{item.destArea.level2Name}}</span>
+        <i *ngIf="item.orderType == 'FSL'">整车</i>
+        <i *ngIf="item.orderType == 'LTL'">零担</i>
+          </div>
+          <div class="content">
+            <div class="info">
+              <p>
+                  <span>取货地址：</span>
+                  <span>{{item.originLocation}}</span>
+                </p>
+                <p>
+                  <span>取货详细地址：</span>
+                  <span>{{item.originAddress}}</span>
+                </p>
+                <p>
+                  <span>配送地址：</span>
+                  <span>{{item.destLocation}}</span>
+                </p>
+                <p>
+                  <span>配送详细地址：</span>
+                  <span>{{item.destAddress}}</span>
+                </p>
+                
+              <p>
+                <span>重量：</span>
+                <span>{{item.commodityWeight}}吨</span>
+              </p>
+              <p>
+                <span>体积：</span>
+                <span>{{item.commodityVolume}}方</span>
+              </p>
+              <p>
+                <span>价格：</span>
+                <span>￥{{item.expectedPrice}}元</span>
+              </p>
+              <p>
+                <span>信誉：</span>
+                <star-level [starLevel]="item.createUser.starLevel" class="my-stars inline"></star-level>
+              </p>
+              <p></p><!-- 留空，不删 -->
+            </div>
+          </div>
+        </li>
+  </ul>
+
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+      <ion-infinite-scroll-content
+        loadingSpinner="bubbles"
+        loadingText="加载更多数据...">
+      </ion-infinite-scroll-content>
+    </ion-infinite-scroll>
+</ion-content>

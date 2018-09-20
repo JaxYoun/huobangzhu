@@ -1,0 +1,22 @@
+<app-header title="认证材料"></app-header>
+
+<ion-content padding class="upload-id-card">
+  <h1>上传证件材料：</h1>
+  <ul class="upload-list">
+    <li (click)="createImage('certificates')">
+      <div *ngIf="!certificates">
+        <p>+</p>
+        <p>身份证照片</p>
+      </div>
+      <img [src]="certificates" *ngIf="certificates" />
+    </li>
+    <li (click)="createImage('certifiedPhoto')">
+      <div *ngIf="!certifiedPhoto">
+        <p>+</p>
+        <p>持证照片</p>
+      </div>
+      <img [src]="certifiedPhoto" *ngIf="certifiedPhoto" />
+    </li>
+  </ul>
+  <button ion-button class="ok" (click)="submitUpload()" disabled={{isClick}}>提交认证</button>
+</ion-content>

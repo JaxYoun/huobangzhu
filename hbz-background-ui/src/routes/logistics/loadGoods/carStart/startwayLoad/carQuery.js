@@ -1,0 +1,214 @@
+import React from 'react'
+import { Form, Input, Row, Col, Button, Card, Select, Icon, DatePicker } from 'antd'
+import { AreaSelect } from 'components'
+import PropTypes from 'prop-types'
+import styles from '../index.less'
+import moment from 'moment'
+const FormItem = Form.Item
+const formItemLayout = {
+  labelCol: {
+    xs: { span: 8 },
+    sm: { span: 8 },
+  },
+  wrapperCol: {
+    xs: { span: 16 },
+    sm: { span: 16 },
+  },
+}
+const queryCol = {
+  sm: 8,
+  md: 8,
+  lg: 8,
+  xl: 8,
+}
+const CarQueryForm = ({
+  form,
+  dispatch,
+  carData,
+  chooseCar,
+  firmData,
+}) => {
+  const { getFieldDecorator } = form
+  const saveMessage = () => {
+    form.validateFields((err, formValue) => {
+      if (err) {
+        return
+      }
+      formValue.vehicleInformationId = chooseCar.id
+      formValue.receiptDate = new Date(formValue.receiptDate).getTime()
+      formValue.receiptToDate = new Date(formValue.receiptToDate).getTime()
+      // formValue.transitState = 'NORMAL'
+      if (firmData.id) {
+        if (formValue.originAreaCode === '') {
+          formValue.originAreaCode = firmData.originAreaCode
+          formValue.destAreaCode = firmData.destAreaCode
+        }
+        formValue.id = firmData.id
+        dispatch({ type: 'carStart/updateAddCar', payload: { data: formValue } })
+      } else {
+        dispatch({ type: 'carStart/saveCar', payload: { data: formValue } })
+      }
+    })
+  }
+  const reset = () => {
+    form.resetFields()
+  }
+  // 选择车辆
+  const chooseCarOption = (value, option) => {
+    dispatch({ type: 'carStart/updateCar', payload: { chooseCar: option.props.data } })
+  }
+  const fromInfo = {
+    province: {
+      label: '发站城市',
+      key: 'startCitys',
+      outKey: 'originAreaCode',
+      required: true,
+    },
+    updateData: (firmData && firmData.id) ? firmData.startCity : [],
+    code: (firmData && firmData.id) ? firmData.originAreaCode : '',
+    form,
+    formItemLayout,
+  }
+  const toInfo = {
+    province: {
+      label: '发站城市',
+      key: 'endCitys',
+      outKey: 'destAreaCode',
+      required: true,
+    },
+    updateData: (firmData && firmData.id) ? firmData.endCity : [],
+    code: (firmData && firmData.id) ? firmData.destAreaCode : '',
+    form,
+    formItemLayout,
+  }
+  return (
+    <div>
+      <Card title="初始发车">
+        <Row>
+          <Col {...queryCol}>
+            <FormItem label="车辆编号" {...formItemLayout}>
+              {getFieldDecorator('vehicleNumber', {
+                initialValue: firmData.vehicleInformationDTO && firmData.vehicleInformationDTO.vehicleNumber,
+                rules: [{ required: true, message: '请选择车辆编号' }],
+              })(
+                <Select onSelect={chooseCarOption} style={{ width: '100%' }}>
+                  {carData && carData.map(item => <Option key={item.vehicleNumber} data={item} >{item.vehicleNumber}</Option>)}
+                </Select>
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="司机姓名" {...formItemLayout}>
+              {getFieldDecorator('driverName', {
+                initialValue: chooseCar && chooseCar.driverName,
+              })(
+                <Input
+                  disabled
+                />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="司机电话" {...formItemLayout}>
+              {getFieldDecorator('driverTelephone', {
+                initialValue: chooseCar && chooseCar.driverTelephone,
+              })(
+                <Input
+                  disabled
+                />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="车牌号" {...formItemLayout}>
+              {getFieldDecorator('numberPlate', {
+                initialValue: chooseCar && chooseCar.numberPlate,
+              })(
+                <Input
+                  disabled
+                />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="车长" {...formItemLayout}>
+              {getFieldDecorator('carLength', {
+                initialValue: chooseCar && chooseCar.carLength,
+              })(
+                <Input
+                  disabled
+                />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="载重" {...formItemLayout}>
+              {getFieldDecorator('cargoLoad', {
+                initialValue: chooseCar && chooseCar.cargoLoad,
+              })(
+                <Input
+                  disabled
+                />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="发车时间" {...formItemLayout}>
+              {getFieldDecorator('receiptDate', {
+                initialValue: (firmData && firmData.receiptDate) ? moment((firmData.receiptDate)) : '',
+                rules: [{ required: true, message: '请填写发车时间' }],
+              })(
+                <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" style={{ width: '100%' }} />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="预计到站时间" {...formItemLayout}>
+              {getFieldDecorator('receiptToDate', {
+                initialValue: (firmData && firmData.receiptToDate) ? moment((firmData.receiptToDate)) : '',
+                rules: [{ required: true, message: '请填写到站时间' }],
+              })(
+                <DatePicker showTime format="YYYY-MM-DD HH:mm:ss" style={{ width: '100%' }} />
+              )}
+            </FormItem>
+          </Col>
+          <Col {...queryCol}>
+            <AreaSelect
+              {...fromInfo}
+              placeholder="请选择"
+            />
+          </Col>
+          <Col {...queryCol}>
+            <AreaSelect
+              {...toInfo}
+              placeholder="请选择"
+            />
+          </Col>
+          <Col {...queryCol}>
+            <FormItem label="备注" {...formItemLayout}>
+              {getFieldDecorator('remarks', {
+                initialValue: firmData && firmData.remarks,
+              })(
+                <Input />
+              )}
+            </FormItem>
+          </Col>
+        </Row>
+        <Row className={styles.buttonPosition}>
+          <Button type="warning" onClick={saveMessage.bind(this)}>保存发车单</Button>
+          {/* <Button type="primary" onClick={queryFirm.bind(this)}>查询车辆</Button> */}
+          <Button type="primary" onClick={reset.bind(this)}>重置</Button>
+        </Row>
+      </Card>
+    </div>
+  )
+}
+CarQueryForm.propTypes = {
+  form: PropTypes.obj,
+  dispatch: PropTypes.func,
+  carData: PropTypes.array,
+  chooseCar: PropTypes.obj,
+  firmData: PropTypes.obj,
+}
+const CarQuery = Form.create()(CarQueryForm)
+export default CarQuery
